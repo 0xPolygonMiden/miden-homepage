@@ -1,5 +1,8 @@
 import React from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import Scaling from "../../thesis/scaling.jsx";
+import Privacy from "../../thesis/privacy.jsx";
+import Safety from "../../thesis/safety.jsx";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -42,7 +45,7 @@ export default function Scalability() {
             </div>
 
             <div className="absolute top-[-31px] sm:top-[0%] xl:top-[50px] right-[-25px] sm:right-[13%] lg:right-[-0.9%] xlg:right-[12.9%] xl:right-[146px] 2xl:right-[85px] text-center max-w-[138px] lg:max-w-[205px] xl:max-w-[310px]">
-              <Link>
+              <Link to="/scaling">
                 <ScalableText text="Transactions are executed only once, most state is off-chain" />
               </Link>
             </div>
@@ -58,7 +61,7 @@ export default function Scalability() {
             </div>
 
             <div className="absolute top-[225px] sm:top-[183px] left-[-10px] xs:left-[] sm:left-[9%] lg:left-[-3%] xlg:left-[7%] xl:left-[110px] 2xl:left-[20px] xl:top-[504px] 2xl:top-[680px] text-center max-w-[110px] sm:max-w-[85px] lg:max-w-[145px] xl:max-w-[250px]">
-              <Link>
+              <Link to="/privacy">
                 <ScalableText text="Only commitments to private data" />
               </Link>
             </div>
@@ -74,7 +77,7 @@ export default function Scalability() {
             </div>
 
             <div className="absolute top-[208px]  sm:top-[167px] lg:top-[167px] xl:top-[450px] 2xl:top-[634px] right-[0%] sm:right-[7%] lg:right-[-24px] xlg:right-[6%] xl:right-[86px] 2xl:right-[46px] text-center max-w-[110px] sm:max-w-[60px] lg:max-w-[148px] xl:max-w-[248px]">
-              <Link>
+              <Link to="/safety">
                 <ScalableText text="Rust and in-protocol safe guards" />
               </Link>
             </div>

@@ -11,21 +11,25 @@ function FooterTexts({ text }) {
 }
 
 export default function Footer() {
-  const QuickLink = [
+  const QuickLinks = [
     {
-      pageName: "For Builders",
-      to: "#",
+      pageName: "GitHub",
+      to: "https://github.com/0xPolygonMiden",
+    },
+    {
+      pageName: "Explorer",
+      to: "https://testnet.midenscan.com/",
     },
   ];
 
   const Resources = [
     {
-      pageName: "Blog Posts",
-      to: "#",
+      pageName: "Docs",
+      to: "https://docs.polygon.technology/miden/",
     },
     {
-      pageName: "Docs",
-      to: "#",
+      pageName: "Videos",
+      to: "https://www.youtube.com/playlist?list=PLslsfan1R_z20bEgUU_ZyY64AHx5C6vgg",
     },
   ];
 
@@ -39,10 +43,6 @@ export default function Footer() {
       pageName: "Terms of Service",
       to: "#",
     },
-    {
-      pageName: "GitHub",
-      to: "#",
-    },
   ];
 
 
@@ -52,7 +52,6 @@ export default function Footer() {
   <div className="container mx-auto">
     <div>
       <div className='pb-[40px] flex flex-col gap-5 xlg:gap-0 xlg:flex-row justify-between relative after:absolute after:content-[""] after:w-full after:h-[1px] after:bg-primaryWhite after:left-0 after:bottom-0'>
-        
         {/* Left Side Content */}
         <div className="flex flex-col gap-y-8 mb-8 lg:mb-0">
           <div className="w-[100px] h-[58px] lg:w-[126px] lg:h-[73px]">
@@ -71,9 +70,9 @@ export default function Footer() {
         <div className="flex flex-col flex-wrap lg:flex-row gap-x-0 lg:gap-x-[174px] gap-y-10 xl:gap-y-0">
           {/* Quick Links */}
           <div className="flex flex-col gap-y-8">
-            <FooterTexts text="Quick Link" />
+            <FooterTexts text="Quick Links" />
             <ul className="flex flex-col gap-y-[15px]">
-              {QuickLink.map((item, index) => (
+              {QuickLinks.map((item, index) => (
                 <li key={index}>
                   <Link
                     className="text-primaryWhite text-[16px] font-medium leading-[26px]"

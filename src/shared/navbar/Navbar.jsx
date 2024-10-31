@@ -5,9 +5,10 @@ import { FiMenu, FiX } from "react-icons/fi";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // State for dropdown
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // State for Blog dropdown
+  const [isBuildersDropdownOpen, setIsBuildersDropdownOpen] = useState(false); // State for Builders dropdown
 
-  // This Is My Menu Item
+  // Menu Item
   const MenuItem = [
     {
       text: "For builders",
@@ -19,26 +20,33 @@ export default function Navbar() {
     },
   ];
 
-  // Additional Blog Post Links
+  // Blog Post Links
   const blogPosts = [
     { text: "Initial", to: "/initial" },
     { text: "Transactions", to: "/transactions" },
     { text: "State", to: "/state" },
     { text: "Assets", to: "/assets" },
-    { text: "Privacy", to: "/privacy" },
+    { text: "Privacy", to: "/privacyPost" },
+  ];
+
+  // Builders Links
+  const buildersLinks = [
+    { text: "Roadmap", to: "https://docs.polygon.technology/miden/miden-base/introduction/roadmap/" },
+    { text: "GitHub", to: "https://github.com/0xPolygonMiden" },
+    { text: "Explorer", to: "https://testnet.midenscan.com/" },
+    { text: "Docs", to: "https://docs.polygon.technology/miden/" },
+    { text: "Miden VM Playground", to: "https://0xpolygonmiden.github.io/examples/" },
   ];
 
   return (
     <section className="py-3 z-30 fixed w-full left-0 backdrop-blur-sm bg-navbarBg">
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
-          {/* Logo with responsive width */}
+          {/* Logo */}
           <div className="w-[40px] h-[40px] md:w-[40px] md:h-[40px] xlg:w-[70px] lg:h-[70px]">
-            <img
-              className="w-full h-full object-contain"
-              src={Logo}
-              alt="Logo"
-            />
+            <Link to="/">
+              <img className="w-full h-full object-contain" src={Logo} alt="Logo" />
+            </Link>
           </div>
 
           {/* Desktop Menu */}
@@ -60,14 +68,43 @@ export default function Navbar() {
                             <li key={postIndex}>
                               <Link
                                 className="block px-4 py-2 text-black"
-                                to={post.to} // Use the route from blogPosts
+                                to={post.to}
                                 onClick={() => {
-                                  setIsDropdownOpen(false); // Close dropdown on click
-                                  setIsMenuOpen(false); // Close mobile menu if open
+                                  setIsDropdownOpen(false);
+                                  setIsMenuOpen(false);
                                 }}
                               >
                                 {post.text}
                               </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </>
+                  ) : item.text === "For builders" ? (
+                    <>
+                      <button
+                        className="text-[16px] xlg:text-[18px] font-medium leading-[30px] capitalize text-primaryBlack"
+                        onClick={() => setIsBuildersDropdownOpen(!isBuildersDropdownOpen)}
+                      >
+                        {item.text}
+                      </button>
+                      {isBuildersDropdownOpen && (
+                        <ul className="absolute top-full left-0 w-40 bg-white shadow-lg mt-1">
+                          {buildersLinks.map((link, linkIndex) => (
+                            <li key={linkIndex}>
+                              <a
+                                className="block px-4 py-2 text-black"
+                                href={link.to}
+                                target="_blank" // Open link in a new tab
+                                rel="noopener noreferrer"
+                                onClick={() => {
+                                  setIsBuildersDropdownOpen(false);
+                                  setIsMenuOpen(false);
+                                }}
+                              >
+                                {link.text}
+                              </a>
                             </li>
                           ))}
                         </ul>
@@ -119,8 +156,8 @@ export default function Navbar() {
                                   className="block text-[18px] font-medium leading-[30px] capitalize text-primaryBlack"
                                   to={post.to}
                                   onClick={() => {
-                                    setIsDropdownOpen(false); // Close dropdown on click
-                                    setIsMenuOpen(false); // Close menu on click
+                                    setIsDropdownOpen(false);
+                                    setIsMenuOpen(false);
                                   }}
                                 >
                                   {post.text}
@@ -130,11 +167,40 @@ export default function Navbar() {
                           </ul>
                         )}
                       </>
+                    ) : item.text === "For builders" ? (
+                      <>
+                        <button
+                          className="text-[18px] font-medium leading-[30px] capitalize text-primaryBlack"
+                          onClick={() => setIsBuildersDropdownOpen(!isBuildersDropdownOpen)}
+                        >
+                          {item.text}
+                        </button>
+                        {isBuildersDropdownOpen && (
+                          <ul className="mt-2">
+                            {buildersLinks.map((link, linkIndex) => (
+                              <li key={linkIndex}>
+                                <a
+                                  className="block text-[18px] font-medium leading-[30px] capitalize text-primaryBlack"
+                                  href={link.to}
+                                  target="_blank" // Open link in a new tab
+                                  rel="noopener noreferrer"
+                                  onClick={() => {
+                                    setIsBuildersDropdownOpen(false);
+                                    setIsMenuOpen(false);
+                                  }}
+                                >
+                                  {link.text}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </>
                     ) : (
                       <Link
                         className="text-[18px] font-medium leading-[30px] capitalize text-primaryBlack"
                         to={item.to}
-                        onClick={() => setIsMenuOpen(false)} // Close menu on click
+                        onClick={() => setIsMenuOpen(false)}
                       >
                         {item.text}
                       </Link>
