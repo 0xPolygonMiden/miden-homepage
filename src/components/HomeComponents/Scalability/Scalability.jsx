@@ -1,8 +1,5 @@
 import React from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import Scaling from "../../thesis/scaling.jsx";
-import Privacy from "../../thesis/privacy.jsx";
-import Safety from "../../thesis/safety.jsx";
+import { Link } from "react-router-dom";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -37,7 +34,7 @@ export default function Scalability() {
           <div className="w-full h-full circle-holder">
             <div className=" absolute top-[0%] sm:top-0 lg:top-[-17px] xl:top-0 left-[50%] sm:left-[50%] xl:left-[50%] translate-x-[-50%] w-[160px] lg:w-[220px] xlg:w-[250px] xl:w-[380px] 2xl:w-[500px] h-[160px] lg:h-[220px] xlg:h-[250px] xl:h-[380px] 2xl:h-[500px] flex justify-center rounded-full border-[5px] border-[#42526E]">
               <Link
-                className="mt-[10%] sm:mt-[14%] xl:mt-[65px] mr-[0%] sm:mr-[0%] xl:mr-0 text-primaryBlack text-[13px] xl:text-[40px] 2xl:text-[52px]"
+                className="mt-[10%] sm:mt-[14%] xl:mt-[65px] mr-[0%] sm:mr-[0%] xl:mr-0 text-primaryBlack text-[13px] xl:text-[40px] xl:text-[26px]"
                 to="#"
               >
                 Scalability
@@ -55,7 +52,7 @@ export default function Scalability() {
             <div className="absolute top-[65px] sm:top-[250%] xl:top-[208px] 2xl:top-[238px]  left-[6%] xs:left-[8%] sm:left-[21%] xlg:left-[25%] xl:left-[325px] 2xl:left-[226px] w-[160px] lg:w-[220px] xlg:w-[250px] xl:w-[380px] 2xl:w-[500px]  h-[160px] lg:h-[220px] xlg:h-[250px] xl:h-[380px] 2xl:h-[500px] rounded-full border-[5px] border-[#42526E]"></div>
 
             <div className="relative w-fit left-[12%] xs:left-[11%] sm:left-[24%] xlg:left-[28%] xl:left-[375px] 2xl:left-[256px] top-[145px] sm:top-[133px] lg:top-[177px] xl:top-[454px] 2xl:top-[517px]">
-              <Link className="text-primaryBlack w-fit text-[13px] lg:text-[16px] xl:text-[40px] 2xl:text-[52px]">
+              <Link className="text-primaryBlack w-fit text-[13px] lg:text-[16px] xl:text-[40px] xl:text-[26px]">
                 Privacy
               </Link>
             </div>
@@ -71,7 +68,7 @@ export default function Scalability() {
             <div className="absolute top-[45px] sm:top-[40px] xl:top-[138px] 2xl:top-[165px]  right-[6%] xs:right-[9%] sm:right-[21%] xlg:right-[25%] xl:right-[305px] 2xl:right-[178px] w-[170px]  lg:w-[220px] xlg:w-[250px] xl:w-[380px] 2xl:w-[500px] lg:h-[220px] h-[160px] xlg:h-[250px] xl:h-[380px] 2xl:h-[500px] rounded-full border-[5px] border-[#42526E]"></div>
 
             <div className="absolute w-fit text-end right-[13%] sm:right-[24%] xlg:right-[28%] xl:right-[356px] 2xl:right-[260px] top-[115px] sm:top-[118px] lg:top-[142px] xl:top-[380px] 2xl:top-[460px]">
-              <Link className="text-primaryBlack text-[13px] lg:text-[16px] xl:text-[40px] 2xl:text-[52px]">
+              <Link className="text-primaryBlack text-[13px] lg:text-[16px] xl:text-[40px] xl:text-[26px]">
                 Safety
               </Link>
             </div>

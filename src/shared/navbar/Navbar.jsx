@@ -11,27 +11,33 @@ export default function Navbar() {
   // Menu Item
   const MenuItem = [
     {
+      text: "Roadmap",
+      to: "/roadmap",
+    },
+    {
       text: "For builders",
       to: "#",
     },
     {
-      text: "Blog posts",
+      text: "Resources",
       to: "#",
     },
   ];
 
   // Blog Post Links
-  const blogPosts = [
-    { text: "Initial", to: "/initial" },
-    { text: "Transactions", to: "/transactions" },
-    { text: "State", to: "/state" },
-    { text: "Assets", to: "/assets" },
-    { text: "Privacy", to: "/privacyPost" },
+  const resources = [
+    { text: "Blog posts", to: "/blogposts" },
+    //{ text: "Initial", to: "/initial" },
+    //{ text: "Transactions", to: "/transactions" },
+    //{ text: "State", to: "/state" },
+    //{ text: "Assets", to: "/assets" },
+    //{ text: "Privacy", to: "/privacyPost" },
+    { text: "Videos", to: "https://www.youtube.com/playlist?list=PLslsfan1R_z20bEgUU_ZyY64AHx5C6vgg" },
+    { text: "Research", to: "#" },
   ];
 
   // Builders Links
   const buildersLinks = [
-    { text: "Roadmap", to: "https://docs.polygon.technology/miden/miden-base/introduction/roadmap/" },
     { text: "GitHub", to: "https://github.com/0xPolygonMiden" },
     { text: "Explorer", to: "https://testnet.midenscan.com/" },
     { text: "Docs", to: "https://docs.polygon.technology/miden/" },
@@ -54,7 +60,7 @@ export default function Navbar() {
             <ul className="flex gap-x-5 xl:gap-x-10 items-center">
               {MenuItem.map((item, index) => (
                 <li key={index} className="relative">
-                  {item.text === "Blog posts" ? (
+                  {item.text === "Resources" ? (
                     <>
                       <button
                         className="text-[16px] xlg:text-[18px] font-medium leading-[30px] capitalize text-primaryBlack"
@@ -64,7 +70,7 @@ export default function Navbar() {
                       </button>
                       {isDropdownOpen && (
                         <ul className="absolute top-full left-0 w-40 bg-white shadow-lg mt-1">
-                          {blogPosts.map((post, postIndex) => (
+                          {resources.map((post, postIndex) => (
                             <li key={postIndex}>
                               <Link
                                 className="block px-4 py-2 text-black"
@@ -150,7 +156,7 @@ export default function Navbar() {
                         </button>
                         {isDropdownOpen && (
                           <ul className="mt-2">
-                            {blogPosts.map((post, postIndex) => (
+                            {resources.map((post, postIndex) => (
                               <li key={postIndex}>
                                 <Link
                                   className="block text-[18px] font-medium leading-[30px] capitalize text-primaryBlack"

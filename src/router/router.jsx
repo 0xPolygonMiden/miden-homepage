@@ -5,10 +5,12 @@ import InitialPost from "../components/blogPosts/initial"; // Import the Initial
 import AssetPost from "../components/blogPosts/assets"; // Import the AssetPost component
 import TransactionsPost from "../components/blogPosts/transactions"; // Import the TransactionsPost component
 import PrivacyPost from "../components/blogPosts/privacyPost"; // Import the PrivacyPost component
-import StatePost from "../components/blogPosts/state"; // Import the StatePost component
+import StatePost from "../components/blogPosts/state";
+import Blogposts from "../components/blogPosts/blogOverview"; // Import the StatePost component
 import Scaling from "../components/thesis/scaling";
 import Privacy from "../components/thesis/privacy";
 import Safety from "../components/thesis/safety";
+import Roadmap from "../components/roadmap/roadmap";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/blogposts",
+        element: <Blogposts />,
       },
       {
         path: "/initial",
@@ -50,6 +56,10 @@ const router = createBrowserRouter([
       {
         path: "/safety",
         element: <Safety />,
+      },
+      {
+        path: "/roadmap",
+        element: <Roadmap />,
       },
     ],
   },
