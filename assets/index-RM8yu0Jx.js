@@ -117,7 +117,7 @@ This design results in unprecedented flexibility. Developers can mix and match p
 
 But perhaps the most distinguishing aspect of the Miden design is that being private on Miden is cheaper than being public. This is because local execution and self-custodied state impose minimal burden on the network, so fees for private transactions are necessarily lower than fees for public transactions. The importance of this property cannot be overstated as we believe that designs, where privacy costs extra, are simply non-viable.
 
-`,KC=()=>M.jsxs("div",{className:"prose max-w-3xl mx-auto",children:[M.jsx("h1",{className:"text-3xl font-bold mb-4",children:"Privacy"}),M.jsx("p",{className:"text-gray-600",children:"By Bob on March 28, 2024"}),M.jsx(Hr,{children:QC})]}),XC="/assets/Accounts-QICF8ZFB.png",ZC="/assets/Languages-CRcIjnnp.png",GC=`
+`,KC=()=>M.jsxs("div",{className:"prose max-w-3xl mx-auto",children:[M.jsx("h1",{className:"text-3xl font-bold mb-4",children:"Privacy"}),M.jsx("p",{className:"text-gray-600",children:"By Bob on March 28, 2024"}),M.jsx(Hr,{children:QC})]}),XC="/miden-homepage/assets/Accounts-QICF8ZFB.png",ZC="/miden-homepage/assets/Languages-CRcIjnnp.png",GC=`
 # Safe development for the masses
 
 Miden incorporates years of learning and best practices of modern blockchain protocols to make smart contract development safer and easier. Client-side proving makes exploiting bugs categorically more difficult. Using Rust as the primary contract development language makes Miden accessible to crypto-native and non-crypto developers alike.
