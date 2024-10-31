@@ -2,4 +2,4 @@
 This is the initial draft for the Miden homepage.
 
 ##
-run `npm build && npm preview`
+run `npm run build && npm run start`
