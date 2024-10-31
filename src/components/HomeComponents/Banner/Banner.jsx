@@ -20,7 +20,7 @@ export default function Banner() {
                     <SubTitle texts="Miden pushed execution and state storage to the edge."/>
 
                     <div className=" mt-7 lg:mt-[67px]">
-                        <Link className="py-3 px-[35px] xl:py-4 xl:px-[63px] rounded-[53px] bg-primaryGreen text-primaryBlack" to="https://docs.polygon.technology/miden/miden-base/introduction/get-started/prerequisites/" target="_blank">
+                        <Link className="py-3 px-[35px] xl:py-4 xl:px-[63px] rounded-[53px] bg-primaryGreen text-primaryBlack" to="https://docs..technology/miden/miden-base/introduction/get-started/prerequisites/" target="_blank">
                             Start Miden
                         </Link>
                     </div>

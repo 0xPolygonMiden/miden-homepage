@@ -32,7 +32,7 @@ Next, because of Miden’s asynchronous execution model, it is possible to creat
 
 Another change that increases safety is that in Miden, fungible and non-fungible assets are stored locally in accounts (rather than in global token contracts). This makes exploiting potential bugs more difficult, as every account needs to be attacked individually.
 
-Speaking of bugs, to make smart contract development safer, Polygon Miden aims to support modern smart contract languages such as Rust which is designed with an emphasis on safety and correctness.
+Speaking of bugs, to make smart contract development safer,  Miden aims to support modern smart contract languages such as Rust which is designed with an emphasis on safety and correctness.
 
 ## Privacy
 
@@ -63,6 +63,18 @@ Additionally, Miden accounts can live either on-chain or off-chain. For on-chain
 Having on-chain and off-chain account data combined with the ability to prove state changes locally or by the network leaves us with flexible transaction modes. 
 
 At DevCon 6, in Bogotá, Colombia, Miden co-founder Bobbin Threadbare spoke about flexible transaction modes and how our state model is designed to build a decentralized scalable rollup.
+
+[![Bobbin Bogota](https://img.youtube.com/vi/TEPY19-hie4/0.jpg)](https://www.youtube.com/watch?v=TEPY19-hie4)
+
+## Paradigm Shifts
+ Miden aims to unlock new use cases and applications. The prevailing idea is that everything in a blockchain must be transparent to be verifiable. But in  Miden, actors can prove correctness and don’t need to be transparent.
+
+ Miden combines core concepts of Ethereum, Bitcoin, and modern concurrent databases, all powered by the trustless security of ZK proofs. What will emerge are the dimensions of an elastic, general-purpose ZK rollup that is optimized for high-throughput, computation-heavy applications where privacy is also a priority. 
+
+Our architectural foundations are set to enable enormous throughput, low fees and privacy in future iterations. However, like all rollups, we will start with training wheels. We will communicate our roadmap soon.
+
+
+
 `;
 
 const InitialPost = () => {

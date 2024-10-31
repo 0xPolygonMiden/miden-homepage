@@ -21,11 +21,11 @@ export default function Navbar() {
 
   // Additional Blog Post Links
   const blogPosts = [
-    { text: "Assets", to: "/assets" },
     { text: "Initial", to: "/initial" },
-    { text: "Privacy", to: "/privacy" },
-    { text: "State", to: "/state" },
     { text: "Transactions", to: "/transactions" },
+    { text: "State", to: "/state" },
+    { text: "Assets", to: "/assets" },
+    { text: "Privacy", to: "/privacy" },
   ];
 
   return (

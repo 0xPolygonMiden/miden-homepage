@@ -13,18 +13,14 @@ function FooterTexts({ text }) {
 export default function Footer() {
   const QuickLink = [
     {
-      pageName: "About Us",
-      to: "#",
-    },
-    {
-      pageName: "Builders",
+      pageName: "For Builders",
       to: "#",
     },
   ];
 
   const Resources = [
     {
-      pageName: "Blogs",
+      pageName: "Blog Posts",
       to: "#",
     },
     {
@@ -67,8 +63,7 @@ export default function Footer() {
             />
           </div>
           <h4 className="text-primaryWhite text-[16px] max-w-[365px]">
-            We’ve created the product that will help your startup to look
-            even better.
+            Privacy scales better
           </h4>
         </div>
 
@@ -130,7 +125,7 @@ export default function Footer() {
       {/* Footer Bottom */}
       <div className="py-5 flex justify-center items-center">
         <h5 className="text-primaryWhite text-[16px] md:text-[18px] leading-[30px] text-center">
-          © 2024 company name. All rights reserved.
+          © 2024 Miden. All rights reserved.
         </h5>
       </div>
     </div>
