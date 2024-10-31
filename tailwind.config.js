@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import typography from '@tailwindcss/typography';
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -8,7 +10,7 @@ export default {
         primaryGreen: "#00E100",
         primaryGray: "#5A5C5F",
         primaryWhite: "#FFF",
-        navbarBg: "#F8F8F8"
+        navbarBg: "#F8F8F8",
       },
       container: {
         center: true,
@@ -25,5 +27,7 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    typography, // Add the Typography plugin here
+  ],
 };
