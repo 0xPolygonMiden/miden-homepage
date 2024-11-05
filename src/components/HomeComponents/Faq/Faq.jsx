@@ -61,7 +61,7 @@ const Faq = () => {
       {
         question: "What is Miden?",
         answer:
-          "Miden is a next-generation blockchain protocol that uses zero-knowledge (ZK) technology to achieve unbounded scalability, privacy by default, and safer smart contract development. It allows users to execute and prove transactions locally, pushing execution to the client side.",
+          "Miden is an Ethereum Layer-2 solutions that uses zero-knowledge (ZK) technology to achieve unbounded scalability, privacy by default, and safer smart contract development. It allows users to execute and prove transactions locally, pushing execution to the client side.",
       },
       {
         question: " Why is Miden scalable?",
