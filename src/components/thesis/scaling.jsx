@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
+import ClientSideImage from '../../assets/Image/client_side_image.png';
+
 
 const markdown = `
 # Scaling
@@ -17,7 +19,7 @@ A transaction can update the state only of a single account, but can produce and
 ## Unbounded scalability
 The most immediate effect of client-side proving is the elimination of execution bloat. Transactions executed and proven by the users do not need to be re-executed by the network. In fact, on Miden, every transaction is executed exactly once. Transaction-level proofs are then recursively aggregated into block proofs, and the nodes only need to verify short ZK proofs that can attest to the validity of thousands (or even millions) of transactions. This means that from the computation standpoint, even a smartphone can verify a practically unlimited number of transactions in real-time.
 
-![Miden Architecture Core Concepts](https://file.notion.so/f/f/f4bb0fff-fdeb-4a0e-93dd-25e3c9b6f6d8/0d094a58-3ae7-4eac-ac0c-0357318628f7/Screenshot_2024-10-01_at_12.13.38.png?table=block&id=128f341e-5d62-8114-86ee-e39480577437&spaceId=f4bb0fff-fdeb-4a0e-93dd-25e3c9b6f6d8&expirationTimestamp=1730469600000&signature=ZWIE2pfiA9QYbwSk4NDI8RE_xNNNW54Lug0i-5Kxx0g&downloadName=Screenshot+2024-10-01+at+12.13.38.png)
+![Miden Architecture Core Concepts](${ClientSideImage})
 
 
 The above is a direct consequence of the Actor Model in which most transactions do not need to touch the public state and can be processed in parallel by independent actors. On Miden, token transfers, NFT swaps, and many others can happen asynchronously directly between users. This implies that contract execution can be scaled independently to meet demand, or conversely, heavy usage of one smart contract does not slow down all the rest.
