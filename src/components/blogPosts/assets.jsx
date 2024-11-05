@@ -4,8 +4,6 @@ import ReactMarkdown from 'react-markdown';
 const markdown = `
 # Miden: Asset Model
 
-TEST
-
 Miden continues to make progress toward a public testnet, expected in Q4 of this year. This blog post is the latest in a series covering Miden’s novel architecture, designed to enable developers to build high-throughput, privacy-enhanced applications. 
 
 Miden’s feature set requires a new way of thinking about assets and a new approach to storing them. In order to provide concurrency and privacy, assets need to be treated natively. Basically, the way Ethereum treats Ether, its native currency, is the approach  Miden takes for all assets. 
