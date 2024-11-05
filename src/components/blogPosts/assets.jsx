@@ -4,9 +4,11 @@ import ReactMarkdown from 'react-markdown';
 const markdown = `
 # Miden: Asset Model
 
- Miden continues to make progress toward a public testnet, expected in Q4 of this year. This blog post is the latest in a series covering Miden’s novel architecture, designed to enable developers to build high-throughput, privacy-enhanced applications. 
+TEST
 
- Miden’s feature set requires a new way of thinking about assets and a new approach to storing them. In order to provide concurrency and privacy, assets need to be treated natively. Basically, the way Ethereum treats Ether, its native currency, is the approach  Miden takes for all assets. 
+Miden continues to make progress toward a public testnet, expected in Q4 of this year. This blog post is the latest in a series covering Miden’s novel architecture, designed to enable developers to build high-throughput, privacy-enhanced applications. 
+
+Miden’s feature set requires a new way of thinking about assets and a new approach to storing them. In order to provide concurrency and privacy, assets need to be treated natively. Basically, the way Ethereum treats Ether, its native currency, is the approach  Miden takes for all assets. 
 
 This post will cover the design of  Miden’s asset model, how it compares to Ethereum’s, and how it allows for new features when implemented on an execution layer. The core goal of  Miden is to extend the feature set of the EVM to create a forward-looking scaling solution that still inherits Ethereum’s security. 
 
