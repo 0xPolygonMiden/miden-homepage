@@ -4,7 +4,7 @@ const MidenInfo = () => (
   <div className="flex items-center justify-center min-h-screen">
     <div className="max-w-screen-md p-4 text-left">
       <h1 className="text-4xl font-bold mb-2 text-center">Miden</h1>
-      <h2 className="text-2xl font-semibold mb-4 text-center">Privacy Scales Better</h2>
+      {/* <h2 className="text-2xl font-semibold mb-4 text-center">Privacy Scales Better</h2> */}
       <p className="text-base leading-relaxed">
         Miden is the next-generation blockchain protocol designed from the ground up to take full 
         advantage of the capabilities unlocked by ZK technology. It takes the core concept of ZK 
