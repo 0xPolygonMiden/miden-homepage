@@ -64,7 +64,7 @@ Having on-chain and off-chain account data combined with the ability to prove st
 
 At DevCon 6, in Bogotá, Colombia, Miden co-founder Bobbin Threadbare spoke about flexible transaction modes and how our state model is designed to build a decentralized scalable rollup.
 
-![transaction modes](https://github.com/0xPolygonMiden/miden-homepage/blob/9cf573b79384540579a5c94562d2bc13f404de5d/src/assets/Image/initial_1.png)
+![transaction modes](../../assets/initial_1.png)
 
 [![Bobbin Bogota](https://img.youtube.com/vi/TEPY19-hie4/0.jpg)](https://www.youtube.com/watch?v=TEPY19-hie4)
 
