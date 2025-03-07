@@ -2,18 +2,21 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
 const markdown = `
-# Goal: Extend Ethereum’s feature set  
+# The future of blockchains is off-chain
 
-Ethereum is designed to be a base layer that evolves slowly and provides stability. Rollups allow the creation of new design spaces while retaining the security of Ethereum. This makes a rollup the perfect place to innovate and enable new functionality. 
-For Miden, the aim is to extend Ethereum's feature set.
+The future of blockchains is off-chain. Blockchain is one of the most transformative technologies of our generation. However, no L1 or L2 is currently ready for mass adoption. Either because they do not scale, cannot provide privacy, are difficult to develop on, or sacrifice fundamental principles of web3 (self-custody and censorship-resistance). The underlying cause is that virtually all current blockchains were designed before the advent of the Zero-Knowledge (ZK) technology. Even the existing ZK-based solutions are frequently just carbon-copies of pre-ZK designs with ZK technology added on, and thus, carry over design limitations of the previous generations.
 
-Unlike many other rollups, Miden prioritizes ZK-friendliness over EVM compatibility. It also uses a novel state model to exploit the full power of a ZK-centric design. These design decisions allow developers to create applications that are currently difficult or impractical to build on account-based systems. 
+Miden prioritizes ZK-friendliness over EVM compatibility. It also uses a novel state model to exploit the full power of a ZK-centric design. These design decisions allow developers to create applications that are currently difficult or impractical to build on account-based systems.
 
-With that in place, Miden extends Ethereum on three core dimensions to attract billions of users: scalability, safety, and privacy.
+Miden is the next-generation blockchain protocol engineered to leverage the full potential of ZK technology, pushing both execution and state to the edge (i.e., the client side). This resolves fundamental issues in blockchain scalability, privacy, and safety, ensuring a new level of performance and user experience. The three main benefits of the Miden design are:
+
+1. **Unbounded scalability**: Through client-side proving, Miden allows users to execute and prove transactions locally without requiring the network to re-execute them. This enables the network to verify massive volumes of transactions concurrently and drastically reduces on-chain state storage requirements.
+2. **Privacy by default**: With client-side execution and a self-custodied state, users maintain complete control over their data and transaction details. The network only needs to know commitments to states, enabling private transactions and applications.
+3. **Safe development for the masses**: Miden prioritizes developer safety and accessibility by leveraging Rust as the primary smart contract language and incorporating in-protocol safeguards like account abstraction and self-custodied state. These features make smart contracts more secure, reducing attack surfaces and making blockchain development more approachable for crypto-native and traditional developers alike.
 
 ## Scalability
 
-To achieve ultimate scalability, Miden radically changes how blockchains are designed and the paradigm that everything in a blockchain must be transparent to be verifiable. 
+To achieve ultimate scalability, Miden radically changes how blockchains are designed and the paradigm that everything in a blockchain must be transparent to be verifiable.
 Blockchains verify by re-executing. Re-executing requires transparency and processing power. Verification by re-execution slows blockchains down. Zero-knowledge proofs offer the possibility to verify without re-execution. Zero-knowledge verification doesn’t need transparency or processing power. In Miden, users can generate their own proofs, and the network verifies them.
 
 This is the most important change in Miden. Users can execute smart contracts locally. Specifically, for anything that doesn’t touch the public state, users can execute smart contracts on their devices and then send ZK proofs to the network. The operators can then verify these ZK proofs exponentially faster than executing the original transactions and update the state accordingly. 
@@ -62,14 +65,16 @@ Additionally, Miden accounts can live either on-chain or off-chain. For on-chain
 
 Having on-chain and off-chain account data combined with the ability to prove state changes locally or by the network leaves us with flexible transaction modes. 
 
+<Picture 1.1>
+
 At DevCon 6, in Bogotá, Colombia, Miden co-founder Bobbin Threadbare spoke about flexible transaction modes and how our state model is designed to build a decentralized scalable rollup.
 
 [![Bobbin Bogota](https://img.youtube.com/vi/TEPY19-hie4/0.jpg)](https://www.youtube.com/watch?v=TEPY19-hie4)
 
 ## Paradigm Shifts
- Miden aims to unlock new use cases and applications. The prevailing idea is that everything in a blockchain must be transparent to be verifiable. But in  Miden, actors can prove correctness and don’t need to be transparent.
+Miden aims to unlock new use cases and applications. The prevailing idea is that everything in a blockchain must be transparent to be verifiable. But in  Miden, actors can prove correctness and don’t need to be transparent.
 
- Miden combines core concepts of Ethereum, Bitcoin, and modern concurrent databases, all powered by the trustless security of ZK proofs. What will emerge are the dimensions of an elastic, general-purpose ZK rollup that is optimized for high-throughput, computation-heavy applications where privacy is also a priority. 
+Miden combines core concepts of Ethereum, Bitcoin, and modern concurrent databases, all powered by the trustless security of ZK proofs. What will emerge are the dimensions of an elastic, general-purpose ZK rollup that is optimized for high-throughput, computation-heavy applications where privacy is also a priority. 
 
 Our architectural foundations are set to enable enormous throughput, low fees and privacy in future iterations. However, like all rollups, we will start with training wheels. We will communicate our roadmap soon.
 

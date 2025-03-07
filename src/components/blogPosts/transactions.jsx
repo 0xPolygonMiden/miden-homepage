@@ -14,6 +14,8 @@ In Miden, there are accounts and notes, both of which can hold assets. Transacti
 
 In Miden, accounts hold assets and define rules of how these assets can be transferred. This is quite similar to how accounts work on Ethereum, but there are some important differences.
 
+< Picture 2.1 >
+
 First, in Miden, every account has code, whereas, on Ethereum, externally owned accounts (EOAs) do not. That means all accounts on Miden are smart contracts—the concept is called Account Abstraction. That leads to a better user experience and safer wallets—imagine the ability to rotate keys, rate limit, social recovery, among others.
 
 Second, in Miden, assets are stored locally in the account. On Ethereum, only ETH balances are stored locally in the accounts. This means that the account’s data structure is the only place where information about the account’s ETH balance is stored. In contrast, in Miden, all assets are stored locally in the account. This provides privacy and scalability. If you recall, in Miden, users can keep the account data private. Information about what assets or code a certain account holds does not need to be visible to others.
@@ -36,7 +38,11 @@ Consider the following: On Ethereum, sending $5 from one account to another mean
 
 When accounts consume or produce notes, we call that a transaction. A transaction is always executed against a single account, and it causes a state change in that single account.
 
+< Picture 2.2 >
+
 That means sending an asset from one account to another requires two transactions: one transaction to create the note and another transaction to consume that note by another account.
+
+< Picture 2.3 >
 
 Think of the above example: When you put the $5 bill in the lockbox, that’s your individual state transition and the first transaction. However, when this second person takes the $5 bill from the lockbox, her own individual state transition has occurred, plus $5. These are the two transactions for transferring one asset in Miden. This second person could even open several lockboxes simultaneously and “consume” all bills in one transaction.
 
@@ -55,6 +61,8 @@ Ok, so Miden accounts can locally execute and prove their transactions because a
 Basically, an account that needs its state to be public cannot execute and prove its transactions locally. Those network transactions must be executed and proven by the Miden operator. In this case, Miden works similarly to all other ZK Rollups, where specialized provers create the proofs of valid state transitions.
 
 Let’s look at the architecture of how two accounts can swap tokens with a Uniswap-like contract. From left to right, we can break down this sequence into discrete phases.
+
+< Picture 2.4 >
 
 Token Swap Initiation
 
