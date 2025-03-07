@@ -30,6 +30,8 @@ Account database: This describes the latest state of each account in a tiered sp
 Note database: This captures all notes in an append-only Merkle Mountain Range
 Nullifier database: This captures whether a note was already consumed in a tiered sparse Merkle tree
 
+< Picture 5.1 >
+
 Why does  Miden have two databases for notes? The note database is append-only and permanently stores all notes, while the nullifier database stores which notes cannot be consumed anymore. Separating note storage into these two databases gives  Miden client-side proving and advanced privacy.
 
 When users create proofs locally, they must prove that a note they want to consume is in the note database. The Merkle path to that note is used as witness data for the proof. In an append-only data structure like the Merkle Mountain Range, this witness data does not become stale when the data structure is updated. That means users can generate valid proofs even if they don’t have the latest state of this database, so there is no need to query the operator on a constantly changing state. This is not true, for example, for Merkle trees, as the root of the tree changes with every update.
@@ -60,6 +62,7 @@ As mentioned, operators must still store the full nullifier database for block v
 
 So, in  Miden, there are epochs, and a new nullifier database is created after every epoch. The operator stores the last two full trees and all historical nullifiers’ tree roots. That means older notes can still be spent; only there is a bit more work to be done by the user. By adding this epoch parameter to the nullifier database, the primary driver of state bloat becomes transactions per second.  
 
+< Picture 5.2 >
 
 Block production with only part of the state is possible with  Miden’s concurrent state model. A block contains the newly created notes and nullifiers. Notes are simply appended to the Notes Database. For nullifiers, the operator needs to update a Merkle Tree, which, as mentioned, requires knowledge of the full tree. 
 

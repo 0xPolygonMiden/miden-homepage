@@ -26,8 +26,9 @@ On  Miden, users can create and trade arbitrary fungible and non-fungible assets
 Faucets: Asset issuance
 On  Miden, specialized accounts—called faucets—can issue assets. However, anyone can create these accounts. Faucets can either issue fungible or non-fungible assets. The customizable code in those accounts defines the asset's properties, e.g., who can issue and when and what the maximum supply is. This way, it works similarly to the Ethereum ERC20 model. 
 
-The difference is that faucets do not track ownership. Instead, they produce notes in executing transactions to distribute the assets. As described in  Miden’s transaction model, those notes carry the newly created assets to be consumed by other accounts. That way, one can mint a million NFTs locally in a single transaction and then send them out, as needed, in separate transactions in the future. If executed privately, the network would lose track of asset ownership from then on; one cannot query the asset account to get a balance. 
+The difference is that faucets do not track ownership. Instead, they produce notes in executing transactions to distribute the assets. As described in  Miden’s transaction model, those notes carry the newly created assets to be consumed by other accounts. That way, one can mint a million NFTs locally in a single transaction and then send them out, as needed, in separate transactions in the future. If executed privately, the network would lose track of asset ownership from then on; one cannot query the asset account to get a balance.
 
+< Picture 3.1 >
 
 ## Asset encoding
 Assets need to follow a certain format so that every participant can easily identify them as such. Asset encoding defines the standardized form used to preserve information about the asset and to transmit or store it.    
@@ -35,6 +36,8 @@ Assets need to follow a certain format so that every participant can easily iden
 On  Miden, all native assets are encoded using 256 bits. The asset encodes both the ID of the faucet and the respective asset details. Having the issuer's ID encoded in the asset makes it cost-efficient to determine the type of an asset inside and outside the Miden VM. And, representing the asset in a ‘Word’ means the representation is always a commitment to the asset data itself. This is particularly interesting for non-fungible assets, where the asset encoding expresses the asset itself.  
 Asset storage
 On  Miden, all assets are stored in the owner’s account itself or in a note. Accounts and notes have vaults to store them. Accounts may store an unlimited number of assets in a tiered sparse Merkle tree. Notes store assets in vectors of length 255.
+
+< Picture 3.2 >
 
 Storing assets directly in accounts provides several benefits, including parallelizable transactions, off-chain storage, and programmable transaction fees. 
 

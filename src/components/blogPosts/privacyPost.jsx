@@ -56,7 +56,9 @@ Public storage implies no privacy, as all data is stored on-chain and visible to
 
 Users can modify the stored data (public, encrypted, or off-chain) through transactions. By executing and proving transactions locally,  Miden ensures user privacy. With private data storage (encrypted or off-chain) and local transaction execution, transaction data is visible only to the direct participants. 
 
-Using relay accounts, for example, could even obscure the sender of an asset from the receiver. This makes absolute privacy possible on  Miden. 
+Using relay accounts, for example, could even obscure the sender of an asset from the receiver. This makes absolute privacy possible on  Miden.
+
+< Picture 4.1 >
 
 ## Remaining Privacy Challenges
 This claim of absolute privacy raises a question: Can an experienced observer gain some information by monitoring the network's state and its changes? 
@@ -64,6 +66,8 @@ This claim of absolute privacy raises a question: Can an experienced observer ga
 As noted, in  Miden, there are accounts and notes. The data of which can be stored off-chain, and the observer only sees a commitment. However, every note in  Miden has a unique nullifier that points to either 0 or 1, depending on whether the note is already consumed. Now, the observer could watch the nullifier database and observe with which transaction a certain nullifier changes.
 
 For public notes, it is possible to watch the nullifier database and gain information about who consumes a note. In this case, the note data is publicly visible, and the network knows the sender, the recipient, and the assets involved. However, for notes that are stored off-chain, the network only knows the sender and the note hash, with even the sender being mask-able. Outsiders cannot compute and know the nullifier with this information.
+
+< Picture 4.2 >
 
 There remain aspects of the network that could inhibit absolute privacy, such as operators gaining knowledge from user requests. Addressing this issue is an active area of design for the researchers working on  Miden, with potential solutions including having users request more notes than needed and applying local filters.
 
