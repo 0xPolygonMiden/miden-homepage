@@ -12,6 +12,7 @@ export default [
     route("/testnet", "routes/testnet.tsx"),
     route("/resources", "routes/resources.tsx"),
     route("/resources/blog", "routes/blog/index.tsx"),
+    route("/developers", "routes/developers.tsx"),
   ]),
 
   ...(await flatRoutes({
