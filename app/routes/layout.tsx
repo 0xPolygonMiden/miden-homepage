@@ -1,0 +1,29 @@
+import { Link, Outlet } from "react-router";
+import { Banner } from "~/components/banner";
+import { Footer } from "~/components/footer";
+import { Navigation } from "~/components/navigation";
+
+export default function Layout() {
+  return (
+    <main className="w-full flex flex-col min-h-dvh max-w-4xl text-sm md:px-12 mx-auto">
+      <Banner
+        message={
+          <p>
+            Try Miden today and{" "}
+            <Link
+              to="/docs"
+              prefetch="intent"
+              className="underline underline-offset-2"
+            >
+              get started here
+            </Link>
+            .
+          </p>
+        }
+      />
+      <Navigation />
+      <Outlet />
+      <Footer />
+    </main>
+  );
+}
