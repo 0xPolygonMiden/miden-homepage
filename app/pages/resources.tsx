@@ -1,6 +1,7 @@
 import type { SVGProps } from "react";
 import { Link } from "react-router";
 import { Container, Header } from "~/components/container";
+import { ListItem } from "~/components/list";
 import type { Post } from "~/lib/posts";
 
 const articles = [
@@ -33,98 +34,77 @@ const articles = [
 
 export function PageResources({ posts }: { posts: Post[] }) {
   return (
-    <>
-      <Container>
+    <div className="flex-1">
+      <Container className="flex-none">
         <Header>
           <h2>All we have to say about Miden</h2>
         </Header>
       </Container>
-
-      <div className="mt-6">
-        <h3 className="my-6 px-6 w-miden">Blog</h3>
+      <div className="mb-6">
+        <h3 className="my-3 px-6 w-miden">Blog</h3>
         <ul className="flex flex-col">
           {posts.map((post) => (
             <li key={post.slug}>
-              <Link
-                to={`/resources/blog/${post.slug}`}
-                prefetch="intent"
-                className="py-1.5 flex hover:bg-secondary transition-colors hover:duration-100 duration-300"
-              >
-                <div className="w-full px-6 w-miden flex items-center gap-3">
-                  <time className="text-accent">{post.date}</time>
-                  <h4 className="text-neutral-600">{post.title}</h4>
-                </div>
-              </Link>
+              <ListItem to={`/resources/blog/${post.slug}`}>
+                <time className="text-accent">{post.date}</time>
+                <h4 className="text-neutral-600">{post.title}</h4>
+              </ListItem>
             </li>
           ))}
         </ul>
         <Link
           prefetch="intent"
           to="/resources/blog"
-          className="my-6 w-miden w-miden block underline underline-offset-2 px-6"
+          className="my-3 w-miden w-miden block underline underline-offset-2 px-6"
         >
           {">>"} Explore more articles
         </Link>
       </div>
-
-      <div className="mt-6">
-        <h3 className="my-6 w-miden px-6">Research papers</h3>
+      <div className="mb-6">
+        <h3 className="my-3 w-miden px-6">Research papers</h3>
         <ul className="flex flex-col">
           {articles.map((item) => (
             <li key={item.label}>
-              <Link
-                to={item.href}
-                prefetch="intent"
-                className="px-6 py-1.5 flex hover:bg-secondary transition-colors hover:duration-100 duration-300"
-              >
-                <div className="w-full px-6 w-miden flex items-center gap-3">
-                  <div className="h-5 text-accent flex items-center justify-center">
-                    <IconPaper className="size-3.5" />
-                  </div>
-                  <h4 className="text-neutral-600">{item.label}</h4>
+              <ListItem to={item.href}>
+                <div className="h-5 text-accent flex items-center justify-center">
+                  <IconPaper className="size-3.5" />
                 </div>
-              </Link>
+                <h4 className="text-neutral-600">{item.label}</h4>
+              </ListItem>
             </li>
           ))}
         </ul>
         <Link
           prefetch="intent"
           to="/resources/blog"
-          className="my-6 w-miden block underline underline-offset-2 px-6"
+          className="my-3 w-miden block underline underline-offset-2 px-6"
         >
           {">>"} Continue your research
         </Link>
       </div>
-
-      <div className="mt-6">
-        <h3 className="my-6 w-miden px-6">Talks</h3>
+      <div className="mb-6">
+        <h3 className="my-3 w-miden px-6">Talks</h3>
         <ul className="flex flex-col">
           {articles.map((item) => (
             <li key={item.label}>
-              <Link
-                to={item.href}
-                prefetch="intent"
-                className="px-6 py-1.5 flex hover:bg-secondary transition-colors hover:duration-100 duration-300"
-              >
-                <div className="w-full px-6 w-miden flex items-center gap-3">
-                  <div className="h-5 text-accent flex items-center justify-center">
-                    <IconTalk className="size-3.5" />
-                  </div>
-                  <h4 className="text-neutral-600">{item.label}</h4>
+              <ListItem to={item.href}>
+                <div className="h-5 text-accent flex items-center justify-center">
+                  <IconTalk className="size-3.5" />
                 </div>
-              </Link>
+                <h4 className="text-neutral-600">{item.label}</h4>
+              </ListItem>
             </li>
           ))}
         </ul>
         <Link
           prefetch="intent"
           to="/resources/blog"
-          className="my-6 w-miden block underline underline-offset-2 px-6"
+          className="my-3 w-miden block underline underline-offset-2 px-6"
         >
           {">>"} Explore all talks
         </Link>
       </div>
-    </>
+    </div>
   );
 }
 

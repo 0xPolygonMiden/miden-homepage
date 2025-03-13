@@ -2,7 +2,11 @@ import type { HtmlHTMLAttributes } from "react";
 import { cn } from "~/lib/utils";
 
 export function Container(props: HtmlHTMLAttributes<HTMLElement>) {
-  return <section className="py-3 flex-1">{props.children}</section>;
+  return (
+    <section className={cn("py-3 flex-1", props.className)}>
+      {props.children}
+    </section>
+  );
 }
 
 export function Header(props: HtmlHTMLAttributes<HTMLElement>) {
