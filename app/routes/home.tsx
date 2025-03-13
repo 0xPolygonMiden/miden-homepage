@@ -5,6 +5,6 @@ export function meta({}: Route.MetaArgs) {
   return [{ title: "Miden" }];
 }
 
-export default function Home({}: Route.ComponentProps) {
+export default function RouteHome({}: Route.ComponentProps) {
   return <PageHome />;
 }

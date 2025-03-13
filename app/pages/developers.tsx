@@ -1,27 +1,8 @@
 import { Link } from "react-router";
 import { Container, Header } from "~/components/container";
+import type { Item } from "~/routes/developers";
 
-const items = [
-  {
-    label: "Miden Docs",
-    description:
-      "Everything you need to know to get started building with Miden.",
-    link: {
-      href: "/",
-      label: "Explorer",
-    },
-  },
-  {
-    label: "Miden Playground",
-    description: "Start experimenting with Miden.",
-    link: {
-      href: "/",
-      label: "Explorer",
-    },
-  },
-];
-
-export function PageDevelopers() {
+export function PageDevelopers({ items }: { items: Item[] }) {
   return (
     <Container>
       <Header>

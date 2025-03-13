@@ -18,7 +18,7 @@ export function getPosts(): Post[] {
     };
   });
 
-  return posts;
+  return posts ?? [];
 }
 
 export function getFeaturedPosts(): Post[] {

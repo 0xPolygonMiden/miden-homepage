@@ -2,37 +2,20 @@ import type { SVGProps } from "react";
 import { Link } from "react-router";
 import { Container, Header } from "~/components/container";
 import { ListItem } from "~/components/list";
+import type { Paper } from "~/lib/papers";
 import type { Post } from "~/lib/posts";
+import type { Talk } from "~/lib/talks";
 
-const articles = [
-  {
-    label: "Miden’s Asset Model: How every asset is native",
-    date: "17.03.25",
-    href: "/",
-  },
-  {
-    label: "Privacy simply scales better",
-    date: "17.03.25",
-    href: "/",
-  },
-  {
-    label: "Miden: Transaction Model",
-    date: "17.03.25",
-    href: "/",
-  },
-  {
-    label: "Miden: State Model",
-    date: "17.03.25",
-    href: "/",
-  },
-  {
-    label: "Ethereum’s feature set extended",
-    date: "17.03.25",
-    href: "/",
-  },
-];
-
-export function PageResources({ posts }: { posts: Post[] }) {
+export function PageResources({
+  posts,
+  papers,
+  talks,
+}: {
+  posts: Post[];
+  papers: Paper[];
+  talks: Talk[];
+}) {
+  console.log({ posts, papers, talks });
   return (
     <div className="flex-1">
       <Container className="flex-none">
@@ -40,70 +23,76 @@ export function PageResources({ posts }: { posts: Post[] }) {
           <h2>All we have to say about Miden</h2>
         </Header>
       </Container>
-      <div className="mb-6">
-        <h3 className="my-3 px-6 w-miden">Blog</h3>
-        <ul className="flex flex-col">
-          {posts.map((post) => (
-            <li key={post.slug}>
-              <ListItem to={`/resources/blog/${post.slug}`}>
-                <time className="text-accent">{post.date}</time>
-                <h4 className="text-neutral-600">{post.title}</h4>
-              </ListItem>
-            </li>
-          ))}
-        </ul>
-        <Link
-          prefetch="intent"
-          to="/resources/blog"
-          className="my-3 w-miden w-miden block underline underline-offset-2 px-6"
-        >
-          {">>"} Explore more articles
-        </Link>
-      </div>
-      <div className="mb-6">
-        <h3 className="my-3 w-miden px-6">Research papers</h3>
-        <ul className="flex flex-col">
-          {articles.map((item) => (
-            <li key={item.label}>
-              <ListItem to={item.href}>
-                <div className="h-5 text-accent flex items-center justify-center">
-                  <IconPaper className="size-3.5" />
-                </div>
-                <h4 className="text-neutral-600">{item.label}</h4>
-              </ListItem>
-            </li>
-          ))}
-        </ul>
-        <Link
-          prefetch="intent"
-          to="/resources/blog"
-          className="my-3 w-miden block underline underline-offset-2 px-6"
-        >
-          {">>"} Continue your research
-        </Link>
-      </div>
-      <div className="mb-6">
-        <h3 className="my-3 w-miden px-6">Talks</h3>
-        <ul className="flex flex-col">
-          {articles.map((item) => (
-            <li key={item.label}>
-              <ListItem to={item.href}>
-                <div className="h-5 text-accent flex items-center justify-center">
-                  <IconTalk className="size-3.5" />
-                </div>
-                <h4 className="text-neutral-600">{item.label}</h4>
-              </ListItem>
-            </li>
-          ))}
-        </ul>
-        <Link
-          prefetch="intent"
-          to="/resources/blog"
-          className="my-3 w-miden block underline underline-offset-2 px-6"
-        >
-          {">>"} Explore all talks
-        </Link>
-      </div>
+      {posts.length > 0 && (
+        <div className="mb-6">
+          <h3 className="my-3 px-6 w-miden">Blog</h3>
+          <ul className="flex flex-col">
+            {posts.map((item) => (
+              <li key={item.slug}>
+                <ListItem to={`/resources/blog/${item.slug}`}>
+                  <time className="text-accent">{item.date}</time>
+                  <h4 className="text-neutral-600">{item.title}</h4>
+                </ListItem>
+              </li>
+            ))}
+          </ul>
+          <Link
+            prefetch="intent"
+            to="/resources/blog"
+            className="my-3 w-miden w-miden block underline underline-offset-2 px-6"
+          >
+            {">>"} Explore more articles
+          </Link>
+        </div>
+      )}
+      {papers.length > 0 && (
+        <div className="mb-6">
+          <h3 className="my-3 w-miden px-6">Research papers</h3>
+          <ul className="flex flex-col">
+            {papers.map((item) => (
+              <li key={item.slug}>
+                <ListItem to={`/resources/research/${item.slug}`}>
+                  <div className="h-5 text-accent flex items-center justify-center">
+                    <IconPaper className="size-3.5" />
+                  </div>
+                  <h4 className="text-neutral-600">{item.title}</h4>
+                </ListItem>
+              </li>
+            ))}
+          </ul>
+          <Link
+            prefetch="intent"
+            to="/resources/blog"
+            className="my-3 w-miden block underline underline-offset-2 px-6"
+          >
+            {">>"} Continue your research
+          </Link>
+        </div>
+      )}
+      {talks.length > 0 && (
+        <div className="mb-6">
+          <h3 className="my-3 w-miden px-6">Talks</h3>
+          <ul className="flex flex-col">
+            {talks.map((item) => (
+              <li key={item.slug}>
+                <ListItem to={`/resources/talks/${item.slug}`}>
+                  <div className="h-5 text-accent flex items-center justify-center">
+                    <IconTalk className="size-3.5" />
+                  </div>
+                  <h4 className="text-neutral-600">{item.title}</h4>
+                </ListItem>
+              </li>
+            ))}
+          </ul>
+          <Link
+            prefetch="intent"
+            to="/resources/blog"
+            className="my-3 w-miden block underline underline-offset-2 px-6"
+          >
+            {">>"} Explore all talks
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

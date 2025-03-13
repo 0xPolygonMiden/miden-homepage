@@ -1,4 +1,4 @@
-import type { Route } from ".react-router/types/app/content/+types/resources.blog";
+import type { Route } from "./+types/resources";
 import { Link, NavLink, Outlet } from "react-router";
 import { Banner } from "~/components/banner";
 import { Container, Header } from "~/components/container";

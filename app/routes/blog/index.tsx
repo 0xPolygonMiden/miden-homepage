@@ -1,4 +1,4 @@
-import type { Route } from ".react-router/types/app/routes/blog/+types";
+import type { Route } from "./+types/index";
 import { getFeaturedPosts } from "~/lib/posts.server";
 import { PageBlog } from "~/pages/blog";
 

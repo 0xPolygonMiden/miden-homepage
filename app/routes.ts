@@ -13,6 +13,7 @@ export default [
     route("/resources", "routes/resources.tsx"),
     route("/resources/blog", "routes/blog/index.tsx"),
     route("/developers", "routes/developers.tsx"),
+    route("/ecosystem", "routes/ecosystem.tsx"),
   ]),
 
   ...(await flatRoutes({
@@ -23,6 +24,7 @@ export default [
       "routes/testnet.tsx",
       "routes/resources.tsx",
       "routes/blog/index.tsx",
+      "routes/developers.tsx",
     ],
   })),
 ] satisfies RouteConfig;

@@ -5,6 +5,6 @@ export function meta({}: Route.MetaArgs) {
   return [{ title: "Testnet – Miden" }];
 }
 
-export default function Home({}: Route.ComponentProps) {
+export default function RouteTestnet({}: Route.ComponentProps) {
   return <PageTestnet />;
 }
