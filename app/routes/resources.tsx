@@ -1,17 +1,17 @@
-import { getPosts } from "~/lib/posts.server";
+import { getFeaturedPapers } from "~/lib/papers.server";
+import { getFeaturedPosts } from "~/lib/posts.server";
+import { getFeaturedTalks } from "~/lib/talks.server";
 import { PageResources } from "~/pages/resources";
 import type { Route } from "./+types/resources";
-import { getPapers } from "~/lib/papers.server";
-import { getTalks } from "~/lib/talks.server";
 
 export function meta({}: Route.MetaArgs) {
   return [{ title: "Resources – Miden" }];
 }
 
 export function loader({}: Route.LoaderArgs) {
-  const posts = getPosts();
-  const papers = getPapers();
-  const talks = getTalks();
+  const posts = getFeaturedPosts();
+  const papers = getFeaturedPapers();
+  const talks = getFeaturedTalks();
 
   return {
     posts,

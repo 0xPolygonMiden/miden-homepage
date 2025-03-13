@@ -11,16 +11,18 @@ export function PageDevelopers({ items }: { items: Item[] }) {
 
       <div className="mt-6 w-miden grid sm:grid-cols-2 grid-cols-1 gap-3">
         {items.map((item) => (
-          <div key={item.label} className="border p-6">
+          <Link
+            to={item.link.href}
+            prefetch="intent"
+            key={item.label}
+            className="border p-6"
+          >
             <h4 className="border-b w-fit pb-2">{item.label}</h4>
             <p className="text-neutral-600 my-6">{item.description}</p>
-            <Link
-              to={item.link.href}
-              className="size-4 bg-accent text-accent-foreground flex items-center justify-center"
-            >
+            <span className="size-4 bg-accent text-accent-foreground flex items-center justify-center">
               ↗<span className="sr-only">{item.link.label}</span>
-            </Link>
-          </div>
+            </span>
+          </Link>
         ))}
       </div>
     </Container>

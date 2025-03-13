@@ -8,22 +8,29 @@ import { getPost } from "~/lib/posts.server";
 
 export function loader({ request }: Route.LoaderArgs) {
   const url = new URL(request.url);
-  const slug = url.pathname.split("/").pop();
+  const pathname = url.pathname.split("/");
 
+  const slug = pathname.pop();
   if (!slug) {
     return new Response("Not found", { status: 404 });
   }
 
-  const post = getPost(slug);
-
-  if (!post) {
+  const category = pathname[pathname.length - 1];
+  if (!category) {
     return new Response("Not found", { status: 404 });
   }
 
-  return { post };
+  const data = getPost(slug);
+  if (!data) {
+    return new Response("Not found", { status: 404 });
+  }
+
+  return { data, category };
 }
 
-export default function Layout({ loaderData: { post } }: Route.ComponentProps) {
+export default function Layout({
+  loaderData: { data, category },
+}: Route.ComponentProps) {
   return (
     <main className="w-full flex flex-col min-h-dvh text-sm md:px-12 mx-auto">
       <Banner
@@ -45,20 +52,19 @@ export default function Layout({ loaderData: { post } }: Route.ComponentProps) {
       <Container>
         <Header>
           <div className="flex items-center gap-2 text-neutral-500">
-            <span>/</span>
             <NavLink to="/resources" prefetch="intent">
               Resources
             </NavLink>
             <span>/</span>
-            <NavLink to="/resources/blog" prefetch="intent">
-              Blog
+            <NavLink to={`/resources/${category}`} prefetch="intent">
+              {category}
             </NavLink>
             <span>/</span>
             <NavLink
-              to={`/resources/blog/${post.slug}`}
+              to={`/resources/blog/${data.slug}`}
               className="aria-[current='page']:font-bold aria-[current='page']:text-neutral-800"
             >
-              {post.title}
+              {data.title}
             </NavLink>
           </div>
         </Header>
@@ -67,7 +73,6 @@ export default function Layout({ loaderData: { post } }: Route.ComponentProps) {
             <Outlet />
           </div>
         </div>
-        ca
       </Container>
       <Footer />
     </main>

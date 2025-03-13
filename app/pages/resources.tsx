@@ -2,20 +2,17 @@ import type { SVGProps } from "react";
 import { Link } from "react-router";
 import { Container, Header } from "~/components/container";
 import { ListItem } from "~/components/list";
-import type { Paper } from "~/lib/papers";
-import type { Post } from "~/lib/posts";
-import type { Talk } from "~/lib/talks";
+import type { Article } from "~/lib/data";
 
 export function PageResources({
   posts,
   papers,
   talks,
 }: {
-  posts: Post[];
-  papers: Paper[];
-  talks: Talk[];
+  posts: Article[];
+  papers: Article[];
+  talks: Article[];
 }) {
-  console.log({ posts, papers, talks });
   return (
     <div className="flex-1">
       <Container className="flex-none">
@@ -23,6 +20,7 @@ export function PageResources({
           <h2>All we have to say about Miden</h2>
         </Header>
       </Container>
+
       {posts.length > 0 && (
         <div className="mb-6">
           <h3 className="my-3 px-6 w-miden">Blog</h3>
@@ -45,13 +43,14 @@ export function PageResources({
           </Link>
         </div>
       )}
+
       {papers.length > 0 && (
         <div className="mb-6">
           <h3 className="my-3 w-miden px-6">Research papers</h3>
           <ul className="flex flex-col">
             {papers.map((item) => (
               <li key={item.slug}>
-                <ListItem to={`/resources/research/${item.slug}`}>
+                <ListItem to={`/resources/papers/${item.slug}`}>
                   <div className="h-5 text-accent flex items-center justify-center">
                     <IconPaper className="size-3.5" />
                   </div>
@@ -62,13 +61,14 @@ export function PageResources({
           </ul>
           <Link
             prefetch="intent"
-            to="/resources/blog"
+            to="/resources/papers"
             className="my-3 w-miden block underline underline-offset-2 px-6"
           >
             {">>"} Continue your research
           </Link>
         </div>
       )}
+
       {talks.length > 0 && (
         <div className="mb-6">
           <h3 className="my-3 w-miden px-6">Talks</h3>
@@ -86,7 +86,7 @@ export function PageResources({
           </ul>
           <Link
             prefetch="intent"
-            to="/resources/blog"
+            to="/resources/talks"
             className="my-3 w-miden block underline underline-offset-2 px-6"
           >
             {">>"} Explore all talks

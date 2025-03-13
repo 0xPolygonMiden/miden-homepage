@@ -1,7 +1,7 @@
 import type { ReactElement } from "react";
-import type { Frontmatter, Post } from "~/lib/posts";
+import type { Article, Frontmatter } from "./data";
 
-export function getPosts(): Post[] {
+export function getPosts(): Article[] {
   const modules = import.meta.glob<{
     frontmatter: Frontmatter;
     default: (props: any) => ReactElement;
@@ -21,12 +21,12 @@ export function getPosts(): Post[] {
   return posts ?? [];
 }
 
-export function getFeaturedPosts(): Post[] {
+export function getFeaturedPosts(): Article[] {
   const allPosts = getPosts();
   return allPosts.filter((post) => post.featured);
 }
 
-export function getPost(slug: string): Post | undefined {
+export function getPost(slug: string): Article | undefined {
   const allPosts = getPosts();
   return allPosts.find((post) => post.slug === slug);
 }

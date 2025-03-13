@@ -5,6 +5,12 @@ export type Frontmatter = {
   featured?: boolean;
 };
 
-export type Paper = {
+export enum Category {
+  Blog = "blog",
+  Papers = "papers",
+  Talks = "talks",
+}
+
+export type Article = {
   slug: string;
 } & Frontmatter;

@@ -1,27 +1,38 @@
 import type { ReactElement } from "react";
-import type { Frontmatter, Post } from "~/lib/posts";
+import type { Frontmatter, Article, Category } from "~/lib/data";
 
-export function getPapers(): Post[] {
+export function getAllPapers(): Article[] {
   const modules = import.meta.glob<{
     frontmatter: Frontmatter;
     default: (props: any) => ReactElement;
-  }>("../content/resources.paper.*.mdx", { eager: true });
+  }>(`../content/resources.blog.*.mdx`, { eager: true });
 
-  const papers = Object.entries(modules).map(([file, paper]) => {
+  const articles = Object.entries(modules).map(([file, article]) => {
     let id = file
-      .replace("../content/resources.paper.", "")
+      .replace(`../content/resources.blog.`, "")
       .replace(/\.mdx$/, "");
 
     return {
       slug: id,
-      ...paper.frontmatter,
+      ...article.frontmatter,
     };
   });
 
-  return papers ?? [];
+  return articles ?? [];
 }
 
-export function getPaper(slug: string): Post | undefined {
-  const allPapers = getPapers();
+export function getFeaturedPapers(): Article[] {
+  const allPapers = getAllPapers();
+  return allPapers.filter((paper) => paper.featured);
+}
+
+export function getPaper({
+  slug,
+  category,
+}: {
+  slug: string;
+  category: Category;
+}): Article | undefined {
+  const allPapers = getAllPapers();
   return allPapers.find((paper) => paper.slug === slug);
 }
