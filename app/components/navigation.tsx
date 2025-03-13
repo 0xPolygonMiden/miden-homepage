@@ -26,9 +26,9 @@ const items = [
 
 export function Navigation() {
   return (
-    <nav className="p-6 border border-t-0 pr-3 flex items-center justify-between gap-4">
+    <nav className="pl-6 py-3 border-b pr-3 flex items-center justify-between gap-4 text-xs w-miden">
       <Link to="/" prefetch="intent">
-        <Logo className="h-5 shrink-0" />
+        <Logo className="h-9 shrink-0" />
       </Link>
       <ul className="items-center justify-end hidden md:flex">
         {items.map((item) => (
@@ -36,7 +36,7 @@ export function Navigation() {
             <NavLink
               to={item.href}
               prefetch="intent"
-              className="px-3 aria-[current='page']:font-bold"
+              className="px-3 aria-[current='page']:text-primary"
             >
               {item.label}
             </NavLink>

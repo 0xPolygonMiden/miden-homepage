@@ -33,22 +33,27 @@ const articles = [
 
 export function PageResources({ posts }: { posts: Post[] }) {
   return (
-    <Container>
-      <Header>
-        <h2>All we have to say about Miden</h2>
-      </Header>
+    <>
+      <Container>
+        <Header>
+          <h2>All we have to say about Miden</h2>
+        </Header>
+      </Container>
+
       <div className="mt-6">
-        <h3 className="my-6">Blog</h3>
-        <ul className="flex flex-col gap-3">
+        <h3 className="my-6 px-6 w-miden">Blog</h3>
+        <ul className="flex flex-col">
           {posts.map((post) => (
             <li key={post.slug}>
               <Link
                 to={`/resources/blog/${post.slug}`}
                 prefetch="intent"
-                className="flex items-start gap-3"
+                className="py-1.5 flex hover:bg-secondary transition-colors hover:duration-100 duration-300"
               >
-                <time>{post.date}</time>
-                <h4 className="text-neutral-600">{post.title}</h4>
+                <div className="w-full px-6 w-miden flex items-center gap-3">
+                  <time className="text-accent">{post.date}</time>
+                  <h4 className="text-neutral-600">{post.title}</h4>
+                </div>
               </Link>
             </li>
           ))}
@@ -56,26 +61,28 @@ export function PageResources({ posts }: { posts: Post[] }) {
         <Link
           prefetch="intent"
           to="/resources/blog"
-          className="my-6 block underline underline-offset-2"
+          className="my-6 w-miden w-miden block underline underline-offset-2 px-6"
         >
           {">>"} Explore more articles
         </Link>
       </div>
 
       <div className="mt-6">
-        <h3 className="my-6">Research papers</h3>
-        <ul className="flex flex-col gap-3">
+        <h3 className="my-6 w-miden px-6">Research papers</h3>
+        <ul className="flex flex-col">
           {articles.map((item) => (
             <li key={item.label}>
               <Link
                 to={item.href}
                 prefetch="intent"
-                className="flex items-start gap-3"
+                className="px-6 py-1.5 flex hover:bg-secondary transition-colors hover:duration-100 duration-300"
               >
-                <div className="h-5 flex items-center justify-center">
-                  <IconPaper className="size-3.5" />
+                <div className="w-full px-6 w-miden flex items-center gap-3">
+                  <div className="h-5 text-accent flex items-center justify-center">
+                    <IconPaper className="size-3.5" />
+                  </div>
+                  <h4 className="text-neutral-600">{item.label}</h4>
                 </div>
-                <h4 className="text-neutral-600">{item.label}</h4>
               </Link>
             </li>
           ))}
@@ -83,26 +90,28 @@ export function PageResources({ posts }: { posts: Post[] }) {
         <Link
           prefetch="intent"
           to="/resources/blog"
-          className="my-6 block underline underline-offset-2"
+          className="my-6 w-miden block underline underline-offset-2 px-6"
         >
           {">>"} Continue your research
         </Link>
       </div>
 
       <div className="mt-6">
-        <h3 className="my-6">Talks</h3>
-        <ul className="flex flex-col gap-3">
+        <h3 className="my-6 w-miden px-6">Talks</h3>
+        <ul className="flex flex-col">
           {articles.map((item) => (
             <li key={item.label}>
               <Link
                 to={item.href}
                 prefetch="intent"
-                className="flex items-start gap-3"
+                className="px-6 py-1.5 flex hover:bg-secondary transition-colors hover:duration-100 duration-300"
               >
-                <div className="h-5 flex items-center justify-center">
-                  <IconTalk className="size-3.5" />
+                <div className="w-full px-6 w-miden flex items-center gap-3">
+                  <div className="h-5 text-accent flex items-center justify-center">
+                    <IconTalk className="size-3.5" />
+                  </div>
+                  <h4 className="text-neutral-600">{item.label}</h4>
                 </div>
-                <h4 className="text-neutral-600">{item.label}</h4>
               </Link>
             </li>
           ))}
@@ -110,12 +119,12 @@ export function PageResources({ posts }: { posts: Post[] }) {
         <Link
           prefetch="intent"
           to="/resources/blog"
-          className="my-6 block underline underline-offset-2"
+          className="my-6 w-miden block underline underline-offset-2 px-6"
         >
           {">>"} Explore all talks
         </Link>
       </div>
-    </Container>
+    </>
   );
 }
 

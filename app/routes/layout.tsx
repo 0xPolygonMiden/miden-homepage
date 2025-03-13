@@ -5,7 +5,7 @@ import { Navigation } from "~/components/navigation";
 
 export default function Layout() {
   return (
-    <main className="w-full flex flex-col min-h-dvh max-w-4xl text-sm md:px-12 mx-auto">
+    <main className="w-full flex flex-col min-h-dvh text-sm mx-auto">
       <Banner
         message={
           <p>

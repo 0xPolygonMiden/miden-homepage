@@ -46,14 +46,13 @@ const socials = [
 
 export function Footer() {
   return (
-    <footer className="p-6 border border-b-0 flex items-center justify-between gap-4">
+    <footer className="p-6 w-miden border-t flex items-center justify-between gap-4">
       <div className="flex items-center gap-4">
         <Link to="/" prefetch="intent">
-          <Logo className="h-5 shrink-0" />
+          <p className="uppercase text-xs leading-none">
+            For those who <br /> Move the world
+          </p>
         </Link>
-        <p className="uppercase text-xs leading-none">
-          For those who <br /> Move the world
-        </p>
       </div>
       <ul className="flex items-center justify-end text-neutral-400">
         {socials.map((item) => (

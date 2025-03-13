@@ -16,17 +16,20 @@ export function PageBlog({ posts }: { posts: Post[] }) {
       </Header>
 
       <div className="mt-6">
-        <h3 className="my-6">Featured</h3>
-        <ul className="flex flex-col gap-3">
+        <h3 className="my-6 px-6 w-miden">Featured</h3>
+        <ul className="flex flex-col">
           {posts.map((item) => (
             <li key={item.title}>
               <Link
                 prefetch="intent"
                 to={`/resources/blog/${item.slug}`}
-                className="flex items-start gap-3"
+                className="py-1.5 flex hover:bg-secondary transition-colors hover:duration-100 duration-300"
               >
-                <time>{item.date}</time>
-                <h4 className="text-neutral-600">{item.title}</h4>
+                <div className="w-full px-6 w-miden flex items-center gap-3">
+                  <time>{item.date}</time>
+                  <h4 className="text-neutral-600">{item.title}</h4>
+                </div>
+                cla
               </Link>
             </li>
           ))}
