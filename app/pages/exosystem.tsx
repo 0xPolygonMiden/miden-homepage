@@ -10,7 +10,7 @@ export function PageEcosystem({ items }: { items: Item[] }) {
       </Header>
       <div>
         <div className="font-bold w-miden p-6 pb-0">Projects</div>
-        <div className="mt-6 w-miden grid sm:grid-cols-2 md:grid-cols-3 grid-cols-1 gap-3">
+        <div>
           {items.map((item) => (
             <Link
               to={item.link.href}

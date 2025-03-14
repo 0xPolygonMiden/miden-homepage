@@ -57,7 +57,7 @@ export function Footer() {
       <ul className="flex items-center justify-end text-neutral-400">
         {socials.map((item) => (
           <li key={item.label}>
-            <Link to={item.href} className="px-2 block">
+            <Link to={item.href} className="px-2 block" aria-label={item.label}>
               <svg
                 fill="none"
                 viewBox="0 0 14 14"
