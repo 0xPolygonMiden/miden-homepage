@@ -29,7 +29,7 @@ export function PageTalks({ talks }: { talks: Article[] }) {
         <ul className="flex flex-col">
           {talks.map((item) => (
             <li key={item.title}>
-              <ListItem to={`/resources/talks/${item.slug}`}>
+              <ListItem to={`/resource/talks/${item.slug}`}>
                 <time className="text-accent">{item.date}</time>
                 <h4 className="text-neutral-600">{item.title}</h4>
               </ListItem>

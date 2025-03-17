@@ -2,13 +2,13 @@ import type { Article, MDXModule } from "./data";
 
 export function getPosts(): Article[] {
   const modules = import.meta.glob<MDXModule>(
-    "../content/resources.blog.*.mdx",
+    "../content/resource.blog.*.mdx",
     { eager: true }
   );
 
   const posts = Object.entries(modules).map(([path, mod]) => {
     const id = path
-      .replace("../content/resources.blog.", "")
+      .replace("../content/resource.blog.", "")
       .replace(".mdx", "");
 
     return {

@@ -2,13 +2,13 @@ import type { Article, MDXModule } from "./data";
 
 export function getTalks(): Article[] {
   const modules = import.meta.glob<MDXModule>(
-    "../content/resources.talks.*.mdx",
+    "../content/resource.talks.*.mdx",
     { eager: true }
   );
 
   const talks = Object.entries(modules).map(([file, mod]) => {
     let id = file
-      .replace("../content/resources.talks.", "")
+      .replace("../content/resource.talks.", "")
       .replace(/\.mdx$/, "");
 
     return {

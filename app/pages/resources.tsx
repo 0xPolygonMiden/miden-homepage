@@ -27,7 +27,7 @@ export function PageResources({
           <ul className="flex flex-col">
             {posts.map((item) => (
               <li key={item.slug}>
-                <ListItem to={`/resources/blog/${item.slug}`}>
+                <ListItem to={`/resource/blog/${item.slug}`}>
                   <time className="text-accent">{item.date}</time>
                   <h4 className="text-neutral-600">{item.title}</h4>
                 </ListItem>
@@ -50,7 +50,7 @@ export function PageResources({
           <ul className="flex flex-col">
             {papers.map((item) => (
               <li key={item.slug}>
-                <ListItem to={`/resources/papers/${item.slug}`}>
+                <ListItem to={`/resource/papers/${item.slug}`}>
                   <div className="flex justify-center items-center h-5 text-accent">
                     <IconPaper className="size-3.5" />
                   </div>
@@ -75,7 +75,7 @@ export function PageResources({
           <ul className="flex flex-col">
             {talks.map((item) => (
               <li key={item.slug}>
-                <ListItem to={`/resources/talks/${item.slug}`}>
+                <ListItem to={`/resource/talks/${item.slug}`}>
                   <div className="flex justify-center items-center h-5 text-accent">
                     <IconTalk className="size-3.5" />
                   </div>

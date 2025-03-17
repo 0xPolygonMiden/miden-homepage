@@ -1,4 +1,4 @@
-import type { Route } from "./+types/resources";
+import type { Route } from "./+types/resource";
 import { Link, NavLink, Outlet } from "react-router";
 import { Banner } from "~/components/banner";
 import { Container, Header } from "~/components/container";
@@ -61,7 +61,7 @@ export default function Layout({
             </NavLink>
             <span>/</span>
             <NavLink
-              to={`/resources/blog/${data.slug}`}
+              to={`/resource/blog/${data.slug}`}
               className="aria-[current='page']:font-bold aria-[current='page']:text-neutral-800"
             >
               {data.title}
@@ -77,7 +77,7 @@ export default function Layout({
             {data.headings.map((heading) => (
               <li key={heading.id}>
                 <Link
-                  to={`/resources/${category}/${data.slug}#${heading.id}`}
+                  to={`/resource/${category}/${data.slug}#${heading.id}`}
                   className="block py-1.5 hover:text-black transition-colors"
                 >
                   {heading.text}

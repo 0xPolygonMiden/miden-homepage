@@ -35,7 +35,7 @@ export function PageOverview<T>({
         <ul className="flex flex-col">
           {data.map((item) => (
             <li key={item.title}>
-              <ListItem to={`/resources/${category}/${item.slug}`}>
+              <ListItem to={`/resource/${category}/${item.slug}`}>
                 <time className="text-accent">{item.date}</time>
                 <h4 className="text-neutral-600">{item.title}</h4>
               </ListItem>
