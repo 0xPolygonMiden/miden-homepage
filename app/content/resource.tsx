@@ -4,7 +4,9 @@ import { Banner } from "~/components/banner";
 import { Container, Header } from "~/components/container";
 import { Footer } from "~/components/footer";
 import { Navigation } from "~/components/navigation";
+import { getPaper } from "~/lib/papers.server";
 import { getPost } from "~/lib/posts.server";
+import { getTalk } from "~/lib/talks.server";
 
 export function loader({ request }: Route.LoaderArgs) {
   const url = new URL(request.url);
@@ -20,9 +22,26 @@ export function loader({ request }: Route.LoaderArgs) {
     return new Response("Not found", { status: 404 });
   }
 
-  const data = getPost(slug);
+  let data;
+
+  switch (category) {
+    case "blog": {
+      data = getPost(slug);
+      break;
+    }
+    case "papers": {
+      data = getPaper(slug);
+      break;
+    }
+    case "talks": {
+      data = getTalk(slug);
+      break;
+    }
+    default:
+      throw new Response("Not found", { status: 404 });
+  }
   if (!data) {
-    return new Response("Not found", { status: 404 });
+    throw new Response("Not found", { status: 404 });
   }
 
   return { data, category };
@@ -51,7 +70,7 @@ export default function Layout({
       <Navigation />
       <Container>
         <Header>
-          <div className="flex items-center gap-2 text-neutral-500">
+          <div className="flex items-center gap-2 overflow-hidden text-neutral-500">
             <NavLink to="/resources" prefetch="intent">
               Resources
             </NavLink>
@@ -61,8 +80,8 @@ export default function Layout({
             </NavLink>
             <span>/</span>
             <NavLink
-              to={`/resource/blog/${data.slug}`}
-              className="aria-[current='page']:font-bold aria-[current='page']:text-neutral-800"
+              to={`/resource/${category}/${data.slug}`}
+              className="min-w-0 aria-[current='page']:font-bold aria-[current='page']:text-neutral-800 truncate"
             >
               {data.title}
             </NavLink>
@@ -78,7 +97,7 @@ export default function Layout({
               <li key={heading.id}>
                 <Link
                   to={`/resource/${category}/${data.slug}#${heading.id}`}
-                  className="block py-1.5 hover:text-black transition-colors"
+                  className="block py-1.5 hover:text-black truncate transition-colors"
                 >
                   {heading.text}
                 </Link>
@@ -87,7 +106,7 @@ export default function Layout({
           </ul>
 
           <div className="px-6 w-full">
-            <div className="[&_span.author]:block prose-h1:m-0 prose-h2:mt-6 [&_span.author]:mb-3 prose-h2:mb-3 prose-h3:mb-3 prose-headings:pt-6 [&_span.author]:pb-3 prose-h2:pb-3 prose-h3:pb-3 [&_span.author]:border-b [&h1>a]:border-b prose-h2:border-b max-w-full [&_*]:max-w-[574px] font-sans [&_span.author]:font-mono [&h1>a]:font-mono prose-h2:font-mono prose-h1:font-semibold text-sm prose-h2:text-sm prose-h3:text-sm prose-h1:text-4xl prose-h3:underline prose-h3:underline-offset-2 prose-h2:!normal-case leading-[170%] prose">
+            <div className="[&_span.author]:block prose-h1:m-0 prose-h2:mt-6 [&_span.author]:mb-3 prose-h2:mb-3 prose-h3:mb-3 prose-headings:pt-6 [&_span.author]:pb-3 prose-h2:pb-3 prose-h3:pb-3 [&_span.author]:border-b [&h1>a]:border-b prose-h2:border-b prose-img:w-full max-w-full [&_*]:max-w-[574px] font-sans [&_span.author]:font-mono [&h1>a]:font-mono prose-h2:font-mono prose-h1:font-semibold text-sm prose-h2:text-sm prose-h3:text-sm prose-h1:text-4xl prose-h3:underline prose-h3:underline-offset-2 prose-h2:!normal-case prose-h1:text-balance leading-[170%] prose">
               <Outlet />
             </div>
           </div>

@@ -27,13 +27,7 @@ export function getFeaturedPapers(): Article[] {
   return allPapers.filter((paper) => paper.featured);
 }
 
-export function getPaper({
-  slug,
-  category,
-}: {
-  slug: string;
-  category: Category;
-}): Article | undefined {
+export function getPaper(slug: string): Article | undefined {
   const allPapers = getAllPapers();
   return allPapers.find((paper) => paper.slug === slug);
 }
