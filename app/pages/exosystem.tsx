@@ -9,18 +9,18 @@ export function PageEcosystem({ items }: { items: Item[] }) {
         <h2>Learn how to build on miden</h2>
       </Header>
       <div>
-        <div className="font-bold w-miden p-6 pb-0">Projects</div>
+        <div className="p-6 pb-0 w-miden font-bold">Projects</div>
         <div>
           {items.map((item) => (
             <Link
               to={item.link.href}
               prefetch="intent"
               key={item.label}
-              className="border block p-6"
+              className="block p-6 border"
             >
-              <h4 className="border-b w-fit pb-2">{item.label}</h4>
-              <p className="text-neutral-600 my-6">{item.description}</p>
-              <span className="size-4 bg-accent text-accent-foreground flex items-center justify-center">
+              <h4 className="pb-2 border-b w-fit">{item.label}</h4>
+              <p className="my-6 text-neutral-600">{item.description}</p>
+              <span className="flex justify-center items-center bg-accent size-4 text-accent-foreground">
                 ↗<span className="sr-only">{item.link.label}</span>
               </span>
             </Link>
@@ -28,13 +28,13 @@ export function PageEcosystem({ items }: { items: Item[] }) {
         </div>
       </div>
       <div className="my-6">
-        <div className="font-bold w-miden p-6 pb-0">Pioneer program</div>
+        <div className="p-6 pb-0 w-miden font-bold">Pioneer program</div>
         <div className="mt-6 px-6 max-w-xl text-balance">
           <p>
             The Pioneer program provides critical support and grants funding to
             accelerate the teams shaping tomorrow’s onchain economies.
           </p>
-          <ul className="mt-6 flex flex-col gap-3">
+          <ul className="flex flex-col gap-3 mt-6">
             <li>
               <Link to="/" className="text-accent underline underline-offset-2">
                 Apply to the Pioneer program →

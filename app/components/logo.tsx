@@ -126,7 +126,7 @@ export function Logo(props: SVGProps<SVGSVGElement>) {
           </linearGradient>
         </defs>
       </svg>
-      <span className="text-xl font-sans font-medium tracking-tight">
+      <span className="font-sans font-medium text-xl tracking-tight">
         Miden
       </span>
     </div>

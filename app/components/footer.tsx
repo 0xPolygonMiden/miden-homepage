@@ -46,23 +46,23 @@ const socials = [
 
 export function Footer() {
   return (
-    <footer className="p-6 w-miden border-t flex items-center justify-between gap-4">
+    <footer className="flex justify-between items-center gap-4 p-6 border-t w-miden">
       <div className="flex items-center gap-4">
         <Link to="/" prefetch="intent">
-          <p className="uppercase text-xs leading-none">
+          <p className="text-xs uppercase leading-none">
             For those who <br /> Move the world
           </p>
         </Link>
       </div>
-      <ul className="flex items-center justify-end text-neutral-400">
+      <ul className="flex justify-end items-center text-neutral-400">
         {socials.map((item) => (
           <li key={item.label}>
-            <Link to={item.href} className="px-2 block" aria-label={item.label}>
+            <Link to={item.href} className="block px-2" aria-label={item.label}>
               <svg
                 fill="none"
                 viewBox="0 0 14 14"
                 xmlns="http://www.w3.org/2000/svg"
-                className="shrink-0 size-3.5"
+                className="size-3.5 shrink-0"
               >
                 {item.icon}
               </svg>

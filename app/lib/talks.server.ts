@@ -1,5 +1,4 @@
-import type { ReactElement } from "react";
-import type { Article, Frontmatter, MDXModule } from "./data";
+import type { Article, MDXModule } from "./data";
 
 export function getTalks(): Article[] {
   const modules = import.meta.glob<MDXModule>(

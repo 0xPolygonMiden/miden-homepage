@@ -2,7 +2,7 @@ import type { ReactNode, SVGProps } from "react";
 
 export function Banner({ message }: { message: ReactNode }) {
   return (
-    <div className="flex border-b items-center p-6 [&_a]:text-blue-500 w-miden">
+    <div className="flex items-center p-6 border-b w-miden [&_a]:text-blue-500">
       <IconInfo className="mr-2 size-5 text-blue-500" />
       {message}
     </div>

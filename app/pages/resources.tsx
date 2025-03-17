@@ -37,7 +37,7 @@ export function PageResources({
           <Link
             prefetch="intent"
             to="/resources/blog"
-            className="my-3 w-miden w-miden block underline underline-offset-2 px-6"
+            className="block my-3 px-6 w-miden w-miden underline underline-offset-2"
           >
             {">>"} Explore more articles
           </Link>
@@ -46,12 +46,12 @@ export function PageResources({
 
       {papers.length > 0 && (
         <div className="mb-6">
-          <h3 className="my-3 w-miden px-6">Research papers</h3>
+          <h3 className="my-3 px-6 w-miden">Research papers</h3>
           <ul className="flex flex-col">
             {papers.map((item) => (
               <li key={item.slug}>
                 <ListItem to={`/resources/papers/${item.slug}`}>
-                  <div className="h-5 text-accent flex items-center justify-center">
+                  <div className="flex justify-center items-center h-5 text-accent">
                     <IconPaper className="size-3.5" />
                   </div>
                   <h4 className="text-neutral-600">{item.title}</h4>
@@ -62,7 +62,7 @@ export function PageResources({
           <Link
             prefetch="intent"
             to="/resources/papers"
-            className="my-3 w-miden block underline underline-offset-2 px-6"
+            className="block my-3 px-6 w-miden underline underline-offset-2"
           >
             {">>"} Continue your research
           </Link>
@@ -71,12 +71,12 @@ export function PageResources({
 
       {talks.length > 0 && (
         <div className="mb-6">
-          <h3 className="my-3 w-miden px-6">Talks</h3>
+          <h3 className="my-3 px-6 w-miden">Talks</h3>
           <ul className="flex flex-col">
             {talks.map((item) => (
               <li key={item.slug}>
                 <ListItem to={`/resources/talks/${item.slug}`}>
-                  <div className="h-5 text-accent flex items-center justify-center">
+                  <div className="flex justify-center items-center h-5 text-accent">
                     <IconTalk className="size-3.5" />
                   </div>
                   <h4 className="text-neutral-600">{item.title}</h4>
@@ -87,7 +87,7 @@ export function PageResources({
           <Link
             prefetch="intent"
             to="/resources/talks"
-            className="my-3 w-miden block underline underline-offset-2 px-6"
+            className="block my-3 px-6 w-miden underline underline-offset-2"
           >
             {">>"} Explore all talks
           </Link>

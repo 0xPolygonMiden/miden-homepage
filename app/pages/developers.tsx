@@ -9,17 +9,17 @@ export function PageDevelopers({ items }: { items: Item[] }) {
         <h2>Learn how to build on miden</h2>
       </Header>
 
-      <div className="mt-6 w-miden grid sm:grid-cols-2 grid-cols-1 gap-3">
+      <div className="gap-3 grid grid-cols-1 sm:grid-cols-2 mt-6 w-miden">
         {items.map((item) => (
           <Link
             to={item.link.href}
             prefetch="intent"
             key={item.label}
-            className="border p-6"
+            className="p-6 border"
           >
-            <h4 className="border-b w-fit pb-2">{item.label}</h4>
-            <p className="text-neutral-600 my-6">{item.description}</p>
-            <span className="size-4 bg-accent text-accent-foreground flex items-center justify-center">
+            <h4 className="pb-2 border-b w-fit">{item.label}</h4>
+            <p className="my-6 text-neutral-600">{item.description}</p>
+            <span className="flex justify-center items-center bg-accent size-4 text-accent-foreground">
               ↗<span className="sr-only">{item.link.label}</span>
             </span>
           </Link>

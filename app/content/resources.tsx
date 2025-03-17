@@ -32,7 +32,7 @@ export default function Layout({
   loaderData: { data, category },
 }: Route.ComponentProps) {
   return (
-    <main className="w-full flex flex-col min-h-dvh text-sm md:px-12 mx-auto">
+    <main className="flex flex-col mx-auto md:px-12 w-full min-h-dvh text-sm">
       <Banner
         message={
           <p>
@@ -69,8 +69,8 @@ export default function Layout({
           </div>
         </Header>
 
-        <div className="relative font-sans w-full grid grid-cols-[1fr_768px_1fr] max-w-[calc(768px+256px+256px)">
-          <ul className="w-3xs ml-auto sticky top-0 h-dvh py-6 flex flex-col text-muted-foreground">
+        <div className="relative grid grid-cols-[1fr_768px_1fr] w-full max-w-[calc(768px+256px+256px) font-sans">
+          <ul className="top-0 sticky flex flex-col ml-auto py-6 w-3xs h-dvh text-muted-foreground">
             <li>
               <Link to={`/resources/${category}`}>↵</Link>
             </li>
@@ -78,7 +78,7 @@ export default function Layout({
               <li key={heading.id}>
                 <Link
                   to={`/resources/blog/${data.slug}#${heading.id}`}
-                  className="hover:text-black transition-colors py-1.5 block"
+                  className="block py-1.5 hover:text-black transition-colors"
                 >
                   {heading.text}
                 </Link>
@@ -86,8 +86,8 @@ export default function Layout({
             ))}
           </ul>
 
-          <div className="w-full px-6">
-            <div className="prose prose-h2:text-sm prose-h2:!normal-case prose-h2:font-mono prose-h2:pb-3 prose-h2:mb-3 prose-h2:border-b prose-h2:mt-6 prose-headings:pt-6 prose-h3:pb-3 prose-h3:mb-3 prose-h3:underline prose-h3:underline-offset-2 prose-h3:text-sm font-sans text-sm leading-[170%] prose-h1:m-0 prose-h1:font-semibold prose-h1:text-4xl [&_span.author]:font-mono [&_span.author]:border-b [&_span.author]:mb-3 [&_span.author]:pb-3 [&_span.author]:block [&h1>a]:font-mono [&h1>a]:border-b">
+          <div className="px-6 w-full">
+            <div className="[&_span.author]:block prose-h1:m-0 prose-h2:mt-6 [&_span.author]:mb-3 prose-h2:mb-3 prose-h3:mb-3 prose-headings:pt-6 [&_span.author]:pb-3 prose-h2:pb-3 prose-h3:pb-3 [&_span.author]:border-b [&h1>a]:border-b prose-h2:border-b font-sans [&_span.author]:font-mono [&h1>a]:font-mono prose-h2:font-mono prose-h1:font-semibold text-sm prose-h2:text-sm prose-h3:text-sm prose-h1:text-4xl prose-h3:underline prose-h3:underline-offset-2 prose-h2:!normal-case leading-[170%] prose">
               <Outlet />
             </div>
           </div>

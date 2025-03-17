@@ -26,11 +26,11 @@ const items = [
 
 export function Navigation() {
   return (
-    <nav className="pl-6 py-3 border-b pr-3 flex items-center justify-between gap-4 text-xs w-miden">
+    <nav className="flex justify-between items-center gap-4 py-3 pr-3 pl-6 border-b w-miden text-xs">
       <Link to="/" prefetch="intent">
         <Logo className="h-9 shrink-0" />
       </Link>
-      <ul className="items-center justify-end hidden md:flex">
+      <ul className="hidden md:flex justify-end items-center">
         {items.map((item) => (
           <li key={item.href}>
             <NavLink

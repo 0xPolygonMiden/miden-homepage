@@ -18,11 +18,10 @@ export enum Category {
   Talks = "talks",
 }
 
-export type Article = {
+export type Article = Frontmatter & {
   slug: string;
   headings: Heading[];
-  component: (props: any) => ReactElement;
-} & Frontmatter;
+};
 
 export interface MDXModule {
   frontmatter: Frontmatter;

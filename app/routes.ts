@@ -16,16 +16,5 @@ export default [
     route("/resources/:category", "routes/overview.tsx"),
   ]),
 
-  ...(await flatRoutes({
-    rootDirectory: "content",
-    ignoredRouteFiles: [
-      "routes/layout.tsx",
-      "routes/home.tsx",
-      "routes/testnet.tsx",
-      "routes/resources.tsx",
-      "routes/overview.tsx",
-      "routes/developers.tsx",
-      "routes/ecosystem.tsx",
-    ],
-  })),
+  ...(await flatRoutes({ rootDirectory: "content" })),
 ] satisfies RouteConfig;
