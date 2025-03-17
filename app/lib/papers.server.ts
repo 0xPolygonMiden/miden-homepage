@@ -1,20 +1,22 @@
 import type { ReactElement } from "react";
-import type { Frontmatter, Article, Category } from "~/lib/data";
+import type { Frontmatter, Article, Category, MDXModule } from "~/lib/data";
 
 export function getAllPapers(): Article[] {
-  const modules = import.meta.glob<{
-    frontmatter: Frontmatter;
-    default: (props: any) => ReactElement;
-  }>(`../content/resources.blog.*.mdx`, { eager: true });
+  const modules = import.meta.glob<MDXModule>(
+    `../content/resources.papers.*.mdx`,
+    { eager: true }
+  );
 
-  const articles = Object.entries(modules).map(([file, article]) => {
+  const articles = Object.entries(modules).map(([file, mod]) => {
     let id = file
-      .replace(`../content/resources.blog.`, "")
+      .replace(`../content/resources.papers.`, "")
       .replace(/\.mdx$/, "");
 
     return {
+      ...mod.frontmatter,
       slug: id,
-      ...article.frontmatter,
+      headings: mod.headings,
+      component: mod.default,
     };
   });
 

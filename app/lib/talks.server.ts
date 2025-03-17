@@ -1,20 +1,22 @@
 import type { ReactElement } from "react";
-import type { Article, Frontmatter } from "./data";
+import type { Article, Frontmatter, MDXModule } from "./data";
 
 export function getTalks(): Article[] {
-  const modules = import.meta.glob<{
-    frontmatter: Frontmatter;
-    default: (props: any) => ReactElement;
-  }>("../content/resources.talks.*.mdx", { eager: true });
+  const modules = import.meta.glob<MDXModule>(
+    "../content/resources.talks.*.mdx",
+    { eager: true }
+  );
 
-  const talks = Object.entries(modules).map(([file, talk]) => {
+  const talks = Object.entries(modules).map(([file, mod]) => {
     let id = file
       .replace("../content/resources.talks.", "")
       .replace(/\.mdx$/, "");
 
     return {
+      ...mod.frontmatter,
       slug: id,
-      ...talk.frontmatter,
+      headings: mod.headings,
+      component: mod.default,
     };
   });
 

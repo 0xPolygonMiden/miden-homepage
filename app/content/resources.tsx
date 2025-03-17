@@ -68,9 +68,28 @@ export default function Layout({
             </NavLink>
           </div>
         </Header>
-        <div className="w-miden px-6">
-          <div className="prose prose-h2:text-sm prose-h2:!normal-case prose-h2:font-mono prose-h2:pb-3 prose-h2:mb-3 prose-h2:border-b prose-h2:mt-12 prose-h3:pb-3 prose-h3:mb-3 prose-h3:underline prose-h3:underline-offset-2 prose-h3:text-sm font-sans text-sm leading-[170%] py-6 prose-h1:m-0 prose-h1:font-semibold prose-h1:text-4xl [&_span.author]:font-mono [&_span.author]:border-b [&_span.author]:mb-3 [&_span.author]:pb-3 [&_span.author]:block">
-            <Outlet />
+
+        <div className="relative font-sans w-full grid grid-cols-[1fr_768px_1fr] max-w-[calc(768px+256px+256px)">
+          <ul className="w-3xs ml-auto sticky top-0 h-dvh py-6 flex flex-col text-muted-foreground">
+            <li>
+              <Link to={`/resources/${category}`}>↵</Link>
+            </li>
+            {data.headings.map((heading) => (
+              <li key={heading.id}>
+                <Link
+                  to={`/resources/blog/${data.slug}#${heading.id}`}
+                  className="hover:text-black transition-colors py-1.5 block"
+                >
+                  {heading.text}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <div className="w-full px-6">
+            <div className="prose prose-h2:text-sm prose-h2:!normal-case prose-h2:font-mono prose-h2:pb-3 prose-h2:mb-3 prose-h2:border-b prose-h2:mt-6 prose-headings:pt-6 prose-h3:pb-3 prose-h3:mb-3 prose-h3:underline prose-h3:underline-offset-2 prose-h3:text-sm font-sans text-sm leading-[170%] prose-h1:m-0 prose-h1:font-semibold prose-h1:text-4xl [&_span.author]:font-mono [&_span.author]:border-b [&_span.author]:mb-3 [&_span.author]:pb-3 [&_span.author]:block [&h1>a]:font-mono [&h1>a]:border-b">
+              <Outlet />
+            </div>
           </div>
         </div>
       </Container>

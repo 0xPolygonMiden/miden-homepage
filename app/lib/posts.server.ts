@@ -1,20 +1,21 @@
-import type { ReactElement } from "react";
-import type { Article, Frontmatter } from "./data";
+import type { Article, MDXModule } from "./data";
 
 export function getPosts(): Article[] {
-  const modules = import.meta.glob<{
-    frontmatter: Frontmatter;
-    default: (props: any) => ReactElement;
-  }>("../content/resources.blog.*.mdx", { eager: true });
+  const modules = import.meta.glob<MDXModule>(
+    "../content/resources.blog.*.mdx",
+    { eager: true }
+  );
 
-  const posts = Object.entries(modules).map(([file, post]) => {
-    let id = file
+  const posts = Object.entries(modules).map(([path, mod]) => {
+    const id = path
       .replace("../content/resources.blog.", "")
-      .replace(/\.mdx$/, "");
+      .replace(".mdx", "");
 
     return {
+      ...mod.frontmatter,
       slug: id,
-      ...post.frontmatter,
+      headings: mod.headings,
+      component: mod.default,
     };
   });
 

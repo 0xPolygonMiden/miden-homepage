@@ -1,6 +1,11 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["tailwind.config.ts", "vite.config.ts", "mdx.d.ts"],
+  "include": [
+    "tailwind.config.ts",
+    "vite.config.ts",
+    "mdx.d.ts",
+    "app/lib/rehype-extract-headings.ts"
+  ],
   "compilerOptions": {
     "composite": true,
     "strict": true,
