@@ -70,14 +70,14 @@ export default function Layout({
         </Header>
 
         <div className="relative xl:grid grid-cols-[1fr_768px_1fr] w-full w-miden max-w-[calc(768px+256px+256px) xl:max-w-full font-sans">
-          <ul className="hidden top-0 sticky xl:flex flex-col ml-auto py-6 w-full max-w-3xs h-dvh text-muted-foreground">
+          <ul className="hidden top-0 sticky xl:flex flex-col ml-auto py-6 w-full max-w-3xs h-[calc(100dvh-75px)] text-muted-foreground">
             <li>
               <Link to={`/resources/${category}`}>↵</Link>
             </li>
             {data.headings.map((heading) => (
               <li key={heading.id}>
                 <Link
-                  to={`/resources/blog/${data.slug}#${heading.id}`}
+                  to={`/resources/${category}/${data.slug}#${heading.id}`}
                   className="block py-1.5 hover:text-black transition-colors"
                 >
                   {heading.text}
@@ -87,7 +87,7 @@ export default function Layout({
           </ul>
 
           <div className="px-6 w-full">
-            <div className="[&_span.author]:block prose-h1:m-0 prose-h2:mt-6 [&_span.author]:mb-3 prose-h2:mb-3 prose-h3:mb-3 prose-headings:pt-6 [&_span.author]:pb-3 prose-h2:pb-3 prose-h3:pb-3 [&_span.author]:border-b [&h1>a]:border-b prose-h2:border-b max-w-full font-sans [&_span.author]:font-mono [&h1>a]:font-mono prose-h2:font-mono prose-h1:font-semibold text-sm prose-h2:text-sm prose-h3:text-sm prose-h1:text-4xl prose-h3:underline prose-h3:underline-offset-2 prose-h2:!normal-case leading-[170%] prose">
+            <div className="[&_span.author]:block prose-h1:m-0 prose-h2:mt-6 [&_span.author]:mb-3 prose-h2:mb-3 prose-h3:mb-3 prose-headings:pt-6 [&_span.author]:pb-3 prose-h2:pb-3 prose-h3:pb-3 [&_span.author]:border-b [&h1>a]:border-b prose-h2:border-b max-w-full [&_*]:max-w-[574px] font-sans [&_span.author]:font-mono [&h1>a]:font-mono prose-h2:font-mono prose-h1:font-semibold text-sm prose-h2:text-sm prose-h3:text-sm prose-h1:text-4xl prose-h3:underline prose-h3:underline-offset-2 prose-h2:!normal-case leading-[170%] prose">
               <Outlet />
             </div>
           </div>

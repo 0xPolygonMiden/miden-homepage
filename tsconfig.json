@@ -15,9 +15,7 @@
     "strict": true,
     "noEmit": true,
     "paths": {
-      "~/*": [
-        "./app/*"
-      ]
-    },
+      "~/*": ["./app/*"]
+    }
   }
 }

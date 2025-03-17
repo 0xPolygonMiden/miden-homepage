@@ -5,13 +5,20 @@ date: 17.03.25
 featured: true
 ---
 
+import Scribble from "../components/scribble";
+
 # Miden asset model
 
 <span className="author">Dominik Schmid, Bobbin Threadbare</span>
 
 Miden continues to make progress toward a public testnet, expected in Q4 of this year. This blog post is the latest in a series covering Miden’s novel architecture, designed to enable developers to build high-throughput, privacy-enhanced applications.
 
-Miden’s feature set requires a new way of thinking about assets and a new approach to storing them. In order to provide concurrency and privacy, assets need to be treated natively. Basically, the way Ethereum treats Ether, its native currency, is the approach Miden takes for all assets.
+<Scribble text="Scripted notes to add context / emphasis">
+  Miden’s feature set requires a new way of thinking about assets and a new
+  approach to storing them. In order to provide concurrency and privacy, assets
+  need to be treated natively. Basically, the way Ethereum treats Ether, its
+  native currency, is the approach Miden takes for all assets.
+</Scribble>
 
 This post will cover the design of Miden’s asset model, how it compares to Ethereum’s, and how it allows for new features when implemented on an execution layer. The core goal of Miden is to extend the feature set of the EVM to create a forward-looking scaling solution that still inherits Ethereum’s security.
 
@@ -23,7 +30,11 @@ But there exist many other assets on Ethereum, from USDC to Bored Apes. Due to E
 
 For example, an ERC20 token is represented by a contract. This contract is a simple registry that lists all the owners and their amounts in a global hashmap. The hashmap, in turn, tracks ownership. Transferring an ERC20 token, therefore, means changing the list of owners in that particular contract.
 
-This model has tradeoffs. Transactions can only happen sequentially—there cannot be two different changes to that public list at the same time. And the list is public: Anyone can read the balance_of any other user.
+<Scribble text="Scripted notes to add context / emphasis">
+  This model has tradeoffs. Transactions can only happen sequentially—there
+  cannot be two different changes to that public list at the same time. And the
+  list is public: Anyone can read the balance_of any other user.
+</Scribble>
 
 Even the owner of an ERC20 token needs to look her balance up in those lists. This is why MetaMask doesn’t show all the tokens one possesses right away, but a user needs to add a token to get the balance. While ERC20 tokens are fungible, the model doesn’t change for non-fungible assets like NFTs using ERC-721.
 

@@ -9,8 +9,8 @@ export function PageEcosystem({ items }: { items: Item[] }) {
         <h2>Learn how to build on miden</h2>
       </Header>
       <div>
-        <div className="p-6 pb-0 w-miden font-bold">Projects</div>
-        <div>
+        <div className="mb-3 p-6 pb-0 w-miden font-bold">Projects</div>
+        <div className="gap-3 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
           {items.map((item) => (
             <Link
               to={item.link.href}
