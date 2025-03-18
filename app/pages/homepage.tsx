@@ -2,12 +2,12 @@ import { Container, Header } from "~/components/container";
 
 export function PageHome() {
   return (
-    <Container>
+    <Container className="w-miden">
       <Header className="!border-b-0">
         <h2>Isn't that how Blockchains should work?</h2>
       </Header>
 
-      <ol className="flex flex-col gap-8 mt-6 px-6 w-miden">
+      <ol className="flex flex-col gap-8 mt-6 px-6 max-w-xl">
         <li>
           <h3 className="mb-1 text-primary">Unbounded scalability</h3>
           <p>

@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { href, Link } from "react-router";
 import { Container, Header } from "~/components/container";
 import type { Item } from "~/routes/ecosystem";
 
@@ -41,7 +41,11 @@ export function PageEcosystem({ items }: { items: Item[] }) {
               </Link>
             </li>
             <li>
-              <Link to="/" className="text-accent underline underline-offset-2">
+              <Link
+                prefetch="intent"
+                to={href("/ecosystem/program/pioneers")}
+                className="text-accent underline underline-offset-2"
+              >
                 Learn more about our Pioneer program →{" "}
               </Link>
             </li>

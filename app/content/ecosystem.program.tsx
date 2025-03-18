@@ -1,13 +1,10 @@
-import type { Route } from "./+types/resource";
 import { Link, NavLink, Outlet } from "react-router";
 import { Banner } from "~/components/banner";
 import { Container, Header } from "~/components/container";
 import { Footer } from "~/components/footer";
 import { Navigation } from "~/components/navigation";
 import { getEcosystem } from "~/lib/ecosystem.server";
-import { getPaper } from "~/lib/papers.server";
-import { getPost } from "~/lib/posts.server";
-import { getTalk } from "~/lib/talks.server";
+import type { Route } from "./+types/resource";
 
 export function loader({ request }: Route.LoaderArgs) {
   const url = new URL(request.url);
@@ -23,42 +20,19 @@ export function loader({ request }: Route.LoaderArgs) {
     return new Response("Not found", { status: 404 });
   }
 
-  let data;
-
-  switch (category) {
-    case "blog": {
-      data = getPost(slug);
-      break;
-    }
-    case "papers": {
-      data = getPaper(slug);
-      break;
-    }
-    case "talks": {
-      data = getTalk(slug);
-      break;
-    }
-    case "ecosystem": {
-      data = getEcosystem(slug);
-      break;
-    }
-    default:
-      throw new Response("Not found", { status: 404 });
-  }
+  const data = getEcosystem(slug);
   if (!data) {
     throw new Response("Not found", { status: 404 });
   }
 
-  return { data, category };
+  return { data };
 }
 
 export function meta({ data: { data } }: Route.MetaArgs) {
   return [{ title: `${data.title} – Miden` }];
 }
 
-export default function Layout({
-  loaderData: { data, category },
-}: Route.ComponentProps) {
+export default function Layout({ loaderData: { data } }: Route.ComponentProps) {
   return (
     <main className="flex flex-col mx-auto md:px-12 w-full min-h-dvh text-sm">
       <Banner
@@ -80,16 +54,12 @@ export default function Layout({
       <Container>
         <Header>
           <div className="flex items-center gap-2 overflow-hidden text-neutral-500">
-            <NavLink to="/resources" prefetch="intent">
-              Resources
-            </NavLink>
-            <span>/</span>
-            <NavLink to={`/resources/${category}`} prefetch="intent">
-              {category}
+            <NavLink to="/ecosystem" prefetch="intent">
+              Ecosystem
             </NavLink>
             <span>/</span>
             <NavLink
-              to={`/resource/${category}/${data.slug}`}
+              to={`/ecosystem/program/${data.slug}`}
               className="min-w-0 aria-[current='page']:font-bold aria-[current='page']:text-neutral-800 truncate"
             >
               {data.title}
@@ -100,12 +70,12 @@ export default function Layout({
         <div className="relative gap-6 xl:grid grid-cols-[1fr_768px_1fr] w-full w-miden max-w-[calc(768px+256px+256px) xl:max-w-full font-sans">
           <ul className="hidden top-0 sticky xl:flex flex-col ml-auto px-6 py-6 w-full max-w-3xs h-[calc(100dvh-75px)] text-muted-foreground">
             <li>
-              <Link to={`/resources/${category}`}>↵</Link>
+              <Link to={`/ecosystem`}>↵</Link>
             </li>
             {data.headings.map((heading) => (
               <li key={heading.id}>
                 <Link
-                  to={`/resource/${category}/${data.slug}#${heading.id}`}
+                  to={`/ecosystem/program/${data.slug}#${heading.id}`}
                   className="block py-1.5 hover:text-black text-balance transition-colors"
                 >
                   {heading.text}
