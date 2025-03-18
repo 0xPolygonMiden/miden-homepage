@@ -1,15 +1,18 @@
 import {
   isRouteErrorResponse,
+  Link,
   Links,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
 } from "react-router";
-
+import { Banner } from "~/components/banner";
+import { Container } from "~/components/container";
+import { Footer } from "~/components/footer";
+import { Navigation } from "~/components/navigation";
 import type { Route } from "./+types/root";
 import "./app.css";
-import { cn } from "./lib/utils";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -63,14 +66,33 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   }
 
   return (
-    <main className="mx-auto p-4 pt-16 container">
-      <h1>{message}</h1>
-      <p>{details}</p>
-      {stack && (
-        <pre className="p-4 w-full overflow-x-auto">
-          <code>{stack}</code>
-        </pre>
-      )}
+    <main className="flex flex-col mx-auto w-full min-h-dvh text-sm">
+      <Banner
+        message={
+          <p>
+            Try Miden today and{" "}
+            <Link
+              to="/docs"
+              prefetch="intent"
+              className="underline underline-offset-2"
+            >
+              get started here
+            </Link>
+            .
+          </p>
+        }
+      />
+      <Navigation />
+      <Container className="flex flex-col justify-center items-center">
+        <h1 className="mb-2 font-bold text-lg">{message}</h1>
+        <p className="text-sm">{details}</p>
+        {stack && (
+          <pre className="p-4 w-full overflow-x-auto">
+            <code>{stack}</code>
+          </pre>
+        )}
+      </Container>
+      <Footer />
     </main>
   );
 }
