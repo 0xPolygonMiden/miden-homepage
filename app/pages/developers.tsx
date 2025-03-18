@@ -9,7 +9,7 @@ export function PageDevelopers({ items }: { items: Item[] }) {
         <h2>Learn how to build on miden</h2>
       </Header>
 
-      <div className="gap-3 grid grid-cols-1 sm:grid-cols-2 mt-6 w-miden">
+      <div className="gap-3 grid grid-cols-1 sm:grid-cols-2 mt-6 px-6 w-miden">
         {items.map((item) => (
           <Link
             to={item.link.href}

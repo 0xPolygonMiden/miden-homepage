@@ -85,7 +85,7 @@ export default function Layout({ loaderData: { data } }: Route.ComponentProps) {
           </ul>
 
           <div className="mb-3 px-6 w-full">
-            <div className="[&_span.author]:block prose-h1:m-0 prose-h2:mt-6 [&_span.author]:mb-3 prose-h2:mb-3 prose-h3:mb-3 prose-headings:pt-6 [&_span.author]:pb-3 prose-h2:pb-3 prose-h3:pb-3 [&_span.author]:border-b [&h1>a]:border-b prose-h2:border-b prose-img:w-full max-w-full [&_*]:max-w-[574px] font-sans [&_span.author]:font-mono [&h1>a]:font-mono prose-h2:font-mono prose-h1:font-semibold text-sm prose-h2:text-sm prose-h3:text-sm prose-h1:text-4xl prose-h3:underline prose-h3:underline-offset-2 prose-h2:!normal-case prose-h1:text-balance leading-[170%] prose">
+            <div className="[&_span.author]:block prose-h1:m-0 prose-h2:mt-6 [&_span.author]:mb-3 prose-h2:mb-3 prose-h3:mb-3 prose-headings:pt-6 [&_span.author]:pb-3 prose-h2:pb-3 prose-h3:pb-3 [&_span.author]:border-b [&h1>a]:border-b prose-h2:border-b prose-img:w-full max-w-full [&_*]:max-w-[574px] font-sans [&_span.author]:font-mono [&h1>a]:font-mono prose-h2:font-mono prose-h1:font-semibold text-sm prose-h2:text-sm prose-h3:text-sm prose-h1:text-4xl prose-h3:underline prose-h3:underline-offset-2 prose-h2:!normal-case prose-h1:text-balance prose-headings:text-balance leading-[170%] prose-headings:!leading-normal prose">
               <Outlet />
             </div>
           </div>

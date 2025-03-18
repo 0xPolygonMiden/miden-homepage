@@ -9,7 +9,7 @@ export function PageTestnet({ items }: { items: Item[] }) {
         <h2>Miden is in Alpha Testnet</h2>
         <span className="font-bold">V6</span>
       </Header>
-      <div className="flex flex-col gap-3 mt-6 w-miden">
+      <div className="flex flex-col gap-3 mt-6 px-6 w-miden">
         {items.map((item) => (
           <Link
             to={item.link.href}
