@@ -13,6 +13,9 @@ import { Footer } from "~/components/footer";
 import { Navigation } from "~/components/navigation";
 import type { Route } from "./+types/root";
 import "./app.css";
+import faviconIco from "/favicon.ico";
+import faviconSvg from "/favicon.svg";
+import appleTouchIcon from "/icons/apple-touch-icon.png";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -25,6 +28,10 @@ export const links: Route.LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Reenie+Beanie&display=swap",
   },
+  { rel: "icon", href: `${faviconIco}`, sizes: "any" },
+  { rel: "icon", href: `${faviconSvg}`, type: "image/svg+xml" },
+  { rel: "apple-touch-icon", href: `${appleTouchIcon}` },
+  { rel: "manifest", href: "/site.webmanifest" },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -33,10 +40,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="rgb(250, 250, 250);" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-title" content="Miden" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="py-safe">
         {children}
         <ScrollRestoration />
         <Scripts />
