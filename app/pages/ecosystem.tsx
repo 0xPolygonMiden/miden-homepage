@@ -1,6 +1,6 @@
 import { href, Link } from "react-router";
 import { Container, Header } from "~/components/container";
-import type { Item } from "~/routes/ecosystem";
+import  { type Item } from "~/routes/ecosystem";
 
 export function PageEcosystem({ items }: { items: Item[] }) {
   return (

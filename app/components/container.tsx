@@ -1,4 +1,4 @@
-import type { HtmlHTMLAttributes } from "react";
+import  { type HtmlHTMLAttributes } from "react";
 import { cn } from "~/lib/utils";
 
 export function Container(props: HtmlHTMLAttributes<HTMLElement>) {

@@ -1,5 +1,5 @@
+import  { type Route } from "./+types/testnet";
 import { PageTestnet } from "~/pages/testnet";
-import type { Route } from "./+types/testnet";
 
 export type Item = (typeof items)[0];
 

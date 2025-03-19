@@ -1,8 +1,8 @@
+import  { type Route } from "./+types/resources";
 import { getFeaturedPapers } from "~/lib/papers.server";
 import { getFeaturedPosts } from "~/lib/posts.server";
 import { getFeaturedTalks } from "~/lib/talks.server";
 import { PageResources } from "~/pages/resources";
-import type { Route } from "./+types/resources";
 
 export function meta({}: Route.MetaArgs) {
   return [{ title: "Resources – Miden" }];

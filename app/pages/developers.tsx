@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { Container, Header } from "~/components/container";
-import type { Item } from "~/routes/developers";
+import  { type Item } from "~/routes/developers";
 
 export function PageDevelopers({ items }: { items: Item[] }) {
   return (

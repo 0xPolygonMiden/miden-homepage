@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import  { type ReactNode } from "react";
 import { Link, type To } from "react-router";
 
 export function ListItem({ to, children }: { to: To; children: ReactNode }) {

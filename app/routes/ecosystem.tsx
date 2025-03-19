@@ -1,5 +1,5 @@
+import  { type Route } from "./+types/ecosystem";
 import { PageEcosystem } from "~/pages/ecosystem";
-import type { Route } from "./+types/ecosystem";
 
 export type Item = (typeof items)[0];
 

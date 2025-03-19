@@ -1,9 +1,9 @@
+import  { type Route } from "./+types/overview";
 import { Category } from "~/lib/data";
 import { getFeaturedPapers } from "~/lib/papers.server";
 import { getFeaturedPosts } from "~/lib/posts.server";
 import { getFeaturedTalks } from "~/lib/talks.server";
 import { PageOverview } from "~/pages/overview";
-import type { Route } from "./+types/overview";
 
 export function meta({}: Route.MetaArgs) {
   return [{ title: "Blog – Miden" }];

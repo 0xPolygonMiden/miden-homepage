@@ -1,4 +1,4 @@
-import type { ReactNode, SVGProps } from "react";
+import { type ReactNode, type SVGProps } from "react";
 
 export function Banner({ message }: { message: ReactNode }) {
   return (

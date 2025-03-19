@@ -1,8 +1,8 @@
-import type { SVGProps } from "react";
+import  { type SVGProps } from "react";
 import { Link } from "react-router";
 import { Container, Header } from "~/components/container";
 import { ListItem } from "~/components/list";
-import type { Article } from "~/lib/data";
+import  { type Article } from "~/lib/data";
 
 export function PageResources({
   posts,

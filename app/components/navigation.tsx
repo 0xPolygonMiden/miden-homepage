@@ -1,15 +1,13 @@
-import { Link, NavLink } from "react-router";
 import { ChevronRight, MenuIcon, XIcon } from "lucide-react";
+import { Link, NavLink } from "react-router";
 import { Logo } from "~/components/logo";
 import {
   Drawer,
-  DrawerClose,
   DrawerContent,
   DrawerDescription,
-  DrawerFooter,
   DrawerHeader,
   DrawerTitle,
-  DrawerTrigger,
+  DrawerTrigger
 } from "~/components/ui/drawer";
 
 const items = [

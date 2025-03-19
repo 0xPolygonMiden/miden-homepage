@@ -1,10 +1,10 @@
 import { Link, NavLink, Outlet } from "react-router";
+import  { type Route } from "./+types/resource";
 import { Banner } from "~/components/banner";
 import { Container, Header } from "~/components/container";
 import { Footer } from "~/components/footer";
 import { Navigation } from "~/components/navigation";
 import { getEcosystem } from "~/lib/ecosystem.server";
-import type { Route } from "./+types/resource";
 
 export function loader({ request }: Route.LoaderArgs) {
   const url = new URL(request.url);

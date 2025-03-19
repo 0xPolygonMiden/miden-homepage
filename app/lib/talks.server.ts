@@ -1,4 +1,4 @@
-import type { Article, MDXModule } from "./data";
+import  { type Article, type MDXModule } from "./data";
 
 export function getTalks(): Article[] {
   const modules = import.meta.glob<MDXModule>(

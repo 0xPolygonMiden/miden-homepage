@@ -1,5 +1,5 @@
+import  { type Route } from "./+types/developers";
 import { PageDevelopers } from "~/pages/developers";
-import type { Route } from "./+types/developers";
 
 export type Item = (typeof items)[0];
 

@@ -1,9 +1,9 @@
 import { NavLink } from "react-router";
 import { Container, Header } from "~/components/container";
 import { ListItem } from "~/components/list";
-import type { Article, Category } from "~/lib/data";
+import  { type Article, type Category } from "~/lib/data";
 
-export function PageOverview<T>({
+export function PageOverview({
   data,
   category,
 }: {

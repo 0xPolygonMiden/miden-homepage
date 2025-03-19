@@ -7,11 +7,11 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
+import  { type Route } from "./+types/root";
 import { Banner } from "~/components/banner";
 import { Container } from "~/components/container";
 import { Footer } from "~/components/footer";
 import { Navigation } from "~/components/navigation";
-import type { Route } from "./+types/root";
 import "./app.css";
 import faviconIco from "/favicon.ico";
 import faviconSvg from "/favicon.svg";

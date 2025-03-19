@@ -1,7 +1,7 @@
 import { valueToEstree } from "estree-util-value-to-estree";
-import type { Root } from "mdast";
+import  { type Root } from "mdast";
 import { toString } from "mdast-util-to-string";
-import type { Plugin } from "unified";
+import  { type Plugin } from "unified";
 import { visit } from "unist-util-visit";
 
 export interface Heading {
