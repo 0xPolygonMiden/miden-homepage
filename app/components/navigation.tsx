@@ -1,4 +1,5 @@
 import { ChevronRight, MenuIcon, XIcon } from "lucide-react";
+import { useState } from "react";
 import { Link, NavLink } from "react-router";
 import { Logo } from "~/components/logo";
 import {
@@ -7,7 +8,7 @@ import {
   DrawerDescription,
   DrawerHeader,
   DrawerTitle,
-  DrawerTrigger
+  DrawerTrigger,
 } from "~/components/ui/drawer";
 
 const items = [
@@ -34,6 +35,8 @@ const items = [
 ];
 
 export function Navigation() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="flex justify-between items-center gap-4 px-6 py-3 md:pr-3 md:pl-6 border-b w-miden text-xs">
       <Link to="/" prefetch="intent">
@@ -53,7 +56,7 @@ export function Navigation() {
         ))}
       </ul>
 
-      <Drawer>
+      <Drawer open={isOpen} onOpenChange={setIsOpen}>
         <DrawerTrigger className="group md:hidden block">
           <MenuIcon
             className="group-data-[state=open]:hidden size-5"
@@ -81,6 +84,7 @@ export function Navigation() {
                   to="/"
                   prefetch="intent"
                   className="flex justify-between items-center px-3 text-muted-foreground aria-[current='page']:text-primary"
+                  onClick={() => setIsOpen(false)}
                 >
                   Home
                   <ChevronRight />
@@ -92,6 +96,7 @@ export function Navigation() {
                     to={item.href}
                     prefetch="intent"
                     className="flex justify-between items-center px-3 text-muted-foreground aria-[current='page']:text-primary"
+                    onClick={() => setIsOpen(false)}
                   >
                     {item.label}
                     <ChevronRight />
