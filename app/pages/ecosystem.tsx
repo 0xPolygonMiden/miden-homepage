@@ -17,7 +17,7 @@ export function PageEcosystem({ items }: { items: Item[] }) {
               key={item.label}
               target="_blank"
               rel="noopener noreferrer"
-              className="block flex flex-col justify-between p-6 border hover:!border-border min-h-36 transition-colors"
+              className="flex flex-col justify-between p-6 border hover:!border-border min-h-36 transition-colors"
             >
               <h4 className="pb-2 border-b w-fit">{item.label}</h4>
               <span className="flex justify-center items-center bg-accent size-4 text-accent-foreground">
