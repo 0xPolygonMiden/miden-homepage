@@ -1,72 +1,109 @@
-# Miden Homepaghe
+# Miden Homepage - Documentation
 
-## Getting Started
+## Getting Started with Content Creation
 
-### Writing a blogpost
+This guide explains how to work with Markdown files in the Miden repository to create and manage content.
 
-Create a new file in:
+### Creating a Blog Post
 
-```
-./app/content/[resource].[blog].[blogpost-url].mdx
-```
+1. **Create a new MDX file** in the following format:
 
-Fill in the metadata by adding this to the top of the file:
+   ```
+   ./app/content/[resource].[blog].[blogpost-url].mdx
+   ```
+
+2. **Add required metadata** at the top of your file:
+
+   ```mdx
+   ---
+   title: Title of your blogpost
+   author: By Author 1 and Author 2
+   date: 17.03.25
+   featured: true or false
+   ---
+   ```
+
+3. **Write your content** using standard Markdown syntax. If you need a refresher, check out the [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/).
+
+### Adding Images
+
+Images are stored in the `./public/` directory and referenced from the root domain:
+
+1. **Place your image** in the `./public/` directory (e.g., `./public/images/hello-world.jpg`)
+
+2. **Reference the image** in your MDX file using standard Markdown:
+
+   ```markdown
+   ![Image description](/images/hello-world.jpg)
+   ```
+
+3. The image URL will be resolved as `https://example.com/images/hello-world.jpg`
+
+Feel free to create your own folder structure within the `public` directory to organize your images.
+
+### Using Custom Components
+
+Miden supports custom React components that enhance your content:
+
+#### Scribble Component
+
+The Scribble component adds a handwritten-style highlight to text:
+
+1. **Import the component** after your metadata:
+
+   ```jsx
+   import Scribble from "../components/scribble";
+   ```
+
+2. **Use the component** in your content:
+   ```jsx
+   <Scribble text="This is the scribble text">
+     This series of blog posts has covered an overview of Miden's architecture
+     and a deep dive into its transaction model, which allows for concurrent
+     computation, client-side proving, and public smart contracts at the same
+     time.
+   </Scribble>
+   ```
+
+#### Highlight Component
+
+The Highlight component emphasizes specific text inline:
+
+1. **Import the component** after your metadata:
+
+   ```jsx
+   import Highlight from "../components/highlight";
+   ```
+
+2. **Use the component** in your content:
+   ```jsx
+   This series of blog <Highlight>posts has covered an overview</Highlight> of Miden's
+   architecture and a deep dive into its transaction model.
+   ```
+
+### Example Complete Blog Post
 
 ```mdx
 ---
-title: Title of your blogpost
-author: By Author 1 and Author 2
-date: 17.03.25
-featured: true or false
+title: Understanding Miden Architecture
+author: By Jane Smith and John Doe
+date: 20.03.25
+featured: true
 ---
-```
 
-Write your blog post as normal markdown.
-[Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
-
-### Custom markdown components
-
-If you want to use a custom component like Scribble or Highlight you need to import it right below the metadata inside a mdx file.
-
-```jsx
-import Scribble from "../components/scribble";
 import Highlight from "../components/highlight";
-```
-
-This is how the **Scribble** component works:
-
-```mdx
----
-title: Title of your blogpost
-author: By Author 1 and Author 2
-date: 17.03.25
-featured: true or false
----
-
 import Scribble from "../components/scribble";
 
-<Scribble text="This is the scribble text">
-  This series of blog posts has covered an overview of Miden’s architecture and
-  a deep dive into its transaction model, which allows for concurrent
-  computation, client-side proving, and public smart contracts at the same time.
+# Understanding Miden Architecture
+
+This article explores the core concepts behind <Highlight>Miden's innovative approach</Highlight> to blockchain architecture.
+
+<Scribble text="Key innovation">
+  Miden's transaction model enables concurrent computation, client-side proving,
+  and public smart contracts simultaneously.
 </Scribble>
-```
 
-This is how the **Highlight** component works:
-
-```mdx
----
-title: Title of your blogpost
-author: By Author 1 and Author 2
-date: 17.03.25
-featured: true or false
----
-
-import Highlight from "../components/highlight";
-
-This series of blog <Highlight>posts has covered an overview</Highlight> of Miden’s architecture and
-a deep dive into its transaction model, which allows for concurrent
-computation, client-side proving, and public smart contracts at the same time.
+![Miden Architecture Diagram](/images/miden-architecture.jpg)
 ```
 
 ### Installation
