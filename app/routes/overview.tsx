@@ -4,8 +4,12 @@ import { getFeaturedPosts } from "~/lib/posts.server";
 import { PageOverview } from "~/pages/overview";
 import { papers, talks } from "~/routes/resources";
 
-export function meta({}: Route.MetaArgs) {
-  return [{ title: "Blog – Miden" }];
+function capitalize(str: string) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+export function meta({ data: { category } }: Route.MetaArgs) {
+  return [{ title: `${capitalize(category)} – Miden` }];
 }
 
 export async function loader({ params }: Route.LoaderArgs) {
