@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+import { useState } from "react";
 import { Link, NavLink, Outlet } from "react-router";
 import { type Route } from ".react-router/types/app/content/+types/resource";
 import { Banner } from "~/components/banner";
@@ -62,6 +64,8 @@ export function meta({ data: { data } }: Route.MetaArgs) {
 export default function Layout({
   loaderData: { data, category, relatedPosts },
 }: Route.ComponentProps) {
+  const [isHovering, setIsHovering] = useState(false);
+
   return (
     <>
       <main className="flex flex-col mx-auto md:px-12 w-full min-h-dvh text-sm">
@@ -104,7 +108,40 @@ export default function Layout({
           <div className="relative gap-6 xl:grid grid-cols-[1fr_768px_1fr] w-full w-miden max-w-[calc(768px+256px+256px) xl:max-w-full font-sans">
             <ul className="hidden top-0 sticky xl:flex flex-col ml-auto px-6 py-6 w-full max-w-3xs h-[calc(100dvh-75px)] text-muted-foreground">
               <li>
-                <Link to={`/resources/${category}`}>↵</Link>
+                <Link
+                  to={`/resources/${category}`}
+                  className="flex items-center gap-1 py-1.5 overflow-hidden hover:text-black text-balance transition-colors"
+                  onMouseEnter={() => {
+                    setIsHovering(true);
+                  }}
+                  onMouseLeave={() => {
+                    setIsHovering(false);
+                  }}
+                >
+                  <motion.span className="block bg-white size-4">↵</motion.span>
+                  <motion.span
+                    className="block"
+                    transition={{
+                      duration: isHovering ? 0.4 : 0.2,
+                    }}
+                    initial={{ opacity: 0, x: "-20%" }}
+                    animate={{
+                      opacity: isHovering ? 1 : 0,
+                      x: isHovering ? 0 : "-20%",
+                    }}
+                  >
+                    <motion.span
+                      className="block truncate"
+                      initial={{ width: 56 }}
+                      animate={{ width: isHovering ? 56 : 0 }}
+                      transition={{
+                        duration: 0.3,
+                      }}
+                    >
+                      Go back
+                    </motion.span>
+                  </motion.span>
+                </Link>
               </li>
               {data.headings.map((heading) => (
                 <li key={heading.id}>

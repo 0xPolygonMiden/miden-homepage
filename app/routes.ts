@@ -11,6 +11,7 @@ export default [
     index("routes/home.tsx"),
     route("/testnet", "routes/testnet.tsx"),
     route("/developers", "routes/developers.tsx"),
+    route("/roadmap", "routes/roadmap.tsx"),
     route("/ecosystem", "routes/ecosystem.tsx"),
     route("/resources", "routes/resources.tsx"),
     route("/resources/:category", "routes/overview.tsx"),
