@@ -1,18 +1,73 @@
-# Welcome to React Router!
-
-A modern, production-ready template for building full-stack React applications using React Router.
-
-## Features
-
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+# Miden Homepaghe
 
 ## Getting Started
+
+### Writing a blogpost
+
+Create a new file in:
+
+```
+./app/content/[resource].[blog].[blogpost-url].mdx
+```
+
+Fill in the metadata by adding this to the top of the file:
+
+```mdx
+---
+title: Title of your blogpost
+author: By Author 1 and Author 2
+date: 17.03.25
+featured: true or false
+---
+```
+
+Write your blog post as normal markdown.
+[Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
+
+### Custom markdown components
+
+If you want to use a custom component like Scribble or Highlight you need to import it right below the metadata inside a mdx file.
+
+```jsx
+import Scribble from "../components/scribble";
+import Highlight from "../components/highlight";
+```
+
+This is how the **Scribble** component works:
+
+```mdx
+---
+title: Title of your blogpost
+author: By Author 1 and Author 2
+date: 17.03.25
+featured: true or false
+---
+
+import Scribble from "../components/scribble";
+
+<Scribble text="This is the scribble text">
+  This series of blog posts has covered an overview of Miden’s architecture and
+  a deep dive into its transaction model, which allows for concurrent
+  computation, client-side proving, and public smart contracts at the same time.
+</Scribble>
+```
+
+This is how the **Highlight** component works:
+
+```mdx
+---
+title: Title of your blogpost
+author: By Author 1 and Author 2
+date: 17.03.25
+featured: true or false
+---
+
+import Highlight from "../components/highlight";
+
+This series of blog <Highlight>posts has covered an overview</Highlight> of Miden’s architecture and
+a deep dive into its transaction model, which allows for concurrent
+computation, client-side proving, and public smart contracts at the same time.
+```
 
 ### Installation
 
@@ -61,11 +116,3 @@ You can then promote a version to production after verification or roll it out p
 ```sh
 npx wrangler versions deploy
 ```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
