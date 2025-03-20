@@ -359,10 +359,10 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
           {"Fees"}
         </tspan>
       </text>
-      <rect width={78} height={13} x={692} y={1967} fill="#8F8F8F" rx={6.5} />
+      <rect width={78} height={13} x={692} y={1967} fill="#B2F0FF" rx={6.5} />
       <text
         xmlSpace="preserve"
-        fill="#EBEBEB"
+        fill="#166D84"
         fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
@@ -375,10 +375,10 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
           {"IN PROGRESS"}
         </tspan>
       </text>
-      <rect width={30} height={13} x={776} y={1967} fill="#EBEBEB" rx={6.5} />
+      <rect width={30} height={13} x={776} y={1967} fill="#166D84" rx={6.5} />
       <text
         xmlSpace="preserve"
-        fill="#171717"
+        fill="#B2F0FF"
         fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
@@ -438,10 +438,10 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
           {"signatures"}
         </tspan>
       </text>
-      <rect width={78} height={13} x={692} y={2081} fill="#8F8F8F" rx={6.5} />
+      <rect width={78} height={13} x={692} y={2081} fill="#B2F0FF" rx={6.5} />
       <text
         xmlSpace="preserve"
-        fill="#EBEBEB"
+        fill="#166D84"
         fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
@@ -454,10 +454,10 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
           {"IN PROGRESS"}
         </tspan>
       </text>
-      <rect width={30} height={13} x={776} y={2081} fill="#EBEBEB" rx={6.5} />
+      <rect width={30} height={13} x={776} y={2081} fill="#166D84" rx={6.5} />
       <text
         xmlSpace="preserve"
-        fill="#171717"
+        fill="#B2F0FF"
         fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
