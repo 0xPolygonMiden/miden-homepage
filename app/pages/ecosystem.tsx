@@ -1,6 +1,6 @@
 import { href, Link } from "react-router";
 import { Container, Header } from "~/components/container";
-import  { type Item } from "~/routes/ecosystem";
+import { type Item } from "~/routes/ecosystem";
 
 export function PageEcosystem({ items }: { items: Item[] }) {
   return (
@@ -10,18 +10,18 @@ export function PageEcosystem({ items }: { items: Item[] }) {
       </Header>
       <div>
         <div className="mb-3 p-6 pb-0 w-miden font-bold">Projects</div>
-        <div className="gap-3 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 px-6">
+        <div className="gap-3 grid grid-cols-1 md:grid-cols-2 px-6">
           {items.map((item) => (
             <Link
-              to={item.link.href}
-              prefetch="intent"
+              to={item.link}
               key={item.label}
-              className="block p-6 border"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block flex flex-col justify-between p-6 border hover:!border-border min-h-36 transition-colors"
             >
               <h4 className="pb-2 border-b w-fit">{item.label}</h4>
-              <p className="my-6 text-neutral-600">{item.description}</p>
               <span className="flex justify-center items-center bg-accent size-4 text-accent-foreground">
-                ↗<span className="sr-only">{item.link.label}</span>
+                ↗
               </span>
             </Link>
           ))}
@@ -36,7 +36,12 @@ export function PageEcosystem({ items }: { items: Item[] }) {
           </p>
           <ul className="flex flex-col gap-3 mt-6">
             <li>
-              <Link to="/" className="text-accent underline underline-offset-2">
+              <Link
+                to="https://docs.google.com/forms/d/e/1FAIpQLScGmZdSbJHeoRcIzret0dOG4PxorovSGBUXpVmUf0EFFLsW-w/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent underline underline-offset-2"
+              >
                 Apply to the Pioneer program →
               </Link>
             </li>

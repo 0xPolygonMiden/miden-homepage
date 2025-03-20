@@ -9,58 +9,20 @@ export function meta({}: Route.MetaArgs) {
 
 const items = [
   {
-    label: "MidenPay",
-    description:
-      "A privacy-first, gas-efficient payment system for instant crypto transactions.",
-    link: {
-      href: "/",
-      label: "Explorer",
-    },
+    label: "Keom",
+    link: "https://www.keom.io/",
   },
   {
-    label: "MidenPay",
-    description:
-      "A privacy-first, gas-efficient payment system for instant crypto transactions.",
-    link: {
-      href: "/",
-      label: "Explorer",
-    },
+    label: "Composability Labs",
+    link: "https://github.com/compolabs",
   },
   {
-    label: "MidenPay",
-    description:
-      "A privacy-first, gas-efficient payment system for instant crypto transactions.",
-    link: {
-      href: "/",
-      label: "Explorer",
-    },
+    label: "Arcane Finance",
+    link: "https://www.arcane.finance/",
   },
   {
-    label: "MidenPay",
-    description:
-      "A privacy-first, gas-efficient payment system for instant crypto transactions.",
-    link: {
-      href: "/",
-      label: "Explorer",
-    },
-  },
-  {
-    label: "MidenPay",
-    description:
-      "A privacy-first, gas-efficient payment system for instant crypto transactions.",
-    link: {
-      href: "/",
-      label: "Explorer",
-    },
-  },
-  {
-    label: "MidenPay",
-    description:
-      "A privacy-first, gas-efficient payment system for instant crypto transactions.",
-    link: {
-      href: "/",
-      label: "Explorer",
-    },
+    label: "Pragma",
+    link: "https://www.pragma.build/",
   },
 ];
 
