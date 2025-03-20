@@ -24,7 +24,7 @@ export function PageRoadmap() {
         </li>
       </ul>
       <div className="mx-auto w-miden">
-        <SvgComponent className="w-full" />
+        <SvgComponent className="w-full font-mono" />
       </div>
     </Container>
   );
@@ -51,7 +51,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#363636"
-        fontFamily="IBM Plex Mono"
         fontSize={16}
         fontWeight={600}
         letterSpacing="0em"
@@ -74,7 +73,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#A000F8"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -94,7 +92,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0F7E32"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -120,7 +117,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#8F8F8F"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -140,7 +136,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0F7E32"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -163,7 +158,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#FC0036"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -184,7 +178,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0F7E32"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -200,7 +193,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0F7E32"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -221,7 +213,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0F7E32"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -240,7 +231,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0F7E32"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -263,7 +253,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#A000F8"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -284,7 +273,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0F7E32"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -303,7 +291,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0F7E32"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -326,7 +313,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#A000F8"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -347,7 +333,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0F7E32"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -363,7 +348,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#166D84"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -379,7 +363,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#B2F0FF"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -402,7 +385,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#A000F8"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -423,7 +405,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0F7E32"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -442,7 +423,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#166D84"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -458,7 +438,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#B2F0FF"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -481,7 +460,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#A000F8"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -499,7 +477,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#363636"
-        fontFamily="IBM Plex Mono"
         fontSize={16}
         fontWeight={600}
         letterSpacing="0em"
@@ -550,7 +527,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#A000F8"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -571,7 +547,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0060F2"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -587,7 +562,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#005A72"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -603,7 +577,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#B2F0FF"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -626,7 +599,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#A000F8"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -647,7 +619,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0060F2"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -663,7 +634,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#005A72"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -679,7 +649,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#B2F0FF"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -702,7 +671,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#00AC96"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -723,7 +691,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0060F2"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -739,7 +706,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#005A72"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -755,7 +721,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#B2F0FF"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -778,7 +743,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#FC0036"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -799,7 +763,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0060F2"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -815,7 +778,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#005A72"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -831,7 +793,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#B2F0FF"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -854,7 +815,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#FC0036"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -877,7 +837,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#A000F8"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -897,7 +856,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0060F2"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -920,7 +878,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#A000F8"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -940,7 +897,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0060F2"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -963,7 +919,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#A000F8"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -983,7 +938,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0060F2"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -1006,7 +960,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#FC0036"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1027,7 +980,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0060F2"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -1043,7 +995,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#005A72"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1059,7 +1010,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#B2F0FF"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1082,7 +1032,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#FC0036"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1103,7 +1052,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0060F2"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -1119,7 +1067,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#005A72"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1135,7 +1082,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#B2F0FF"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1158,7 +1104,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#FC0036"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1179,7 +1124,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0060F2"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -1198,7 +1142,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0F7E32"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1221,7 +1164,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#FC0036"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1242,7 +1184,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0060F2"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -1258,7 +1199,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0F7E32"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1281,7 +1221,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#FC0036"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1302,7 +1241,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0060F2"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -1318,7 +1256,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#005A72"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1341,7 +1278,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#FC0036"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1362,7 +1298,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0060F2"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -1378,7 +1313,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#005A72"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1394,7 +1328,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#B2F0FF"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1417,7 +1350,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#FC0036"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1438,7 +1370,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0060F2"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -1457,7 +1388,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#005A72"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1473,7 +1403,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#B2F0FF"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1496,7 +1425,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#A000F8"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1516,7 +1444,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0060F2"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -1540,7 +1467,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0060F2"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -1556,7 +1482,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#005A72"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1572,7 +1497,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#B2F0FF"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1595,7 +1519,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#00AC96"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1618,7 +1541,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#A000F8"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1642,7 +1564,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#363636"
-        fontFamily="IBM Plex Mono"
         fontSize={16}
         fontWeight={600}
         letterSpacing="0em"
@@ -1663,7 +1584,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#FC0036"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1679,7 +1599,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#00AC96"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1700,7 +1619,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#561A00"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -1716,7 +1634,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#166D84"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1732,7 +1649,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#B2F0FF"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1755,7 +1671,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#00AC96"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1778,7 +1693,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#FC0036"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1794,7 +1708,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#166D84"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1810,7 +1723,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#B2F0FF"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1831,7 +1743,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#561A00"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -1847,7 +1758,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#00AC96"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1863,7 +1773,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#FC0036"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1879,7 +1788,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#166D84"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1895,7 +1803,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#B2F0FF"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1916,7 +1823,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#561A00"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -1939,7 +1845,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#00AC96"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1962,7 +1867,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#FC0036"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1978,7 +1882,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#166D84"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -1994,7 +1897,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#B2F0FF"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2015,7 +1917,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#561A00"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -2038,7 +1939,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#00AC96"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2061,7 +1961,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#FC0036"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2077,7 +1976,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#0F7E32"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2098,7 +1996,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#561A00"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -2125,7 +2022,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#363636"
-        fontFamily="IBM Plex Mono"
         fontSize={16}
         fontWeight={600}
         letterSpacing="0em"
@@ -2148,7 +2044,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#A000F8"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2168,7 +2063,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#C31562"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -2191,7 +2085,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#A000F8"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2211,7 +2104,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#C31562"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -2231,7 +2123,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#C31562"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -2254,7 +2145,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#8F8F8F"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2274,7 +2164,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#C31562"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -2297,7 +2186,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#FC0036"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2317,7 +2205,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#C31562"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -2340,7 +2227,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#FC0036"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2361,7 +2247,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#C31562"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -2380,7 +2265,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#166D84"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2396,7 +2280,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#B2F0FF"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2419,7 +2302,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#00AC96"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2442,7 +2324,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#A000F8"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2463,7 +2344,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#C31562"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -2479,7 +2359,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#166D84"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2495,7 +2374,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#B2F0FF"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2518,7 +2396,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#A000F8"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2539,7 +2416,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#C31562"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -2555,7 +2431,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#166D84"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2571,7 +2446,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#B2F0FF"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2594,7 +2468,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#FC0036"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2615,7 +2488,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#C31562"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -2634,7 +2506,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#166D84"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2650,7 +2521,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#B2F0FF"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2673,7 +2543,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#FC0036"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2694,7 +2563,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#C31562"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -2713,7 +2581,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#166D84"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2729,7 +2596,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#B2F0FF"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2752,7 +2618,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#FC0036"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2773,7 +2638,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#C31562"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -2789,7 +2653,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#166D84"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2805,7 +2668,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#B2F0FF"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2828,7 +2690,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#FC0036"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2849,7 +2710,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#C31562"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -2865,7 +2725,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#166D84"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2881,7 +2740,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#B2F0FF"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2904,7 +2762,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#00AC96"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2927,7 +2784,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#A000F8"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2948,7 +2804,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#C31562"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -2964,7 +2819,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#166D84"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -2980,7 +2834,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#B2F0FF"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -3003,7 +2856,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#00AC96"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -3026,7 +2878,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#FC0036"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -3047,7 +2898,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#C31562"
-        fontFamily="IBM Plex Mono"
         fontSize={12}
         fontWeight={600}
         letterSpacing="-.02em"
@@ -3063,7 +2913,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#166D84"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -3079,7 +2928,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#B2F0FF"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
@@ -3102,7 +2950,6 @@ function SvgComponent(props: SVGProps<SVGSVGElement>) {
       <text
         xmlSpace="preserve"
         fill="#A000F8"
-        fontFamily="IBM Plex Mono"
         fontSize={10}
         fontWeight={500}
         letterSpacing="0em"
