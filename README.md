@@ -51,17 +51,14 @@ The Scribble component adds a handwritten-style highlight to text:
 
 1. **Import the component** after your metadata:
 
-   ```jsx
+   ```markdown
    import Scribble from "../components/scribble";
    ```
 
 2. **Use the component** in your content:
-   ```jsx
+   ```markdown
    <Scribble text="This is the scribble text">
-     This series of blog posts has covered an overview of Miden's architecture
-     and a deep dive into its transaction model, which allows for concurrent
-     computation, client-side proving, and public smart contracts at the same
-     time.
+     This series of blog posts has covered an overview of Miden's architecture and a deep dive into its transaction model, which allows for concurrentcomputation, client-side proving, and public smart contracts at the same time.
    </Scribble>
    ```
 
@@ -71,14 +68,13 @@ The Highlight component emphasizes specific text inline:
 
 1. **Import the component** after your metadata:
 
-   ```jsx
+   ```markdown
    import Highlight from "../components/highlight";
    ```
 
 2. **Use the component** in your content:
-   ```jsx
-   This series of blog <Highlight>posts has covered an overview</Highlight> of Miden's
-   architecture and a deep dive into its transaction model.
+   ```markdown
+   This series of blog <Highlight>posts has covered an overview</Highlight> of Miden's architecture and a deep dive into its transaction model.
    ```
 
 ### Example Complete Blog Post
@@ -99,8 +95,8 @@ import Scribble from "../components/scribble";
 This article explores the core concepts behind <Highlight>Miden's innovative approach</Highlight> to blockchain architecture.
 
 <Scribble text="Key innovation">
-  Miden's transaction model enables concurrent computation, client-side proving,
-  and public smart contracts simultaneously.
+  Miden's transaction model enables concurrent computation, client-side
+  proving,and public smart contracts simultaneously.
 </Scribble>
 
 ![Miden Architecture Diagram](/images/miden-architecture.jpg)
