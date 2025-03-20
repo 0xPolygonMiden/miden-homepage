@@ -106,7 +106,7 @@ export default function Layout({
           </Header>
 
           <div className="relative gap-6 xl:grid grid-cols-[1fr_768px_1fr] w-full w-miden max-w-[calc(768px+256px+256px) xl:max-w-full font-sans">
-            <ul className="hidden top-0 sticky xl:flex flex-col ml-auto px-6 py-6 w-full max-w-3xs h-[calc(100dvh-75px)] text-muted-foreground">
+            <ul className="hidden top-0 sticky xl:flex flex-col -mt-[35px] ml-auto p-6 pt-0 w-full max-w-3xs h-[calc(100dvh-75px)] text-muted-foreground">
               <li>
                 <Link
                   to={`/resources/${category}`}
