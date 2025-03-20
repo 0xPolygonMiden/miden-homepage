@@ -9,21 +9,15 @@ export function meta({}: Route.MetaArgs) {
 
 const items = [
   {
-    label: "Miden Docs",
+    label: "Docs",
     description:
       "Everything you need to know to get started building with Miden.",
-    link: {
-      href: "/",
-      label: "Explorer",
-    },
+    link: "https://0xpolygonmiden.github.io/miden-docs/",
   },
   {
-    label: "Miden Playground",
+    label: "Playground",
     description: "Start experimenting with Miden.",
-    link: {
-      href: "/",
-      label: "Explorer",
-    },
+    link: "https://miden-playground.pages.dev/",
   },
 ];
 
