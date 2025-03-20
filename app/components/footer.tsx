@@ -3,7 +3,7 @@ import { Link } from "react-router";
 const socials = [
   {
     label: "Discord",
-    href: "/",
+    href: "https://discord.com/invite/0xPolygonRnD",
     icon: (
       <path
         fill="currentColor"
@@ -13,7 +13,7 @@ const socials = [
   },
   {
     label: "X",
-    href: "/",
+    href: "https://x.com/0xPolygonMiden",
     icon: (
       <path
         d="M10.4507 1H12.2908L8.27076 6.08308L13 13H9.29704L6.39675 8.80492L3.07815 13H1.23696L5.53678 7.56308L1 1H4.79697L7.41858 4.83446L10.4507 1ZM9.8049 11.7815H10.8245L4.24294 2.15446H3.1488L9.8049 11.7815Z"
@@ -23,7 +23,7 @@ const socials = [
   },
   {
     label: "Telegram",
-    href: "/",
+    href: "https://t.me/MidenCommunity",
     icon: (
       <path
         fill="currentColor"
@@ -33,7 +33,7 @@ const socials = [
   },
   {
     label: "Github",
-    href: "/",
+    href: "https://github.com/0xPolygonMiden",
     icon: (
       <path
         fill="currentColor"
@@ -56,7 +56,13 @@ export function Footer() {
       <ul className="flex justify-end items-center text-neutral-400">
         {socials.map((item) => (
           <li key={item.label}>
-            <Link to={item.href} className="block px-2" aria-label={item.label}>
+            <Link
+              to={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block px-2 hover:text-black transition-colors"
+              aria-label={item.label}
+            >
               <svg
                 fill="none"
                 viewBox="0 0 14 14"
