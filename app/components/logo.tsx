@@ -1,4 +1,4 @@
-import  { type SVGProps } from "react";
+import { type SVGProps } from "react";
 
 export function Logo(props: SVGProps<SVGSVGElement>) {
   return (
@@ -130,5 +130,211 @@ export function Logo(props: SVGProps<SVGSVGElement>) {
         Miden
       </span>
     </div>
+  );
+}
+
+export function LogoKeom(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 22 24"
+      fill="none"
+      {...props}
+    >
+      <path
+        fill="url(#a)"
+        d="M13.445 2.174 8.892 6.748 7.374 8.276 6.07 9.586l-1.404 1.412-1.361 1.368 1.303 1.31 1.303-1.31 1.464-1.471 6.836-6.869h2.924L1.843 19.387V5.336l2.109 2.122.814.818 1.303-1.31-.814-.817L0 .86v23l5.912-5.94 1.46-1.466 1.249-1.256.054-.054.002-.002 1.462-1.469 1.303-1.31 1.462-1.468 8.68-8.72h-8.14Zm-.7 11.499-1.303 1.31 5.69 5.718h-2.927l-4.227-4.245-.054.054-1.25 1.255 4.769 4.79h8.14l-8.838-8.88v-.002Z"
+      />
+      <defs>
+        <linearGradient
+          id="a"
+          x1="-1.207"
+          x2="19.781"
+          y1="21.986"
+          y2="4.176"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#BFA6FB" />
+          <stop offset=".28" stopColor="#6F4CC9" />
+          <stop offset=".52" stopColor="#7574F7" />
+          <stop offset=".73" stopColor="#9AD2F8" />
+          <stop offset="1" stopColor="#5D8DC0" />
+        </linearGradient>
+      </defs>
+    </svg>
+  );
+}
+
+export function LogoComposabilityLabs(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 23 23"
+      fill="none"
+      {...props}
+    >
+      <path fill="#F76D00" d="M0 .86h23v4.041H0z" />
+      <path fill="#00E813" d="M0 9.874h23v4.041H0z" />
+      <path fill="#5D6FEF" d="M0 18.888h23v4.041H0z" />
+    </svg>
+  );
+}
+
+export function LogoPragma(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 23 24"
+      fill="none"
+      {...props}
+    >
+      <g clipPath="url(#a)">
+        <path
+          fill="#0E342D"
+          d="M18.668.928H4.332A4.332 4.332 0 0 0 0 5.26v14.336a4.332 4.332 0 0 0 4.332 4.332h14.336A4.332 4.332 0 0 0 23 19.596V5.26A4.332 4.332 0 0 0 18.668.928Z"
+        />
+        <path
+          fill="#B7F2E0"
+          d="M18.104 8.942h-.288v1.18h.288c.231 0 .42.189.42.42v8.492c0 .231-.189.42-.42.42H9.612a.42.42 0 0 1-.42-.42v-.288h-1.18v.288c0 .882.718 1.6 1.6 1.6h8.492c.883 0 1.6-.718 1.6-1.6v-8.492c0-.882-.718-1.6-1.6-1.6Z"
+        />
+        <path
+          fill="#B7F2E0"
+          d="M9.194 18.272h6.55c.883 0 1.6-.717 1.6-1.6v-8.49c0-.882-.717-1.599-1.6-1.599h-.287v1.18h.287a.42.42 0 0 1 .42.42v8.491c0 .232-.189.42-.42.42H7.255a.42.42 0 0 1-.42-.42v-.287h-1.18v.287c0 .883.718 1.6 1.6 1.6h1.94v-.002Z"
+        />
+        <path
+          fill="#B7F2E0"
+          d="M6.835 15.912h6.55c.882 0 1.6-.717 1.6-1.6V5.824c0-.882-.718-1.6-1.6-1.6h-8.49c-.882 0-1.6.718-1.6 1.6v8.492c0 .883.718 1.6 1.6 1.6h1.94v-.003Zm6.97-5.318v3.719a.42.42 0 0 1-.42.42h-4.19v-4.19a.42.42 0 0 1 .42-.42h4.19v.471Zm0-2.36v.709h-4.19c-.883 0-1.6.717-1.6 1.6v4.19h-1.18v-6.55a.42.42 0 0 1 .42-.42h6.55v.472Zm-8.622 6.499h-.287a.42.42 0 0 1-.42-.42v-8.49a.42.42 0 0 1 .42-.42h8.491a.42.42 0 0 1 .42.42v.76h-6.55c-.882 0-1.6.717-1.6 1.6v6.55h-.474Z"
+        />
+      </g>
+      <defs>
+        <clipPath id="a">
+          <path fill="#fff" d="M0 .928h23v23H0z" />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+}
+
+export function LogoArcane(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 23 24"
+      fill="none"
+      {...props}
+    >
+      <path
+        fill="url(#a)"
+        d="M11.501.928v6.27a5.238 5.238 0 0 1 5.23 5.23H23c-.027-6.35-5.176-11.5-11.5-11.5Z"
+      />
+      <path
+        fill="url(#b)"
+        d="M11.5 7.198a3.126 3.126 0 0 0 3.122-3.122c0-1.734-1.388-3.148-3.122-3.148C5.15.928 0 6.078 0 12.428h6.27a5.238 5.238 0 0 1 5.23-5.23Z"
+      />
+      <path
+        fill="url(#c)"
+        d="M6.27 12.428H0c0 6.35 5.15 11.5 11.5 11.5V17.63c-2.882 0-5.23-2.322-5.23-5.203Z"
+      />
+      <path
+        fill="url(#d)"
+        d="M11.5 23.901v-6.27a5.238 5.238 0 0 1-5.229-5.23H.027c0 6.35 5.15 11.5 11.474 11.5Z"
+      />
+      <path
+        fill="url(#e)"
+        d="M11.5 7.198a3.126 3.126 0 0 0 3.123-3.122c0-1.707-1.388-3.148-3.122-3.148C5.177.928.027 6.078.027 12.428h6.27c0-2.882 2.322-5.23 5.204-5.23Z"
+      />
+      <path
+        fill="url(#f)"
+        d="M11.5 17.631a3.126 3.126 0 0 0-3.122 3.122c0 1.708 1.414 3.122 3.122 3.122 6.35 0 11.5-5.15 11.5-11.5h-6.297c0 2.935-2.322 5.256-5.203 5.256Z"
+      />
+      <defs>
+        <linearGradient
+          id="a"
+          x1="18.086"
+          x2="12.724"
+          y1="2.502"
+          y2="28.848"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset=".003" stopColor="#134FFE" />
+          <stop offset=".086" stopColor="#1062FD" />
+          <stop offset=".26" stopColor="#0B84FC" />
+          <stop offset=".437" stopColor="#079FFA" />
+          <stop offset=".618" stopColor="#04B2FA" />
+          <stop offset=".803" stopColor="#03BDF9" />
+          <stop offset="1" stopColor="#02C1F9" />
+        </linearGradient>
+        <linearGradient
+          id="b"
+          x1="7.163"
+          x2="7.631"
+          y1=".533"
+          y2="24.697"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#06B1FA" />
+          <stop offset="1" stopColor="#1058FE" />
+        </linearGradient>
+        <linearGradient
+          id="c"
+          x1="6.011"
+          x2="5.661"
+          y1="1.158"
+          y2="23.532"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#06B1FA" />
+          <stop offset="1" stopColor="#1058FE" />
+        </linearGradient>
+        <linearGradient
+          id="d"
+          x1="4.917"
+          x2="10.278"
+          y1="22.335"
+          y2="-4.011"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset=".003" stopColor="#134FFE" />
+          <stop offset=".086" stopColor="#1062FD" />
+          <stop offset=".26" stopColor="#0B84FC" />
+          <stop offset=".437" stopColor="#079FFA" />
+          <stop offset=".618" stopColor="#04B2FA" />
+          <stop offset=".803" stopColor="#03BDF9" />
+          <stop offset="1" stopColor="#02C1F9" />
+        </linearGradient>
+        <linearGradient
+          id="e"
+          x1="4.399"
+          x2="14.142"
+          y1="22.229"
+          y2="-.406"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset=".003" stopColor="#134FFE" />
+          <stop offset=".086" stopColor="#1062FD" />
+          <stop offset=".26" stopColor="#0B84FC" />
+          <stop offset=".437" stopColor="#079FFA" />
+          <stop offset=".618" stopColor="#04B2FA" />
+          <stop offset=".803" stopColor="#03BDF9" />
+          <stop offset="1" stopColor="#02F9F9" />
+        </linearGradient>
+        <linearGradient
+          id="f"
+          x1="18.602"
+          x2="9.072"
+          y1="2.608"
+          y2="25.476"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset=".003" stopColor="#134FFE" />
+          <stop offset=".086" stopColor="#1062FD" />
+          <stop offset=".26" stopColor="#0B84FC" />
+          <stop offset=".437" stopColor="#079FFA" />
+          <stop offset=".618" stopColor="#04B2FA" />
+          <stop offset=".803" stopColor="#03BDF9" />
+          <stop offset="1" stopColor="#02F9F9" />
+        </linearGradient>
+      </defs>
+    </svg>
   );
 }

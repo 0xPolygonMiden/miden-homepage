@@ -1,7 +1,7 @@
 import { valueToEstree } from "estree-util-value-to-estree";
-import  { type Root } from "mdast";
+import { type Root } from "mdast";
 import { toString } from "mdast-util-to-string";
-import  { type Plugin } from "unified";
+import { type Plugin } from "unified";
 import { visit } from "unist-util-visit";
 
 export interface Heading {
@@ -17,14 +17,7 @@ const rehypeExtractHeadings: Plugin<[{}?], Root> = () => {
       tree,
       "element",
       function (node: { properties: { id: string }; tagName: string }) {
-        if (
-          node.tagName === "h1" ||
-          node.tagName === "h2" ||
-          node.tagName === "h3" ||
-          node.tagName === "h4" ||
-          node.tagName === "h5" ||
-          node.tagName === "h6"
-        ) {
+        if (node.tagName === "h1" || node.tagName === "h2") {
           const text = toString(node);
           const id = node.properties.id;
 
