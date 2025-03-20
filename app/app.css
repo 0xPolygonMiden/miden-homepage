@@ -6,11 +6,19 @@
 
 @plugin "tailwindcss-animate";
 
+@font-face {
+  font-family: "Biro Script";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/biro-script.woff2") format("woff2");
+}
+
 @theme {
   --font-mono: "IBM Plex Mono", monospace;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-script: "Reenie Beanie", cursive;
+  --font-script: "Biro Script", cursive;
 }
 
 * {

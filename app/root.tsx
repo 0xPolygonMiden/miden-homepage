@@ -16,6 +16,7 @@ import "./app.css";
 import faviconIco from "/favicon.ico";
 import faviconSvg from "/favicon.svg";
 import appleTouchIcon from "/icons/apple-touch-icon.png";
+import BiroScript from "/fonts/biro-script.woff2";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -26,7 +27,14 @@ export const links: Route.LinksFunction = () => [
   },
   {
     rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Reenie+Beanie&display=swap",
+    href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
+  },
+  {
+    rel: "preload",
+    href: `${BiroScript}`,
+    as: "font",
+    type: "font/woff2",
+    crossOrigin: "anonymous",
   },
   { rel: "icon", href: `${faviconIco}`, sizes: "any" },
   { rel: "icon", href: `${faviconSvg}`, type: "image/svg+xml" },
