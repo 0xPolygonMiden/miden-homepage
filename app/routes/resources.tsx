@@ -1,4 +1,4 @@
-import  { type Route } from "./+types/resources";
+import { type Route } from ".react-router/types/app/routes/+types/resources";
 import { getFeaturedPapers } from "~/lib/papers.server";
 import { getFeaturedPosts } from "~/lib/posts.server";
 import { getFeaturedTalks } from "~/lib/talks.server";

@@ -1,5 +1,5 @@
 import { Link, NavLink, Outlet } from "react-router";
-import  { type Route } from "./+types/resource";
+import { type Route } from ".react-router/types/app/content/+types/resource";
 import { Banner } from "~/components/banner";
 import { Container, Header } from "~/components/container";
 import { Footer } from "~/components/footer";

@@ -7,7 +7,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
-import  { type Route } from "./+types/root";
+import { type Route } from ".react-router/types/app/+types/root";
 import { Banner } from "~/components/banner";
 import { Container } from "~/components/container";
 import { Footer } from "~/components/footer";

@@ -1,4 +1,4 @@
-import  { type Route } from "./+types/ecosystem";
+import { type Route } from ".react-router/types/app/routes/+types/ecosystem";
 import { PageEcosystem } from "~/pages/ecosystem";
 
 export type Item = (typeof items)[0];

@@ -1,4 +1,4 @@
-import  { type Route } from "./+types/developers";
+import { type Route } from ".react-router/types/app/routes/+types/developers";
 import { PageDevelopers } from "~/pages/developers";
 
 export type Item = (typeof items)[0];
