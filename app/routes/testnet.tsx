@@ -12,7 +12,7 @@ const items = [
     label: "Midenscan",
     description: "Explore accounts, notes, and transactions on block explorer.",
     link: {
-      href: "/",
+      href: "https://testnet.midenscan.com/",
       label: "Explorer",
     },
   },
@@ -20,7 +20,7 @@ const items = [
     label: "Miden Faucet",
     description: "Get Miden testnet tokens and start experimenting with Miden.",
     link: {
-      href: "/",
+      href: "https://faucet.testnet.miden.io/",
       label: "Faucet",
     },
   },
@@ -29,7 +29,7 @@ const items = [
     description:
       "Install the first wallet for Miden, and start client-side proving.",
     link: {
-      href: "/",
+      href: "#",
       label: "Wallet",
     },
   },

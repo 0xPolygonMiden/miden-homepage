@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { Container, Header } from "~/components/container";
-import  { type Item } from "~/routes/testnet";
+import { type Item } from "~/routes/testnet";
 
 export function PageTestnet({ items }: { items: Item[] }) {
   return (
@@ -12,10 +12,11 @@ export function PageTestnet({ items }: { items: Item[] }) {
       <div className="flex flex-col gap-3 mt-6 px-6 w-miden">
         {items.map((item) => (
           <Link
-            to={item.link.href}
-            prefetch="intent"
+            target="_blank"
             key={item.label}
-            className="p-6 border"
+            to={item.link.href}
+            className="p-6 border hover:!border-border transition-colors"
+            rel="noopener noreferrer"
           >
             <h4 className="pb-2 border-b w-fit">{item.label}</h4>
             <p className="my-6 text-neutral-600">{item.description}</p>
