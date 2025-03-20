@@ -1,13 +1,18 @@
 import { NavLink } from "react-router";
 import { Container, Header } from "~/components/container";
+import { IconPaper, IconTalk } from "~/components/icons";
 import { ListItem } from "~/components/list";
-import  { type Article, type Category } from "~/lib/data";
+import { Category, type Article } from "~/lib/data";
 
 export function PageOverview({
-  data,
+  posts,
+  papers,
+  talks,
   category,
 }: {
-  data: Article[];
+  posts: Article[] | null;
+  papers: { label: string; link: string }[];
+  talks: { label: string; link: string }[];
   category: Category;
 }) {
   return (
@@ -33,14 +38,38 @@ export function PageOverview({
       <div>
         <h3 className="my-3 px-6 w-miden">Featured</h3>
         <ul className="flex flex-col">
-          {data.map((item) => (
-            <li key={item.title}>
-              <ListItem to={`/resource/${category}/${item.slug}`}>
-                <time className="text-accent">{item.date}</time>
-                <h4 className="text-neutral-600">{item.title}</h4>
-              </ListItem>
-            </li>
-          ))}
+          {category === Category.Blog &&
+            posts &&
+            posts.map((item) => (
+              <li key={item.title}>
+                <ListItem to={`/resource/${category}/${item.slug}`}>
+                  <time className="text-accent">{item.date}</time>
+                  <h4 className="text-neutral-600 truncate">{item.title}</h4>
+                </ListItem>
+              </li>
+            ))}
+          {category == Category.Papers &&
+            papers.map((item) => (
+              <li key={item.label}>
+                <ListItem to={item.link}>
+                  <div className="flex justify-center items-center h-5 text-accent">
+                    <IconPaper className="size-3.5" />
+                  </div>
+                  <h4 className="text-neutral-600 truncate">{item.label}</h4>
+                </ListItem>
+              </li>
+            ))}
+          {category == Category.Talks &&
+            talks.map((item) => (
+              <li key={item.label}>
+                <ListItem to={item.link}>
+                  <div className="flex justify-center items-center h-5 text-accent">
+                    <IconTalk className="size-3.5" />
+                  </div>
+                  <h4 className="text-neutral-600 truncate">{item.label}</h4>
+                </ListItem>
+              </li>
+            ))}
         </ul>
       </div>
     </div>

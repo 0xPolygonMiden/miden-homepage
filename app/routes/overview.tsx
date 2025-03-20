@@ -1,34 +1,19 @@
 import { type Route } from ".react-router/types/app/routes/+types/overview";
 import { Category } from "~/lib/data";
-import { getFeaturedPapers } from "~/lib/papers.server";
 import { getFeaturedPosts } from "~/lib/posts.server";
-import { getFeaturedTalks } from "~/lib/talks.server";
 import { PageOverview } from "~/pages/overview";
+import { papers, talks } from "~/routes/resources";
 
 export function meta({}: Route.MetaArgs) {
   return [{ title: "Blog – Miden" }];
 }
 
 export async function loader({ params }: Route.LoaderArgs) {
-  let data;
+  let data = null;
   let category = params.category as Category;
 
-  switch (category) {
-    case Category.Blog: {
-      data = getFeaturedPosts();
-      break;
-    }
-    case Category.Papers: {
-      data = getFeaturedPapers();
-      break;
-    }
-    case Category.Talks: {
-      data = getFeaturedTalks();
-      break;
-    }
-    default: {
-      throw new Error("Invalid category");
-    }
+  if (category === Category.Blog) {
+    data = getFeaturedPosts();
   }
 
   return {
@@ -40,5 +25,12 @@ export async function loader({ params }: Route.LoaderArgs) {
 export default function RouteOverview({
   loaderData: { data, category },
 }: Route.ComponentProps) {
-  return <PageOverview data={data} category={category} />;
+  return (
+    <PageOverview
+      posts={data}
+      papers={papers}
+      talks={talks}
+      category={category}
+    />
+  );
 }
