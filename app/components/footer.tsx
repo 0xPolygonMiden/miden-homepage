@@ -45,14 +45,8 @@ const socials = [
 
 export function Footer() {
   return (
-    <footer className="flex justify-between items-center gap-4 p-6 border-t w-miden">
-      <div className="flex items-center gap-4">
-        <Link to="/" prefetch="intent">
-          <p className="text-xs uppercase leading-none">
-            For those who <br /> Move the world
-          </p>
-        </Link>
-      </div>
+    <footer className="flex justify-between items-center gap-4 p-6 !border-neutral-200 border-t w-miden">
+      <div className="flex items-center gap-4"></div>
       <ul className="flex justify-end items-center text-neutral-400">
         {socials.map((item) => (
           <li key={item.label}>

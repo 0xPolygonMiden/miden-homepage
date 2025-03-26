@@ -1,5 +1,4 @@
-import { Link } from "react-router";
-import { Container, Header } from "~/components/container";
+import { useState } from "react";
 import { IconPaper, IconTalk } from "~/components/icons";
 import { ListItem } from "~/components/list";
 import { type Article } from "~/lib/data";
@@ -13,19 +12,19 @@ export function PageResources({
   papers: { label: string; link: string }[];
   talks: { label: string; link: string }[];
 }) {
+  const [showMorePosts, setShowMorePosts] = useState(false);
+  const [showMorePapers, setShowMorePapers] = useState(false);
+  const [showMoreTalks, setShowMoreTalks] = useState(false);
+
   return (
     <div className="flex-1">
-      <Container className="flex-none">
-        <Header>
-          <h2>All we have to say about Miden</h2>
-        </Header>
-      </Container>
-
       {posts.length > 0 && (
         <div className="mb-6">
-          <h3 className="my-3 px-6 w-miden">Blog</h3>
+          <h2 className="my-3 px-6 w-miden !font-mono !font-medium text-2xl">
+            Blog
+          </h2>
           <ul className="flex flex-col">
-            {posts.map((item) => (
+            {posts.slice(0, showMorePosts ? posts.length : 5).map((item) => (
               <li key={item.slug}>
                 <ListItem to={`/resource/blog/${item.slug}`} prefetch="intent">
                   <time className="text-accent">{item.date}</time>
@@ -34,21 +33,24 @@ export function PageResources({
               </li>
             ))}
           </ul>
-          <Link
-            prefetch="intent"
-            to="/resources/blog"
-            className="block my-3 px-6 w-miden w-miden underline underline-offset-2"
-          >
-            {">>"} Explore more articles
-          </Link>
+          {!showMorePosts && (
+            <button
+              onClick={() => setShowMorePosts(true)}
+              className="block my-3 px-6 w-miden text-left underline underline-offset-2"
+            >
+              {">>"} Explore more articles
+            </button>
+          )}
         </div>
       )}
 
       {papers.length > 0 && (
         <div className="mb-6">
-          <h3 className="my-3 px-6 w-miden">Research papers</h3>
+          <h2 className="my-3 px-6 w-miden !font-mono !font-medium text-2xl">
+            Research papers
+          </h2>
           <ul className="flex flex-col">
-            {papers.slice(0, 5).map((item) => (
+            {papers.slice(0, showMorePapers ? papers.length : 5).map((item) => (
               <li key={item.label}>
                 <ListItem
                   to={item.link}
@@ -63,21 +65,24 @@ export function PageResources({
               </li>
             ))}
           </ul>
-          <Link
-            prefetch="intent"
-            to="/resources/papers"
-            className="block my-3 px-6 w-miden underline underline-offset-2"
-          >
-            {">>"} Continue your research
-          </Link>
+          {!showMorePapers && (
+            <button
+              onClick={() => setShowMorePapers(true)}
+              className="block my-3 px-6 w-miden text-left underline underline-offset-2"
+            >
+              {">>"} Continue your research
+            </button>
+          )}
         </div>
       )}
 
       {talks.length > 0 && (
         <div className="mb-6">
-          <h3 className="my-3 px-6 w-miden">Talks</h3>
+          <h2 className="my-3 px-6 w-miden !font-mono !font-medium text-2xl">
+            Talks
+          </h2>
           <ul className="flex flex-col">
-            {talks.slice(0, 5).map((item) => (
+            {talks.slice(0, showMoreTalks ? talks.length : 5).map((item) => (
               <li key={item.label}>
                 <ListItem
                   to={item.link}
@@ -92,13 +97,14 @@ export function PageResources({
               </li>
             ))}
           </ul>
-          <Link
-            prefetch="intent"
-            to="/resources/talks"
-            className="block my-3 px-6 w-miden underline underline-offset-2"
-          >
-            {">>"} Explore all talks
-          </Link>
+          {!showMoreTalks && (
+            <button
+              onClick={() => setShowMoreTalks(true)}
+              className="block my-3 px-6 w-miden text-left underline underline-offset-2"
+            >
+              {">>"} Explore all talks
+            </button>
+          )}
         </div>
       )}
     </div>

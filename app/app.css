@@ -22,7 +22,7 @@
 }
 
 * {
-  @apply border-neutral-100;
+  @apply border-neutral-400;
 }
 
 html,
@@ -36,11 +36,11 @@ body {
 
 h1,
 h2 {
-  @apply leading-none;
+  @apply font-sans;
 }
 
 h2 {
-  @apply uppercase font-bold;
+  @apply font-semibold;
 }
 
 h3 {

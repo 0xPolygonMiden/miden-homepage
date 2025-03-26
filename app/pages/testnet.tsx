@@ -1,30 +1,36 @@
 import { Link } from "react-router";
-import { Container, Header } from "~/components/container";
+import { Container, Header, Wrapper } from "~/components/container";
 import { type Item } from "~/routes/testnet";
 
 export function PageTestnet({ items }: { items: Item[] }) {
   return (
     <Container>
       <Header>
-        <h2>Miden is in Alpha Testnet</h2>
-        <span className="font-bold">V6</span>
+        <h2>
+          Miden is in <br /> Alpha Testnet V6
+        </h2>
+        <p>
+          Currently, Miden is in alpha testnet. It works, and you can experiment
+          with it. But not all the features, e.g., Rust compilation, are there
+          yet.
+        </p>
       </Header>
-      <div className="flex flex-col gap-3 mt-6 px-6 w-miden">
-        {items.map((item) => (
-          <Link
-            target="_blank"
-            key={item.label}
-            to={item.link.href}
-            className="p-6 border hover:!border-border transition-colors"
-            rel="noopener noreferrer"
-          >
-            <h4 className="pb-2 border-b w-fit">{item.label}</h4>
-            <p className="my-6 text-neutral-600">{item.description}</p>
-            <span className="flex justify-center items-center bg-accent size-4 text-accent-foreground">
-              ↗<span className="sr-only">{item.link.label}</span>
-            </span>
-          </Link>
-        ))}
+
+      <div className="mt-12 px-6 w-miden">
+        <Wrapper className="flex flex-col">
+          {items.map((item) => (
+            <Link
+              target="_blank"
+              key={item.label}
+              to={item.link.href}
+              className="py-6 border-t transition-colors"
+              rel="noopener noreferrer"
+            >
+              <h4>{item.label}</h4>
+              <p className="mt-2 text-neutral-600">{item.description}</p>
+            </Link>
+          ))}
+        </Wrapper>
       </div>
     </Container>
   );
