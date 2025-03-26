@@ -27,7 +27,7 @@ export function PageDevelopers({ items }: { items: Item[] }) {
               className="block py-6 border-t transition-colors"
             >
               <h4>{item.label}</h4>
-              <p className="mt-2 text-neutral-600">{item.description}</p>
+              <p className="mt-2 text-muted-foreground">{item.description}</p>
             </Link>
           ))}
         </Wrapper>

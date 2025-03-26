@@ -12,7 +12,7 @@ export function Container(props: HtmlHTMLAttributes<HTMLElement>) {
 export function Header(props: HtmlHTMLAttributes<HTMLElement>) {
   return (
     <header className={cn("px-6 w-miden py-3", props.className)} {...props}>
-      <Wrapper className="flex flex-col gap-6 [&_p]:text-neutral-600 [&_h2]:text-4xl [&_h2]:text-balance">
+      <Wrapper className="flex flex-col gap-6 [&_p]:text-muted-foreground [&_h2]:text-4xl [&_h2]:text-balance">
         {props.children}
       </Wrapper>
     </header>

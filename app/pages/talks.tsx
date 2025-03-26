@@ -1,7 +1,7 @@
 import { NavLink } from "react-router";
 import { Container, Header } from "~/components/container";
 import { ListItem } from "~/components/list";
-import  { type Article } from "~/lib/data";
+import { type Article } from "~/lib/data";
 
 export function PageTalks({ talks }: { talks: Article[] }) {
   return (
@@ -31,7 +31,7 @@ export function PageTalks({ talks }: { talks: Article[] }) {
             <li key={item.title}>
               <ListItem to={`/resource/talks/${item.slug}`}>
                 <time className="text-accent">{item.date}</time>
-                <h4 className="text-neutral-600">{item.title}</h4>
+                <h4 className="text-muted-foreground">{item.title}</h4>
               </ListItem>
             </li>
           ))}

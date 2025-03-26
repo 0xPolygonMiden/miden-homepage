@@ -50,7 +50,7 @@ export function PageEcosystem({ items }: { items: Item[] }) {
                   {item.icon}
                   <h4>{item.label}</h4>
                 </span>
-                <p className="mt-4 text-neutral-600">{item.description}</p>
+                <p className="mt-4 text-muted-foreground">{item.description}</p>
               </Link>
             ))}
           </div>

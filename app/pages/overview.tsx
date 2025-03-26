@@ -44,7 +44,9 @@ export function PageOverview({
               <li key={item.title}>
                 <ListItem to={`/resource/${category}/${item.slug}`}>
                   <time className="text-accent">{item.date}</time>
-                  <h4 className="text-neutral-600 truncate">{item.title}</h4>
+                  <h4 className="text-muted-foreground truncate">
+                    {item.title}
+                  </h4>
                 </ListItem>
               </li>
             ))}
@@ -55,7 +57,9 @@ export function PageOverview({
                   <div className="flex justify-center items-center h-5 text-accent">
                     <IconPaper className="size-3.5" />
                   </div>
-                  <h4 className="text-neutral-600 truncate">{item.label}</h4>
+                  <h4 className="text-muted-foreground truncate">
+                    {item.label}
+                  </h4>
                 </ListItem>
               </li>
             ))}
@@ -66,7 +70,9 @@ export function PageOverview({
                   <div className="flex justify-center items-center h-5 text-accent">
                     <IconTalk className="size-3.5" />
                   </div>
-                  <h4 className="text-neutral-600 truncate">{item.label}</h4>
+                  <h4 className="text-muted-foreground truncate">
+                    {item.label}
+                  </h4>
                 </ListItem>
               </li>
             ))}
