@@ -17,7 +17,7 @@ export function PageHome() {
         </p>
         <Link
           to="/"
-          className="font-semibold text-primary underline underline-offset-2"
+          className="font-medium text-primary underline underline-offset-2"
         >
           START BUILDING →
         </Link>

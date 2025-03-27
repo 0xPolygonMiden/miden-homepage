@@ -46,7 +46,7 @@ export function PageEcosystem({ items }: { items: Item[] }) {
                 rel="noopener noreferrer"
                 className="flex flex-col justify-between py-6 border-t transition-colors"
               >
-                <span className="flex items-center gap-2">
+                <span className="flex items-center gap-3">
                   {item.icon}
                   <h4>{item.label}</h4>
                 </span>
