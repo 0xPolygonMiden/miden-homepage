@@ -16,7 +16,7 @@ export function PageDevelopers({ items }: { items: Item[] }) {
         </p>
       </Header>
 
-      <div className="mt-12 px-6 w-miden">
+      <div className="mt-12">
         <Wrapper>
           {items.map((item) => (
             <Link

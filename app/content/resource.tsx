@@ -67,11 +67,11 @@ export default function Layout({
 
   return (
     <>
-      <main className="flex flex-col mx-auto md:px-12 w-full min-h-dvh text-sm">
+      <main className="flex flex-col mx-auto md:px-6 w-full min-h-dvh text-sm">
         <Navigation />
-        <Container>
-          <div className="relative gap-6 xl:grid grid-cols-[1fr_768px_1fr] w-full w-miden max-w-[calc(768px+256px+256px) xl:max-w-full font-sans">
-            <ul className="hidden top-0 sticky xl:flex flex-col ml-auto p-6 py-10 w-full max-w-3xs h-fit text-muted-foreground">
+        <div className="my-12">
+          <div className="relative gap-6 xl:grid grid-cols-[1fr_800px_1fr] w-full w-miden max-w-[calc(800px+256px+256px) xl:max-w-full font-sans">
+            <ul className="hidden top-0 sticky xl:flex flex-col ml-auto p-6 w-full max-w-3xs h-fit text-muted-foreground">
               <li>
                 <Link
                   to={`/resources`}
@@ -120,19 +120,17 @@ export default function Layout({
               ))}
             </ul>
 
-            <div className="mb-3 px-6 py-3 w-full">
+            <div className="px-6 w-full">
               <div className="[&_span.author]:block prose-h1:m-0 [&_span.author]:mt-1 prose-h2:mt-6 [&_span.author]:mb-3 prose-h2:mb-3 prose-h3:mb-3 prose-h1:first:pt-0 prose-headings:pt-6 [&_span.author]:pb-3 prose-h2:pb-3 prose-h3:pb-3 [&h1>a]:border-b prose-img:w-full max-w-full [&_*]:max-w-[600px] font-sans [&_span.author]:font-mono [&h1>a]:font-mono prose-h2:!font-mono prose-h1:font-semibold text-sm prose-h2:text-sm prose-h3:text-sm prose-h1:text-4xl prose-h3:underline prose-h3:underline-offset-2 prose-h2:!normal-case prose-h1:text-balance leading-[170%] prose">
                 <Outlet />
               </div>
             </div>
           </div>
-        </Container>
+        </div>
       </main>
-      <div className="mx-auto w-full w-miden">
-        <hr />
-      </div>
-      <div className="my-6 text-sm">
-        <h3 className="my-3 px-6 w-miden">More blogs</h3>
+
+      <Container className="my-0 mb-12 text-sm">
+        <h3 className="my-b">More blogs</h3>
         <ul className="flex flex-col">
           {relatedPosts.map((item) => (
             <li key={item.slug}>
@@ -145,12 +143,12 @@ export default function Layout({
         </ul>
         <Link
           prefetch="intent"
-          to="/resources/blog"
-          className="block my-3 px-6 w-miden w-miden underline underline-offset-2"
+          to="/resources"
+          className="block my-3 underline underline-offset-2"
         >
           {">>"} Explore more articles
         </Link>
-      </div>
+      </Container>
       <Footer />
     </>
   );

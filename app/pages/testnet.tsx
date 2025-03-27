@@ -16,7 +16,7 @@ export function PageTestnet({ items }: { items: Item[] }) {
         </p>
       </Header>
 
-      <div className="mt-12 px-6 w-miden">
+      <div className="mt-12">
         <Wrapper className="flex flex-col">
           {items.map((item) => (
             <Link

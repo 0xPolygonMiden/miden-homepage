@@ -10,9 +10,7 @@ export function ListItem(props: LinkProps) {
       )}
       {...props}
     >
-      <div className="flex items-center gap-3 px-6 w-full w-miden">
-        {props.children}
-      </div>
+      <div className="flex items-center gap-3 truncate">{props.children}</div>
     </Link>
   );
 }

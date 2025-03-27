@@ -10,7 +10,7 @@ export function PageRoadmap() {
           Miden road to mainnet <br /> H1 2025
         </h2>
       </Header>
-      <ul className="flex md:flex-row flex-col gap-4 mx-auto p-6 w-miden font-medium text-xs uppercase">
+      <ul className="flex md:flex-row flex-col gap-4 mx-auto py-6 w-miden font-medium text-xs uppercase">
         <li className="flex items-center gap-2">
           <IconE className="size-5" /> Ecosystem partner
         </li>

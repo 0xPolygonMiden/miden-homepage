@@ -34,10 +34,10 @@ export function PageEcosystem({ items }: { items: Item[] }) {
         </ul>
       </Header>
 
-      <div className="mt-12 w-miden">
+      <div className="mt-12">
         <Wrapper>
-          <div className="mb-6 p-6 pb-0 w-miden font-bold">Projects</div>
-          <div className="px-6">
+          <div className="mb-6 font-bold">Projects</div>
+          <div>
             {items.map((item) => (
               <Link
                 to={item.link}

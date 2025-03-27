@@ -137,28 +137,28 @@ export function LogoKeom(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 22 24"
       fill="none"
+      viewBox="0 0 22 24"
       {...props}
     >
       <path
-        fill="url(#a)"
-        d="M13.445 2.174 8.892 6.748 7.374 8.276 6.07 9.586l-1.404 1.412-1.361 1.368 1.303 1.31 1.303-1.31 1.464-1.471 6.836-6.869h2.924L1.843 19.387V5.336l2.109 2.122.814.818 1.303-1.31-.814-.817L0 .86v23l5.912-5.94 1.46-1.466 1.249-1.256.054-.054.002-.002 1.462-1.469 1.303-1.31 1.462-1.468 8.68-8.72h-8.14Zm-.7 11.499-1.303 1.31 5.69 5.718h-2.927l-4.227-4.245-.054.054-1.25 1.255 4.769 4.79h8.14l-8.838-8.88v-.002Z"
+        fill="url(#keom-a)"
+        d="M13.445 2.174 8.892 6.75 7.374 8.277 6.07 9.585l-1.404 1.412-1.361 1.368 1.303 1.31 1.303-1.31 1.464-1.471 6.836-6.868h2.924L1.843 19.387V5.337l2.109 2.122.814.818 1.303-1.309-.814-.818L0 .861v23l5.912-5.94 1.46-1.467 1.249-1.255.054-.054.002-.002 1.462-1.47 1.303-1.309 1.462-1.47 8.68-8.72h-8.14Zm-.7 11.5-1.303 1.309 5.69 5.719h-2.927l-4.227-4.246-.054.054-1.25 1.255 4.769 4.791h8.14l-8.838-8.88v-.003Z"
       />
       <defs>
         <linearGradient
-          id="a"
-          x1="-1.207"
-          x2="19.781"
-          y1="21.986"
-          y2="4.176"
+          id="keom-a"
+          x1={-1.207}
+          x2={19.781}
+          y1={21.986}
+          y2={4.177}
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#BFA6FB" />
-          <stop offset=".28" stopColor="#6F4CC9" />
-          <stop offset=".52" stopColor="#7574F7" />
-          <stop offset=".73" stopColor="#9AD2F8" />
-          <stop offset="1" stopColor="#5D8DC0" />
+          <stop stopColor="color(display-p3 .749 .651 .9843)" />
+          <stop offset={0.28} stopColor="color(display-p3 .4353 .298 .7882)" />
+          <stop offset={0.52} stopColor="color(display-p3 .4588 .4549 .9686)" />
+          <stop offset={0.73} stopColor="color(display-p3 .6039 .8235 .9725)" />
+          <stop offset={1} stopColor="color(display-p3 .3647 .5529 .7529)" />
         </linearGradient>
       </defs>
     </svg>
@@ -219,120 +219,168 @@ export function LogoArcane(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 23 24"
       fill="none"
+      viewBox="0 0 23 23"
       {...props}
     >
       <path
-        fill="url(#a)"
-        d="M11.501.928v6.27a5.238 5.238 0 0 1 5.23 5.23H23c-.027-6.35-5.176-11.5-11.5-11.5Z"
+        fill="url(#arcane-a)"
+        d="M11.5 0v6.27a5.238 5.238 0 0 1 5.23 5.23h6.271C22.974 5.15 17.825 0 11.501 0Z"
       />
       <path
-        fill="url(#b)"
-        d="M11.5 7.198a3.126 3.126 0 0 0 3.122-3.122c0-1.734-1.388-3.148-3.122-3.148C5.15.928 0 6.078 0 12.428h6.27a5.238 5.238 0 0 1 5.23-5.23Z"
+        fill="url(#arcane-b)"
+        d="M11.5 6.27a3.126 3.126 0 0 0 3.122-3.121C14.622 1.413 13.234 0 11.5 0 5.15 0 0 5.15 0 11.5h6.27a5.238 5.238 0 0 1 5.23-5.23Z"
       />
       <path
-        fill="url(#c)"
-        d="M6.27 12.428H0c0 6.35 5.15 11.5 11.5 11.5V17.63c-2.882 0-5.23-2.322-5.23-5.203Z"
+        fill="url(#arcane-c)"
+        d="M6.27 11.5H0C0 17.85 5.15 23 11.5 23v-6.297c-2.882 0-5.23-2.321-5.23-5.203Z"
       />
       <path
-        fill="url(#d)"
-        d="M11.5 23.901v-6.27a5.238 5.238 0 0 1-5.229-5.23H.027c0 6.35 5.15 11.5 11.474 11.5Z"
+        fill="url(#arcane-d)"
+        d="M11.5 22.974v-6.27a5.238 5.238 0 0 1-5.229-5.23H.027c0 6.35 5.15 11.5 11.474 11.5Z"
       />
       <path
-        fill="url(#e)"
-        d="M11.5 7.198a3.126 3.126 0 0 0 3.123-3.122c0-1.707-1.388-3.148-3.122-3.148C5.177.928.027 6.078.027 12.428h6.27c0-2.882 2.322-5.23 5.204-5.23Z"
+        fill="url(#arcane-e)"
+        d="M11.5 6.27c1.735 0 3.123-1.414 3.123-3.121S13.235 0 11.5 0C5.177 0 .027 5.15.027 11.5h6.27c0-2.882 2.322-5.23 5.204-5.23Z"
       />
       <path
-        fill="url(#f)"
-        d="M11.5 17.631a3.126 3.126 0 0 0-3.122 3.122c0 1.708 1.414 3.122 3.122 3.122 6.35 0 11.5-5.15 11.5-11.5h-6.297c0 2.935-2.322 5.256-5.203 5.256Z"
+        fill="url(#arcane-f)"
+        d="M11.5 16.703a3.126 3.126 0 0 0-3.122 3.122c0 1.708 1.414 3.122 3.122 3.122 6.35 0 11.5-5.15 11.5-11.5h-6.297c0 2.935-2.321 5.256-5.203 5.256Z"
       />
       <defs>
         <linearGradient
-          id="a"
-          x1="18.086"
-          x2="12.724"
-          y1="2.502"
-          y2="28.848"
+          id="arcane-a"
+          x1={18.086}
+          x2={12.724}
+          y1={1.575}
+          y2={27.92}
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".003" stopColor="#134FFE" />
-          <stop offset=".086" stopColor="#1062FD" />
-          <stop offset=".26" stopColor="#0B84FC" />
-          <stop offset=".437" stopColor="#079FFA" />
-          <stop offset=".618" stopColor="#04B2FA" />
-          <stop offset=".803" stopColor="#03BDF9" />
-          <stop offset="1" stopColor="#02C1F9" />
+          <stop
+            offset={0.003}
+            stopColor="color(display-p3 .0745 .3098 .9961)"
+          />
+          <stop
+            offset={0.086}
+            stopColor="color(display-p3 .0627 .3843 .9922)"
+          />
+          <stop offset={0.26} stopColor="color(display-p3 .0431 .5176 .9882)" />
+          <stop
+            offset={0.437}
+            stopColor="color(display-p3 .0275 .6235 .9804)"
+          />
+          <stop offset={0.618} stopColor="color(display-p3 .0157 .698 .9804)" />
+          <stop
+            offset={0.803}
+            stopColor="color(display-p3 .0118 .7412 .9765)"
+          />
+          <stop offset={1} stopColor="color(display-p3 .0078 .7569 .9765)" />
         </linearGradient>
         <linearGradient
-          id="b"
-          x1="7.163"
-          x2="7.631"
-          y1=".533"
-          y2="24.697"
+          id="arcane-b"
+          x1={7.163}
+          x2={7.631}
+          y1={-0.394}
+          y2={23.769}
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#06B1FA" />
-          <stop offset="1" stopColor="#1058FE" />
+          <stop stopColor="color(display-p3 .0235 .6941 .9804)" />
+          <stop offset={1} stopColor="color(display-p3 .0627 .3451 .9961)" />
         </linearGradient>
         <linearGradient
-          id="c"
-          x1="6.011"
-          x2="5.661"
-          y1="1.158"
-          y2="23.532"
+          id="arcane-c"
+          x1={6.011}
+          x2={5.662}
+          y1={0.231}
+          y2={22.605}
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#06B1FA" />
-          <stop offset="1" stopColor="#1058FE" />
+          <stop stopColor="color(display-p3 .0235 .6941 .9804)" />
+          <stop offset={1} stopColor="color(display-p3 .0627 .3451 .9961)" />
         </linearGradient>
         <linearGradient
-          id="d"
-          x1="4.917"
-          x2="10.278"
-          y1="22.335"
-          y2="-4.011"
+          id="arcane-d"
+          x1={4.917}
+          x2={10.278}
+          y1={21.407}
+          y2={-4.939}
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".003" stopColor="#134FFE" />
-          <stop offset=".086" stopColor="#1062FD" />
-          <stop offset=".26" stopColor="#0B84FC" />
-          <stop offset=".437" stopColor="#079FFA" />
-          <stop offset=".618" stopColor="#04B2FA" />
-          <stop offset=".803" stopColor="#03BDF9" />
-          <stop offset="1" stopColor="#02C1F9" />
+          <stop
+            offset={0.003}
+            stopColor="color(display-p3 .0745 .3098 .9961)"
+          />
+          <stop
+            offset={0.086}
+            stopColor="color(display-p3 .0627 .3843 .9922)"
+          />
+          <stop offset={0.26} stopColor="color(display-p3 .0431 .5176 .9882)" />
+          <stop
+            offset={0.437}
+            stopColor="color(display-p3 .0275 .6235 .9804)"
+          />
+          <stop offset={0.618} stopColor="color(display-p3 .0157 .698 .9804)" />
+          <stop
+            offset={0.803}
+            stopColor="color(display-p3 .0118 .7412 .9765)"
+          />
+          <stop offset={1} stopColor="color(display-p3 .0078 .7569 .9765)" />
         </linearGradient>
         <linearGradient
-          id="e"
-          x1="4.399"
-          x2="14.142"
-          y1="22.229"
-          y2="-.406"
+          id="arcane-e"
+          x1={4.399}
+          x2={14.142}
+          y1={21.301}
+          y2={-1.334}
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".003" stopColor="#134FFE" />
-          <stop offset=".086" stopColor="#1062FD" />
-          <stop offset=".26" stopColor="#0B84FC" />
-          <stop offset=".437" stopColor="#079FFA" />
-          <stop offset=".618" stopColor="#04B2FA" />
-          <stop offset=".803" stopColor="#03BDF9" />
-          <stop offset="1" stopColor="#02F9F9" />
+          <stop
+            offset={0.003}
+            stopColor="color(display-p3 .0745 .3098 .9961)"
+          />
+          <stop
+            offset={0.086}
+            stopColor="color(display-p3 .0627 .3843 .9922)"
+          />
+          <stop offset={0.26} stopColor="color(display-p3 .0431 .5176 .9882)" />
+          <stop
+            offset={0.437}
+            stopColor="color(display-p3 .0275 .6235 .9804)"
+          />
+          <stop offset={0.618} stopColor="color(display-p3 .0157 .698 .9804)" />
+          <stop
+            offset={0.803}
+            stopColor="color(display-p3 .0118 .7412 .9765)"
+          />
+          <stop offset={1} stopColor="color(display-p3 .0078 .9765 .9765)" />
         </linearGradient>
         <linearGradient
-          id="f"
-          x1="18.602"
-          x2="9.072"
-          y1="2.608"
-          y2="25.476"
+          id="arcane-f"
+          x1={18.602}
+          x2={9.072}
+          y1={1.68}
+          y2={24.548}
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".003" stopColor="#134FFE" />
-          <stop offset=".086" stopColor="#1062FD" />
-          <stop offset=".26" stopColor="#0B84FC" />
-          <stop offset=".437" stopColor="#079FFA" />
-          <stop offset=".618" stopColor="#04B2FA" />
-          <stop offset=".803" stopColor="#03BDF9" />
-          <stop offset="1" stopColor="#02F9F9" />
+          <stop
+            offset={0.003}
+            stopColor="color(display-p3 .0745 .3098 .9961)"
+          />
+          <stop
+            offset={0.086}
+            stopColor="color(display-p3 .0627 .3843 .9922)"
+          />
+          <stop offset={0.26} stopColor="color(display-p3 .0431 .5176 .9882)" />
+          <stop
+            offset={0.437}
+            stopColor="color(display-p3 .0275 .6235 .9804)"
+          />
+          <stop offset={0.618} stopColor="color(display-p3 .0157 .698 .9804)" />
+          <stop
+            offset={0.803}
+            stopColor="color(display-p3 .0118 .7412 .9765)"
+          />
+          <stop offset={1} stopColor="color(display-p3 .0078 .9765 .9765)" />
         </linearGradient>
       </defs>
     </svg>

@@ -3,7 +3,7 @@ import { Container, Header, Wrapper } from "~/components/container";
 
 export function PageHome() {
   return (
-    <Container className="flex-1 py-3 w-miden">
+    <Container className="flex-1">
       <Header>
         <h2>Miden is a high-throughput, privacy-enabled blockchain</h2>
         <p>
@@ -23,7 +23,7 @@ export function PageHome() {
         </Link>
       </Header>
 
-      <Wrapper className="mt-12 px-6">
+      <Wrapper className="mt-12">
         <h3 className="font-sans font-semibold text-2xl text-balance">
           The way blockchains were always meant to work
         </h3>
