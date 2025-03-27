@@ -34,9 +34,9 @@ export function PageEcosystem({ items }: { items: Item[] }) {
         </ul>
       </Header>
 
-      <div className="mt-12">
+      <div className="mt-16">
         <div className="mb-6 font-bold">Projects</div>
-        <div>
+        <Wrapper>
           {items.map((item) => (
             <Link
               to={item.link}
@@ -52,7 +52,7 @@ export function PageEcosystem({ items }: { items: Item[] }) {
               <p className="mt-4 text-muted-foreground">{item.description}</p>
             </Link>
           ))}
-        </div>
+        </Wrapper>
       </div>
     </Container>
   );

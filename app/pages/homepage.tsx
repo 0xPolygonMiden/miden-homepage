@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Container, Header, Wrapper } from "~/components/container";
+import { Container, Header } from "~/components/container";
 
 export function PageHome() {
   return (
@@ -23,7 +23,7 @@ export function PageHome() {
         </Link>
       </Header>
 
-      <div className="mt-12">
+      <div className="mt-16">
         <h3 className="font-sans font-semibold text-2xl text-balance">
           The way blockchains were always meant to work
         </h3>
