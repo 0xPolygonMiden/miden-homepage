@@ -4,30 +4,46 @@ import { IconC, IconE, IconI, IconO } from "~/components/icons";
 
 export function PageRoadmap() {
   return (
-    <Container>
-      <Header>
-        <h2>
-          Miden road to mainnet <br /> H1 2025
-        </h2>
-      </Header>
-      <ul className="flex md:flex-row flex-col gap-4 mx-auto py-6 w-miden font-medium text-xs uppercase">
-        <li className="flex items-center gap-2">
+    <div className="relative flex-1 gap-6 xl:grid grid-cols-[1fr_800px_1fr] w-full w-miden max-w-[calc(800px+256px+256px) xl:max-w-full">
+      <ul className="hidden top-0 sticky xl:flex flex-col ml-auto p-6 py-12 w-full max-w-3xs h-fit font-medium text-muted-foreground text-sm uppercase">
+        <li className="flex items-center gap-2 py-2">
           <IconE className="size-5" /> Ecosystem partner
         </li>
-        <li className="flex items-center gap-2">
+        <li className="flex items-center gap-2 py-2">
           <IconO className="size-5" /> Optional feature
         </li>
-        <li className="flex items-center gap-2">
+        <li className="flex items-center gap-2 py-2">
           <IconI className="size-5" /> Important feature
         </li>
-        <li className="flex items-center gap-2">
+        <li className="flex items-center gap-2 py-2">
           <IconC className="size-5" /> Critical feature
         </li>
       </ul>
-      <div className="mx-auto w-miden">
-        <SvgComponent className="w-full font-mono" />
-      </div>
-    </Container>
+      <Container>
+        <Header>
+          <h2>
+            Miden road to mainnet <br /> H1 2025
+          </h2>
+        </Header>
+        <ul className="xl:hidden flex md:flex-row flex-col gap-4 mx-auto py-6 w-miden font-medium text-xs uppercase">
+          <li className="flex items-center gap-2">
+            <IconE className="size-5" /> Ecosystem partner
+          </li>
+          <li className="flex items-center gap-2">
+            <IconO className="size-5" /> Optional feature
+          </li>
+          <li className="flex items-center gap-2">
+            <IconI className="size-5" /> Important feature
+          </li>
+          <li className="flex items-center gap-2">
+            <IconC className="size-5" /> Critical feature
+          </li>
+        </ul>
+        <div className="mx-auto mt-0 xl:mt-12 w-miden">
+          <SvgComponent className="w-full font-mono" />
+        </div>
+      </Container>
+    </div>
   );
 }
 

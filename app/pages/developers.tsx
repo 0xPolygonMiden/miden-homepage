@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Container, Header, Wrapper } from "~/components/container";
+import { Container, Header } from "~/components/container";
 import { type Item } from "~/routes/developers";
 
 export function PageDevelopers({ items }: { items: Item[] }) {
@@ -17,20 +17,18 @@ export function PageDevelopers({ items }: { items: Item[] }) {
       </Header>
 
       <div className="mt-12">
-        <Wrapper>
-          {items.map((item) => (
-            <Link
-              to={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              key={item.label}
-              className="block py-6 border-t transition-colors"
-            >
-              <h4>{item.label}</h4>
-              <p className="mt-2 text-muted-foreground">{item.description}</p>
-            </Link>
-          ))}
-        </Wrapper>
+        {items.map((item) => (
+          <Link
+            to={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            key={item.label}
+            className="block py-6 border-t transition-colors"
+          >
+            <h4>{item.label}</h4>
+            <p className="mt-2 text-muted-foreground">{item.description}</p>
+          </Link>
+        ))}
       </div>
     </Container>
   );

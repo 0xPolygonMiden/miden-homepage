@@ -38,7 +38,7 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex justify-between items-center gap-4 px-6 py-3 md:pr-3 pb-0 md:pl-6 w-miden text-xs">
+    <nav className="flex justify-between items-center gap-4 px-6 py-6 md:pr-3 pb-0 md:pl-6 w-miden text-xs">
       <Link to="/" prefetch="intent">
         <Logo className="h-9 shrink-0" />
       </Link>

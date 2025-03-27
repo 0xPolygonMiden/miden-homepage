@@ -58,7 +58,7 @@ export function PageResources({
                       prefetch="intent"
                     >
                       <time className="text-accent">{item.date}</time>
-                      <h4 className="text-muted-foreground truncate">
+                      <h4 className="!font-normal text-muted-foreground truncate">
                         {item.title}
                       </h4>
                     </ListItem>
@@ -97,7 +97,7 @@ export function PageResources({
                       <div className="flex justify-center items-center h-5 text-accent">
                         <IconPaper className="size-3.5" />
                       </div>
-                      <h4 className="text-muted-foreground truncate">
+                      <h4 className="!font-normal text-muted-foreground truncate">
                         {item.label}
                       </h4>
                     </ListItem>
@@ -136,7 +136,7 @@ export function PageResources({
                       <div className="flex justify-center items-center h-5 text-accent">
                         <IconTalk className="size-3.5" />
                       </div>
-                      <h4 className="text-muted-foreground truncate">
+                      <h4 className="!font-normal text-muted-foreground truncate">
                         {item.label}
                       </h4>
                     </ListItem>

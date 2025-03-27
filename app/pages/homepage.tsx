@@ -23,7 +23,7 @@ export function PageHome() {
         </Link>
       </Header>
 
-      <Wrapper className="mt-12">
+      <div className="mt-12">
         <h3 className="font-sans font-semibold text-2xl text-balance">
           The way blockchains were always meant to work
         </h3>
@@ -56,7 +56,7 @@ export function PageHome() {
             </p>
           </li>
         </ol>
-      </Wrapper>
+      </div>
     </Container>
   );
 }

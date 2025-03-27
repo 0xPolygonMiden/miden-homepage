@@ -35,26 +35,24 @@ export function PageEcosystem({ items }: { items: Item[] }) {
       </Header>
 
       <div className="mt-12">
-        <Wrapper>
-          <div className="mb-6 font-bold">Projects</div>
-          <div>
-            {items.map((item) => (
-              <Link
-                to={item.link}
-                key={item.label}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col justify-between py-6 border-t transition-colors"
-              >
-                <span className="flex items-center gap-3">
-                  {item.icon}
-                  <h4>{item.label}</h4>
-                </span>
-                <p className="mt-4 text-muted-foreground">{item.description}</p>
-              </Link>
-            ))}
-          </div>
-        </Wrapper>
+        <div className="mb-6 font-bold">Projects</div>
+        <div>
+          {items.map((item) => (
+            <Link
+              to={item.link}
+              key={item.label}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col justify-between py-6 border-t transition-colors"
+            >
+              <span className="flex items-center gap-3">
+                {item.icon}
+                <h4>{item.label}</h4>
+              </span>
+              <p className="mt-4 text-muted-foreground">{item.description}</p>
+            </Link>
+          ))}
+        </div>
       </div>
     </Container>
   );

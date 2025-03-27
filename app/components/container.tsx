@@ -14,10 +14,14 @@ export function Container(props: HtmlHTMLAttributes<HTMLElement>) {
 
 export function Header(props: HtmlHTMLAttributes<HTMLElement>) {
   return (
-    <header {...props} className={cn("w-miden", props.className)}>
-      <Wrapper className="flex flex-col gap-6 [&_p]:text-muted-foreground [&_h2]:text-4xl [&_h2]:text-balance">
-        {props.children}
-      </Wrapper>
+    <header
+      {...props}
+      className={cn(
+        "w-miden flex flex-col gap-6 [&_p]:text-muted-foreground [&_h2]:text-4xl [&_h2]:text-balance",
+        props.className
+      )}
+    >
+      {props.children}
     </header>
   );
 }
