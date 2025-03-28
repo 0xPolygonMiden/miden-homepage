@@ -1,12 +1,12 @@
-import { type Route } from ".react-router/types/app/routes/+types/resources";
 import { getFeaturedPosts } from "~/lib/posts.server";
 import { PageResources } from "~/pages/resources";
+import type { Route } from "./+types/resources";
 
-export function meta({}: Route.MetaArgs) {
+export function meta() {
   return [{ title: "Resources – Miden" }];
 }
 
-export function loader({}: Route.LoaderArgs) {
+export function loader() {
   const posts = getFeaturedPosts();
 
   return {

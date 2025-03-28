@@ -46,7 +46,7 @@ const socials = [
 export function Footer() {
   return (
     <footer className="flex justify-between items-center gap-4 p-6 !border-neutral-200 border-t w-miden">
-      <div className="flex items-center gap-4"></div>
+      <div className="flex items-center gap-4" />
       <ul className="flex justify-end items-center text-neutral-400">
         {socials.map((item) => (
           <li key={item.label}>
@@ -63,6 +63,7 @@ export function Footer() {
                 xmlns="http://www.w3.org/2000/svg"
                 className="size-3.5 shrink-0"
               >
+                <title>{item.label}</title>
                 {item.icon}
               </svg>
             </Link>

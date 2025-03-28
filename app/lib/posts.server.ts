@@ -1,9 +1,9 @@
-import  { type Article, type MDXModule } from "./data";
+import type { Article, MDXModule } from "./data";
 
 export function getPosts(): Article[] {
   const modules = import.meta.glob<MDXModule>(
     "../content/resource.blog.*.mdx",
-    { eager: true }
+    { eager: true },
   );
 
   const posts = Object.entries(modules).map(([path, mod]) => {

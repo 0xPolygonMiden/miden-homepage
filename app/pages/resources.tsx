@@ -3,7 +3,7 @@ import { Link } from "react-router";
 import { Container } from "~/components/container";
 import { IconPaper, IconTalk } from "~/components/icons";
 import { ListItem } from "~/components/list";
-import { type Article } from "~/lib/data";
+import type { Article } from "~/lib/data";
 
 const LIMIT = 10;
 
@@ -44,7 +44,7 @@ export function PageResources({
           <div className="mb-6">
             <h2 id="blog" className="mb-3 !font-mono !font-medium text-2xl">
               <a aria-hidden="true" tabIndex={-1} href="#blog">
-                <span className="icon icon-link"></span>
+                <span className="icon icon-link" />
               </a>
               Blog
             </h2>
@@ -67,6 +67,7 @@ export function PageResources({
             </ul>
             {posts.length > LIMIT && !showMorePosts && (
               <button
+                type="button"
                 onClick={() => setShowMorePosts(true)}
                 className="block my-3 text-left underline underline-offset-2"
               >
@@ -80,7 +81,7 @@ export function PageResources({
           <div className="mb-6">
             <h2 id="papers" className="mb-3 !font-mono !font-medium text-2xl">
               <a aria-hidden="true" tabIndex={-1} href="#papers">
-                <span className="icon icon-link"></span>
+                <span className="icon icon-link" />
               </a>
               Research papers
             </h2>
@@ -106,6 +107,7 @@ export function PageResources({
             </ul>
             {papers.length > LIMIT && !showMorePapers && (
               <button
+                type="button"
                 onClick={() => setShowMorePapers(true)}
                 className="block my-3 text-left underline underline-offset-2"
               >
@@ -119,7 +121,7 @@ export function PageResources({
           <div className="mb-6">
             <h2 id="talks" className="mb-3 !font-mono !font-medium text-2xl">
               <a aria-hidden="true" tabIndex={-1} href="#talks">
-                <span className="icon icon-link"></span>
+                <span className="icon icon-link" />
               </a>
               Talks
             </h2>
@@ -145,6 +147,7 @@ export function PageResources({
             </ul>
             {talks.length > LIMIT && !showMoreTalks && (
               <button
+                type="button"
                 onClick={() => setShowMoreTalks(true)}
                 className="block my-3 text-left underline underline-offset-2"
               >

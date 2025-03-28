@@ -1,14 +1,14 @@
-import { type Article, type MDXModule } from "~/lib/data";
+import type { Article, MDXModule } from "~/lib/data";
 
 export function getAllPapers(): Article[] {
   const modules = import.meta.glob<MDXModule>(
-    `../content/resource.papers.*.mdx`,
-    { eager: true }
+    "../content/resource.papers.*.mdx",
+    { eager: true },
   );
 
   const articles = Object.entries(modules).map(([file, mod]) => {
-    let id = file
-      .replace(`../content/resource.papers.`, "")
+    const id = file
+      .replace("../content/resource.papers.", "")
       .replace(/\.mdx$/, "");
 
     return {

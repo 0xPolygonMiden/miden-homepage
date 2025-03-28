@@ -1,4 +1,4 @@
-import { type Route } from ".react-router/types/app/content/+types/resource";
+import type { Route } from "./+types/resource";
 import { motion } from "motion/react";
 import { useState } from "react";
 import { Link, Outlet } from "react-router";
@@ -6,6 +6,7 @@ import { Container } from "~/components/container";
 import { Footer } from "~/components/footer";
 import { ListItem } from "~/components/list";
 import { Navigation } from "~/components/navigation";
+import type { Article } from "~/lib/data";
 import { getEcosystem } from "~/lib/ecosystem.server";
 import { getPaper } from "~/lib/papers.server";
 import { getFeaturedPosts, getPost } from "~/lib/posts.server";
@@ -25,7 +26,7 @@ export function loader({ request }: Route.LoaderArgs) {
     return new Response("Not found", { status: 404 });
   }
 
-  let data;
+  let data: Article | undefined;
 
   switch (category) {
     case "blog": {
@@ -74,7 +75,7 @@ export default function Layout({
             <ul className="hidden top-0 sticky xl:flex flex-col ml-auto p-6 w-full max-w-3xs h-fit text-muted-foreground">
               <li>
                 <Link
-                  to={`/resources`}
+                  to="/resources"
                   className="flex items-center gap-1 py-1.5 overflow-hidden hover:text-black text-balance transition-colors"
                   onMouseEnter={() => {
                     setIsHovering(true);

@@ -1,10 +1,9 @@
-import { type Route } from ".react-router/types/app/routes/+types/home";
 import { PageHome } from "~/pages/homepage";
 
-export function meta({}: Route.MetaArgs) {
+export function meta() {
   return [{ title: "Miden" }];
 }
 
-export default function RouteHome({}: Route.ComponentProps) {
+export default function RouteHome() {
   return <PageHome />;
 }

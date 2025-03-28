@@ -50,7 +50,7 @@ export function PageOverview({
                 </ListItem>
               </li>
             ))}
-          {category == Category.Papers &&
+          {category === Category.Papers &&
             papers.map((item) => (
               <li key={item.label}>
                 <ListItem to={item.link}>
@@ -63,7 +63,7 @@ export function PageOverview({
                 </ListItem>
               </li>
             ))}
-          {category == Category.Talks &&
+          {category === Category.Talks &&
             talks.map((item) => (
               <li key={item.label}>
                 <ListItem to={item.link}>

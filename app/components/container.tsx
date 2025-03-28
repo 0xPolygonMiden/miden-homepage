@@ -1,4 +1,4 @@
-import { type HtmlHTMLAttributes } from "react";
+import type { HtmlHTMLAttributes } from "react";
 import { cn } from "~/lib/utils";
 
 export function Container(props: HtmlHTMLAttributes<HTMLElement>) {
@@ -18,7 +18,7 @@ export function Header(props: HtmlHTMLAttributes<HTMLElement>) {
       {...props}
       className={cn(
         "w-miden flex flex-col gap-6 [&_p]:text-muted-foreground [&_h2]:text-4xl [&_h2]:text-balance",
-        props.className
+        props.className,
       )}
     >
       {props.children}

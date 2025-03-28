@@ -1,9 +1,8 @@
-import { type Route } from ".react-router/types/app/routes/+types/testnet";
 import { PageTestnet } from "~/pages/testnet";
 
 export type Item = (typeof items)[0];
 
-export function meta({}: Route.MetaArgs) {
+export function meta() {
   return [{ title: "Testnet – Miden" }];
 }
 
@@ -35,6 +34,6 @@ const items = [
   },
 ];
 
-export default function RouteTestnet({}: Route.ComponentProps) {
+export default function RouteTestnet() {
   return <PageTestnet items={items} />;
 }

@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { Container, Header, Wrapper } from "~/components/container";
-import { type Item } from "~/routes/testnet";
+import type { Item } from "~/routes/testnet";
 
 export function PageTestnet({ items }: { items: Item[] }) {
   return (

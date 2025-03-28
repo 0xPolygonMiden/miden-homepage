@@ -1,4 +1,4 @@
-import { type SVGProps } from "react";
+import type { SVGProps } from "react";
 
 export function IconPaper(props: SVGProps<SVGSVGElement>) {
   return (
@@ -8,6 +8,7 @@ export function IconPaper(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Paper</title>
       <line y1="1" x2="14" y2="1" stroke="currentColor" strokeWidth={2} />
       <line y1="7" x2="14" y2="7" stroke="currentColor" strokeWidth={2} />
       <line y1="13" x2="9" y2="13" stroke="currentColor" strokeWidth={2} />
@@ -23,6 +24,7 @@ export function IconTalk(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Talk</title>
       <path
         fill="currentColor"
         d="M10.0107 6.04762C10.7438 6.4709 10.7438 7.5291 10.0107 7.95238L4.64957 11.0476C3.91643 11.4709 3 10.9418 3 10.0952L3 3.90476C3 3.0582 3.91643 2.5291 4.64957 2.95238L10.0107 6.04762Z"
@@ -39,6 +41,7 @@ export function IconE(props: SVGProps<SVGSVGElement>) {
       viewBox="0 0 18 13"
       {...props}
     >
+      <title>Ecosystem</title>
       <rect width={17} height={12} x={0.5} y={0.5} stroke="#00AC96" rx={6} />
       <path
         fill="#00AC96"
@@ -56,6 +59,7 @@ export function IconO(props: SVGProps<SVGSVGElement>) {
       viewBox="0 0 18 13"
       {...props}
     >
+      <title>Open Source</title>
       <rect width="17" height="12" x=".5" y=".5" stroke="#8F8F8F" rx="6" />
       <path
         fill="#8F8F8F"
@@ -73,6 +77,7 @@ export function IconI(props: SVGProps<SVGSVGElement>) {
       viewBox="0 0 18 13"
       {...props}
     >
+      <title>Infrastructure</title>
       <rect width="17" height="12" x=".5" y=".5" stroke="#A000F8" rx="6" />
       <path
         fill="#A000F8"
@@ -90,6 +95,7 @@ export function IconC(props: SVGProps<SVGSVGElement>) {
       viewBox="0 0 18 13"
       {...props}
     >
+      <title>Community</title>
       <rect width={17} height={12} x={0.5} y={0.5} stroke="#FC0036" rx={6} />
       <path
         fill="#FC0036"

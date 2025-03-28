@@ -1,4 +1,4 @@
-import { type ReactNode, type SVGProps } from "react";
+import type { ReactNode, SVGProps } from "react";
 
 export function Banner({ message }: { message: ReactNode }) {
   return (
@@ -17,6 +17,7 @@ function IconInfo(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Info</title>
       <path
         d="M9.99999 13.3333V9.99999M9.99999 6.66666H10.0083M18.3333 9.99999C18.3333 14.6024 14.6024 18.3333 9.99999 18.3333C5.39762 18.3333 1.66666 14.6024 1.66666 9.99999C1.66666 5.39762 5.39762 1.66666 9.99999 1.66666C14.6024 1.66666 18.3333 5.39762 18.3333 9.99999Z"
         stroke="currentColor"

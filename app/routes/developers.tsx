@@ -1,9 +1,8 @@
-import { type Route } from ".react-router/types/app/routes/+types/developers";
 import { PageDevelopers } from "~/pages/developers";
 
 export type Item = (typeof items)[0];
 
-export function meta({}: Route.MetaArgs) {
+export function meta() {
   return [{ title: "Developers – Miden" }];
 }
 
@@ -31,6 +30,6 @@ const items = [
   },
 ];
 
-export default function RouteDevelopers({}: Route.ComponentProps) {
+export default function RouteDevelopers() {
   return <PageDevelopers items={items} />;
 }

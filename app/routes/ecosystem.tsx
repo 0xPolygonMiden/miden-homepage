@@ -1,4 +1,3 @@
-import { type Route } from ".react-router/types/app/routes/+types/ecosystem";
 import {
   LogoArcane,
   LogoComposabilityLabs,
@@ -9,7 +8,7 @@ import { PageEcosystem } from "~/pages/ecosystem";
 
 export type Item = (typeof items)[0];
 
-export function meta({}: Route.MetaArgs) {
+export function meta() {
   return [{ title: "Ecosystem – Miden" }];
 }
 
@@ -40,6 +39,6 @@ const items = [
   },
 ];
 
-export default function RouteEcosystem({}: Route.ComponentProps) {
+export default function RouteEcosystem() {
   return <PageEcosystem items={items} />;
 }
