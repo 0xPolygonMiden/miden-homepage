@@ -7,6 +7,15 @@ on:
       - main
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
   deploy:
     runs-on: ubuntu-latest
     name: Deploy
