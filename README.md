@@ -149,4 +149,3 @@ You can then promote a version to production after verification or roll it out p
 ```sh
 npx wrangler versions deploy
 ```
-.
