@@ -7,21 +7,16 @@ on:
       - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-    name: Build
+    name: Deploy
     steps:
+      
       - uses: actions/checkout@v4
       - name: Install dependencies
         run: npm install
       - name: Build
         run: npm run build
-  deploy:
-    runs-on: ubuntu-latest
-    name: Deploy
-    needs: [build]
-    steps:
-      - uses: actions/checkout@v4
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
