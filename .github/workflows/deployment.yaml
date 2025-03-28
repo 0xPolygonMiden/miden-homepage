@@ -10,13 +10,17 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     name: Deploy
+    env:
+      CLOUDFLARE_API_TOKEN: a4093f504ac6cd3006ac73ab4b330f7c
     steps:
-      
       - uses: actions/checkout@v4
+
       - name: Install dependencies
         run: npm install
+
       - name: Build
         run: npm run build
+
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
