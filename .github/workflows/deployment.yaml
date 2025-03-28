@@ -1,7 +1,7 @@
 name: Deploy
 
 env:
-  CLOUDFLARE_API_TOKEN: a4093f504ac6cd3006ac73ab4b330f7c
+  CLOUDFLARE_ACCOUT_ID: a4093f504ac6cd3006ac73ab4b330f7c
 
 on:
   push:
