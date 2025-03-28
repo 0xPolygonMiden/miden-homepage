@@ -1,11 +1,10 @@
-import { type Route } from ".react-router/types/app/content/+types/ecosystem.program";
 import { motion } from "motion/react";
 import { useState } from "react";
 import { Link, Outlet } from "react-router";
-import { Container } from "~/components/container";
 import { Footer } from "~/components/footer";
 import { Navigation } from "~/components/navigation";
 import { getEcosystem } from "~/lib/ecosystem.server";
+import type { Route } from "./+types/ecosystem.program";
 
 export function loader({ request }: Route.LoaderArgs) {
   const url = new URL(request.url);
@@ -44,7 +43,7 @@ export default function Layout({ loaderData: { data } }: Route.ComponentProps) {
           <ul className="hidden top-0 sticky xl:flex flex-col ml-auto p-6 w-full max-w-3xs h-fit text-muted-foreground">
             <li>
               <Link
-                to={`/ecosystem`}
+                to="ecosystem"
                 className="flex items-center gap-1 py-1.5 overflow-hidden hover:text-black text-balance transition-colors"
                 onMouseEnter={() => {
                   setIsHovering(true);
