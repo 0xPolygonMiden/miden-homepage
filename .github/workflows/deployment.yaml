@@ -1,8 +1,5 @@
 name: Deploy
 
-env:
-  CLOUDFLARE_ACCOUT_ID: a4093f504ac6cd3006ac73ab4b330f7c
-
 on:
   push:
     branches:
@@ -26,4 +23,4 @@ jobs:
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: a4093f504ac6cd3006ac73ab4b330f7c
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUT_ID }}
