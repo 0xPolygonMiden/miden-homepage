@@ -59,13 +59,13 @@ h4 {
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(77.65% 0.2023 62.57);
+  --primary: oklch(0.676 0.217 38.802);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(40% 0 0);
-  --accent: oklch(51.47% 0.2861 261.78);
+  --accent: oklch(0.495 0.13 250.526);
   --accent-foreground: oklch(100% 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);

@@ -11,3 +11,4 @@
 .wrangler
 *.env
 *.vars
+.idea
