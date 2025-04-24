@@ -172,7 +172,7 @@ h4 {
     @apply w-full max-w-[800px] mx-auto;
   }
   .w-wrapper {
-    @apply w-full max-w-[555px] mx-0;
+    @apply w-full max-w-[800px] mx-0;
   }
 }
 
