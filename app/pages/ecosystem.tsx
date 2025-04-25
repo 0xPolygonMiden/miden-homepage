@@ -16,7 +16,7 @@ export function PageEcosystem({ items }: { items: Item[] }) {
             <Link
               prefetch="intent"
               to={href("/ecosystem/program/pioneers")}
-              className="text-accent underline underline-offset-2"
+              className="text-primary underline underline-offset-2"
             >
               Learn more about our Pioneer program →{" "}
             </Link>
@@ -26,7 +26,7 @@ export function PageEcosystem({ items }: { items: Item[] }) {
               to="https://docs.google.com/forms/d/e/1FAIpQLScGmZdSbJHeoRcIzret0dOG4PxorovSGBUXpVmUf0EFFLsW-w/viewform"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-accent underline underline-offset-2"
+              className="text-primary underline underline-offset-2"
             >
               Apply to the Pioneer program →
             </Link>

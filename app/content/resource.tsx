@@ -136,7 +136,7 @@ export default function Layout({
           {relatedPosts.map((item) => (
             <li key={item.slug}>
               <ListItem to={`/resource/blog/${item.slug}`} prefetch="intent">
-                <time className="text-accent">{item.date}</time>
+                <time className="text-primary">{item.date}</time>
                 <h4 className="text-muted-foreground truncate">{item.title}</h4>
               </ListItem>
             </li>

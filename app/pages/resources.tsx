@@ -57,7 +57,7 @@ export function PageResources({
                       to={`/resource/blog/${item.slug}`}
                       prefetch="intent"
                     >
-                      <time className="text-accent">{item.date}</time>
+                      <time className="text-primary">{item.date}</time>
                       <h4 className="!font-normal text-muted-foreground truncate">
                         {item.title}
                       </h4>
@@ -95,7 +95,7 @@ export function PageResources({
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <div className="flex justify-center items-center h-5 text-accent">
+                      <div className="flex justify-center items-center h-5 text-primary">
                         <IconPaper className="size-3.5" />
                       </div>
                       <h4 className="!font-normal text-muted-foreground truncate">
@@ -135,7 +135,7 @@ export function PageResources({
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <div className="flex justify-center items-center h-5 text-accent">
+                      <div className="flex justify-center items-center h-5 text-primary">
                         <IconTalk className="size-3.5" />
                       </div>
                       <h4 className="!font-normal text-muted-foreground truncate">

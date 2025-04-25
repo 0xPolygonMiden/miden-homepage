@@ -43,7 +43,7 @@ export function PageOverview({
             posts.map((item) => (
               <li key={item.title}>
                 <ListItem to={`/resource/${category}/${item.slug}`}>
-                  <time className="text-accent">{item.date}</time>
+                  <time className="text-primary">{item.date}</time>
                   <h4 className="text-muted-foreground truncate">
                     {item.title}
                   </h4>
@@ -54,7 +54,7 @@ export function PageOverview({
             papers.map((item) => (
               <li key={item.label}>
                 <ListItem to={item.link}>
-                  <div className="flex justify-center items-center h-5 text-accent">
+                  <div className="flex justify-center items-center h-5 text-primary">
                     <IconPaper className="size-3.5" />
                   </div>
                   <h4 className="text-muted-foreground truncate">
@@ -67,7 +67,7 @@ export function PageOverview({
             talks.map((item) => (
               <li key={item.label}>
                 <ListItem to={item.link}>
-                  <div className="flex justify-center items-center h-5 text-accent">
+                  <div className="flex justify-center items-center h-5 text-primary">
                     <IconTalk className="size-3.5" />
                   </div>
                   <h4 className="text-muted-foreground truncate">

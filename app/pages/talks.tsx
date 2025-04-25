@@ -30,7 +30,7 @@ export function PageTalks({ talks }: { talks: Article[] }) {
           {talks.map((item) => (
             <li key={item.title}>
               <ListItem to={`/resource/talks/${item.slug}`}>
-                <time className="text-accent">{item.date}</time>
+                <time className="text-primary">{item.date}</time>
                 <h4 className="text-muted-foreground">{item.title}</h4>
               </ListItem>
             </li>
