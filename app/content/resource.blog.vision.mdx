@@ -78,11 +78,13 @@ Shared public state on Miden is facilitated via “network accounts.” These ar
 
 A good illustration of this mechanism is an AMM contract. Similar to how it works on  Ethereum, the code and the asset pool of the AMM account will be publicly visible on Miden (the AMM account will be a “network account”). But now any private account will be able to interact with the AMM by creating notes that represent the trading intents. Users could create such notes in local transactions. The network will then consume all incoming notes in a network transaction to facilitate the trades, and will produce outgoing notes carrying the swapped asset back to the senders.
 
+![PublicSharedState](/images/public-shared-state.gif)
+
 ## Writing smart contracts
 
 At the core of the Miden execution environment is the Miden VM, a virtual machine designed specifically to be efficiently provable using ZK technology and to support private program execution required for client-side proving. However, to make the development on Miden as easy as possible, we've decided against developing a bespoke language for the Miden VM. Instead, the VM can execute programs written in any language that can be compiled into WebAssembly.
 
-![PublicSharedState](/images/public-shared-state.gif)
+![CompilationPipeline](/images/compilation-pipeline.png)
 
 One such language is Rust, and it will be the primary smart contract development language on Miden. Aside from being a safe and mature programming language, Rust is familiar to most developers in the crypto industry and to many more developers beyond, minimizing the friction for new developers wanting to build on blockchain.
 
