@@ -1,8 +1,8 @@
 import {
   LogoArcane,
   LogoComposabilityLabs,
-  LogoKeom,
   LogoPragma,
+  LogoLinum,
 } from "~/components/logo";
 import { PageEcosystem } from "~/pages/ecosystem";
 
@@ -14,28 +14,28 @@ export function meta() {
 
 const items = [
   {
-    icon: <LogoKeom className="size-6" />,
-    label: "Keom",
-    description: "Efficient Private Order Book",
-    link: "https://www.keom.io/",
-  },
-  {
-    icon: <LogoComposabilityLabs className="size-6" />,
-    label: "Composability Labs",
-    description: "Compliant Dark Pool",
-    link: "https://github.com/compolabs",
-  },
-  {
     icon: <LogoPragma className="size-6" />,
     label: "Pragma",
     description: "High-frequency Oracle",
-    link: "https://www.pragma.build/",
+    link: "https://github.com/astraly-labs/pragma-miden",
   },
   {
     icon: <LogoArcane className="size-6" />,
     label: "Arcane Finance",
     description: "Compliant On-Chain Mixer",
-    link: "https://www.arcane.finance/",
+    link: "https://github.com/arcane-finance-defi/miden-bridge-mono",
+  },
+  {
+    icon: <LogoComposabilityLabs className="size-6" />,
+    label: "Composability Labs",
+    description: "Compliant Dark Pool as extension of their perp DEX on Aptos",
+    link: "https://github.com/compolabs/miden-dark-pool/tree/dev/tcp",
+  },
+  {
+    icon: <LogoLinum className="size-6" />,
+    label: "Linum Labs",
+    description: "Compliant Dark Pool using MPC",
+    link: "https://www.linumlabs.com/",
   },
 ];
 
