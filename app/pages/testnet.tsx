@@ -7,12 +7,10 @@ export function PageTestnet({ items }: { items: Item[] }) {
     <Container>
       <Header>
         <h2>
-          Miden is in <br /> Alpha Testnet V6
+          Miden Testnet
         </h2>
         <p>
-          Currently, Miden is in alpha testnet. It works, and you can experiment
-          with it. But not all the features, e.g., Rust compilation, are there
-          yet.
+          The current version is Alpha Testnet v07. It is ready for builders to experiment with, but some important features (e.g. Rust compilation) are not yet available.
         </p>
       </Header>
       <div className="mt-16">

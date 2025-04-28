@@ -24,7 +24,7 @@ export function PageRoadmap() {
       <Container>
         <Header>
           <h2>
-            Miden road to mainnet <br /> H1 2025
+            Miden: Road to Mainnet
           </h2>
         </Header>
         <ul className="xl:hidden flex md:flex-row flex-col gap-4 mx-auto py-6 w-miden font-medium text-xs">

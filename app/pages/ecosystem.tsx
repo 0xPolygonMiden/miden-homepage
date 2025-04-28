@@ -6,11 +6,9 @@ export function PageEcosystem({ items }: { items: Item[] }) {
   return (
     <Container>
       <Header>
-        <h2>Pioneer program</h2>
-        <p>
-          The Pioneer program provides critical support and grants funding to
-          accelerate the teams shaping tomorrow’s onchain economies.
-        </p>
+        <h2>Miden Pioneer Program</h2>
+        <p>The Miden Pioneer Program gives top teams critical support and funding to build the future of on-chain economies.</p>
+        <p>Created to expand the Miden ecosystem, this accelerator brings together venture funds, market makers, and technical support to help founders navigate the key stages of startup growth.</p>
         <ul className="flex flex-col gap-3">
           <li>
             <Link

@@ -5,15 +5,12 @@ export function PageHome() {
   return (
     <Container className="flex-1">
       <Header>
-        <h2>Miden is a high-throughput, privacy-enabled blockchain</h2>
+        <h2>Miden is the Edge Blockchain</h2>
         <p>
-          Miden is the next-generation blockchain protocol designed from the
-          ground up to take full advantage of the capabilities unlocked by ZK
-          technology. It takes the core concept of ZK rollups to its logical
-          conclusion and pushes both state and execution to the edge (i.e., the
-          client side). This allows Miden to simultaneously address the problems
-          plaguing transparent and synchronous blockchains in scalability,
-          privacy, and safety.
+         Miden grants applications the power to scale with public and private transactions.
+        </p>
+        <p>
+          By pushing execution and state to the edge, on the client side, Miden overcomes the limitations of scalability, privacy and security that hold back traditional blockchains.
         </p>
         <Link
           to="/developers"
@@ -30,29 +27,22 @@ export function PageHome() {
         <ol className="flex flex-col gap-8 mt-6">
           <li>
             <h4 className="mb-1 font-bold text-primary">
-              Unbounded scalability
+            It scales
             </h4>
             <p>
-              Through client-side proving, Miden allows users to execute and
-              prove transactions locally without requiring the network to
-              re-execute them. This scales better.
+              Miden allows users to execute and prove their own transactions with  client-side proving, removing the need for re-execution.
             </p>
           </li>
           <li>
-            <h4 className="mb-1 font-bold text-primary">Privacy by default</h4>
+            <h4 className="mb-1 font-bold text-primary">It’s private</h4>
             <p>
-              With client-side execution and a self-custodied state, users
-              maintain complete control over their data and transaction details.
-              The network only needs to know commitments to states.
+              With edge execution and self-custodied state control, users keep full control of their data and transaction details.
             </p>
           </li>
           <li>
-            <h4 className="mb-1 font-bold text-primary">Safe development</h4>
+            <h4 className="mb-1 font-bold text-primary">It’s secure</h4>
             <p>
-              Miden prioritizes developer safety and accessibility by leveraging
-              Rust as the primary smart contract language and incorporating
-              in-protocol safeguards like account abstraction and self-custodied
-              state.
+            Miden enables safe smart contract development with Rust and built-in account abstraction, while also minimizing attack surface with native asset storage for user accounts.
             </p>
           </li>
         </ol>

@@ -7,13 +7,8 @@ export function PageDevelopers({ items }: { items: Item[] }) {
     <Container>
       <Header>
         <h2>Why build on miden?</h2>
-        <p>
-          On Miden, builders can build applications that are infeasible on other
-          systems. Miden is for high throughput and private applications. In
-          protocol safeguards, like native account abstraction, and Rust smart
-          contractors provide the safety you need to build the future's
-          financial applications.
-        </p>
+        <p>Edge execution enables what traditional blockchains can’t provide: An environment to create and deploy scalable applications with private and public transactions.</p>
+        <p>Miden offers the flexibility and security guarantees needed to build previously impossible products through account abstraction, self-custodied state, and smart contracts written in Rust.</p>
       </Header>
 
       <div className="mt-16">
