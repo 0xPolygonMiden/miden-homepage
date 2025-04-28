@@ -38,10 +38,9 @@ export function LogoLinum(props: SVGProps<SVGSVGElement>) {
     return (
         <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="720"
-        height="630"
+        viewBox="0 0 23 23"
         fill="none"
-        viewBox="0 0 720 630"
+        {...props}
       >
         <path
           fill="#1C2D37"
