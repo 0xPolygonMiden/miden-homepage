@@ -11,5 +11,11 @@
   },
   "placement": {
     "mode": "smart"
-  }
+  },
+  "routes": [
+    {
+      "pattern": "miden.xyz",
+      "custom_domain": true
+    }
+  ]
 }
