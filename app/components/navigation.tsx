@@ -40,7 +40,7 @@ export function Navigation() {
   return (
     <nav className="flex justify-between items-center gap-4 px-6 py-6 md:pr-3 pb-0 md:pl-6 w-miden text-xs">
       <Link to="/" prefetch="intent">
-        <Logo className="h-9 shrink-0" />
+        <Logo className="h-9 shrink-0 w-full" />
       </Link>
       <ul className="hidden md:flex justify-end items-center">
         {items.map((item) => (
@@ -71,7 +71,7 @@ export function Navigation() {
           <div className="p-6">
             <DrawerHeader className="mb-4 px-3">
               <DrawerTitle className="text-lg">
-                <Logo className="h-9 shrink-0" />
+                <Logo className="h-9 w-full shrink-0" />
               </DrawerTitle>
               <DrawerDescription className="text-base">
                 Miden is a privacy-preserving blockchain platform that enables
