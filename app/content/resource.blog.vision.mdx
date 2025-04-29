@@ -5,7 +5,7 @@ date: 28.04.25
 featured: true
 ---
 
-## Miden: the Edge Blockchain
+# Miden: the Edge Blockchain
 
 If Bitcoin and Ethereum were designed today, they would look a lot like Miden.
 
@@ -17,7 +17,7 @@ With edge blockchains we can simultaneously address the problems of scalability,
 Our goal with Miden is to build a chain that enables applications to scale both vertically and horizontally, supports public and private transactions, is safe to use and to develop on, and doesn’t require developers to learn new programming languages. All without compromising self-custody or censorship resistance.
 Only by achieving these can we fulfill the original promise of crypto where people and businesses can trustlessly transfer value to each other over the internet at global scale.
 
-### The future of crypto is at the edge
+## The future of crypto is at the edge
 
 The crypto industry has seen two major inflection points. The first came with Bitcoin, in 2009, which, after years of trial and error, introduced the ability for people to transfer assets without intermediaries. The second came with Ethereum, in 2015, which made blockchains truly programmable and unlocked a wave of developer creativity across new use cases.
 Both inflection points required a fundamental rethinking of how the technology works. Since then, blockchain systems have seen improvements in areas like consensus, programming languages, and networking. But these improvements have been largely incremental in nature and none changed the core operating principles of blockchains. Now, with edge blockchains, crypto is on the verge of a third inflection point.
@@ -35,7 +35,7 @@ Traditional blockchains have attempted to work around the privacy problem, but e
 - ZK-based add-ons: Tools like Tornado Cash add real privacy to existing protocols, but at a high cost to users (both in UX and monetary terms). These costs deter regular activity and lead to adverse selection.
 Absent affordable on-chain privacy options, users frequently resort to using centralized exchanges such as Binance and Coinbase as their mixers, or worse yet, stay within web2-like ecosystems of these exchanges. While this does provide a measure of privacy, it also directly undermines core tenets of web3: self-custody and censorship-resistance.
 
-### The case for edge execution
+## The case for edge execution
 
 Edge blockchains are designed differently. Users execute their own transactions locally and store their own state. ZK proofs of valid transactions reach the chain, where nodes verify compact ZK proofs that can represent thousands or even millions of valid transactions. This escapes the traditional blockchain correlation between usage growth and performance degradation, and makes privacy the default.
 The most immediate benefit of edge execution is the elimination of execution bloat. If most transactions are executed and proven by users, the network no longer needs to re-execute them. As a result, even a smartphone can handle real-time verification at a massive scale.
@@ -44,7 +44,7 @@ Edge execution also minimizes state bloat by enabling users to self-custody thei
 Last but not least, privacy is a natural outcome of edge execution. When users execute contract code themselves, there is no need to share the code with the network. Only a commitment to the code must be made public. The same applies to state: if users self-custody their data, the network sees only commitments, not the actual balances or storage. Edge execution combined with self-custodied state may be the only way to achieve true privacy.
 Rearchitecting a chain for the edge aligns incentives correctly: the more work users are willing to do themselves (to prove their own transactions, manage their own state), the less work the network needs to do. Not only does this lower the cost of using the network, the edge blockchain brings scale without compromising self-custody, censorship resistance, or privacy.
 
-## Miden Architecture: To The Edge and Beyond
+# Miden Architecture: To The Edge and Beyond
 
 At the core of Miden’s design is the Actor Model, a proven framework for scaling concurrent and distributed systems. In this model, independent entities called actors communicate by exchanging asynchronous messages. Each actor is a “little” state machine which manages its own state and exposes a well-defined interface to the world. When an actor receives a message, it can update its state and send messages that trigger changes in other actors. Miden’s key innovation is combining the Actor Model with ZK proofs, making all state transitions provable.
 In the context of Miden, actors are accounts. Like Ethereum smart contracts, accounts contain code, storage, and assets.
@@ -67,7 +67,7 @@ For example, to transfer assets from one account to another, Miden requires two 
 
 ![Transaction](/images/transaction.gif)
 
-### Handling public shared sate
+## Handling public shared sate
 
 While Miden emphasizes edge execution and self-custodied state, it also accommodates applications that require shared, public state and network execution. This hybridity creates maximal flexibility and enables new classes of applications which require both confidentiality and composability.
 
@@ -77,7 +77,7 @@ A good illustration of this mechanism is an AMM contract. Similar to how it work
 
 ![PublicSharedState](/images/public-shared-state.gif)
 
-### Writing smart contracts
+## Writing smart contracts
 
 At the core of the Miden execution environment is the Miden VM, a virtual machine designed specifically to be efficiently provable using ZK technology and to support private program execution required for client-side proving. However, to make the development on Miden as easy as possible, we've decided against developing a bespoke language for the Miden VM. Instead, the VM can execute programs written in any language that can be compiled into WebAssembly.
 
