@@ -5,7 +5,8 @@ date: 28.04.25
 featured: true
 ---
 
-# Miden: The Edge Blockchain
+# Miden: the Edge Blockchain
+
 If Bitcoin and Ethereum were designed today, they would look a lot like Miden.
 
 Why? The advent of ZK technology makes it possible to reimagine blockchains from first principles. No longer does the network need to execute (and re-execute) all transactions to verify the validity of the chain. Instead, execution and state can move to the edge (i.e., the client side) where users prove their transactions locally, and send ZK proofs to the network. The role of the network is then largely reduced to verifying and aggregating the proofs, tracking state commitments, and managing public shared state.
@@ -28,39 +29,35 @@ First, requiring every node to re-execute all transactions is inherently wastefu
 
 The second major challenge with traditional chains is state bloat. Re-executing transactions requires access to the full underlying blockchain state. As usage grows, nodes must track an ever-expanding volume of data. Several approaches aim to reduce state bloat in traditional chains, such as statelessness and sharding, but they all come with significant trade-offs to security and/or composability.
 Both state and execution bloat force network execution chains into a tradeoff: they either have to limit throughput or rely on overpowered machines to run a node. Limiting throughput breaks scalability, while relying on overpowered nodes centralizes the network and undermines censorship resistance.
-
 Third, providing a satisfactory level of privacy or confidentiality in traditional blockchains is practically impossible. The fundamental limit here again is that to re-execute transactions, nodes need to know all underlying transaction data, and thus, transaction details must be made public. The lack of privacy is sometimes treated as a selling point: transparency. But transparency is a bug, not a feature.
 Traditional blockchains have attempted to work around the privacy problem, but each approach comes with trade-offs:
-
 - Pseudo-anonymity: While interactions between blockchain accounts are public, the connection to real-world identities stay private - at least in theory. In practice, firms like Chainalysis can easily trace most accounts back to owners.
 - ZK-based add-ons: Tools like Tornado Cash add real privacy to existing protocols, but at a high cost to users (both in UX and monetary terms). These costs deter regular activity and lead to adverse selection.
-
 Absent affordable on-chain privacy options, users frequently resort to using centralized exchanges such as Binance and Coinbase as their mixers, or worse yet, stay within web2-like ecosystems of these exchanges. While this does provide a measure of privacy, it also directly undermines core tenets of web3: self-custody and censorship-resistance.
 
-## The case for edge execution
+### The case for edge execution
 
-Edge blockchains are designed differently. Users execute their own transactions locally and store their own state. ZK proofs of valid transactions reach the chain, where nodes verify compact ZK proofs that can represent thousands or even millions of valid transactions This escapes the traditional blockchain correlation between usage growth and performance degradation, and makes privacy the default.
+Edge blockchains are designed differently. Users execute their own transactions locally and store their own state. ZK proofs of valid transactions reach the chain, where nodes verify compact ZK proofs that can represent thousands or even millions of valid transactions. This escapes the traditional blockchain correlation between usage growth and performance degradation, and makes privacy the default.
 The most immediate benefit of edge execution is the elimination of execution bloat. If most transactions are executed and proven by users, the network no longer needs to re-execute them. As a result, even a smartphone can handle real-time verification at a massive scale.
 Just as importantly, edge execution removes the limits on smart contract complexity. ZK proofs are exponentially faster to verify than the computations they represent. From the network’s perspective, there’s little difference between a proof of a simple token transfer and a proof of an ML model that required a data center to run. The computational complexity of a smart contract is limited only by the user's hardware, not by gas limits or other network-imposed constraints.
 Edge execution also minimizes state bloat by enabling users to self-custody their state. Since transitions are proven locally, the network only needs to track short commitments, such as 32-byte hashes, to verify validity. Full account states can be stored anywhere: on user devices, in centralized clouds, or in decentralized data availability layers. This drastically reduces node storage requirements and allows block producers to create new blocks without knowing the entire state. It also removes constraints on how large a contract's state can be or how costly that state is to manage.
 Last but not least, privacy is a natural outcome of edge execution. When users execute contract code themselves, there is no need to share the code with the network. Only a commitment to the code must be made public. The same applies to state: if users self-custody their data, the network sees only commitments, not the actual balances or storage. Edge execution combined with self-custodied state may be the only way to achieve true privacy.
 Rearchitecting a chain for the edge aligns incentives correctly: the more work users are willing to do themselves (to prove their own transactions, manage their own state), the less work the network needs to do. Not only does this lower the cost of using the network, the edge blockchain brings scale without compromising self-custody, censorship resistance, or privacy.
 
-# Miden architecture: To the edge and beyond
+## Miden Architecture: To The Edge and Beyond
 
-At the core of Miden’s design is the [Actor Model](https://en.wikipedia.org/wiki/Actor_model), a proven framework for scaling concurrent and distributed systems. In this model, independent entities called actors communicate by exchanging asynchronous messages. Each actor is a “little” state machine which  manages its own state and exposes a well-defined interface to the world. When an actor receives a message, it can update its state and send messages that trigger changes in other actors. Miden’s key innovation is combining the Actor Model with ZK proofs, making all state transitions provable.
-
+At the core of Miden’s design is the Actor Model, a proven framework for scaling concurrent and distributed systems. In this model, independent entities called actors communicate by exchanging asynchronous messages. Each actor is a “little” state machine which manages its own state and exposes a well-defined interface to the world. When an actor receives a message, it can update its state and send messages that trigger changes in other actors. Miden’s key innovation is combining the Actor Model with ZK proofs, making all state transitions provable.
 In the context of Miden, actors are accounts. Like Ethereum smart contracts, accounts contain code, storage, and assets.
 
 But there’s an important difference: in Miden, all assets are native and are stored locally within an account. Thus, adding or removing assets to/from an account does not require updates to other accounts. This is one of the crucial properties which makes edge execution on Miden possible in ways that traditional blockchains structurally cannot support.
 
 ![Account](/images/account.png)
 
-Accounts on Miden can be public or private. Public accounts are stored entirely on-chain, similar to how most accounts work in other blockchains. Private accounts are stored off-chain \- only their commitments go on-chain. This option creates remarkable efficiency: a commitment to a private account is just 32 bytes, regardless of how much data it actually contains.
+Accounts on Miden can be public or private. Public accounts are stored entirely on-chain, similar to how most accounts work in other blockchains. Private accounts are stored off-chain - only their commitments go on-chain. This option creates remarkable efficiency: a commitment to a private account is just 32 bytes, regardless of how much data it actually contains.
 
 With this architecture, Miden can support billions of private accounts while maintaining a manageable state size without compromising security or verifiability. 
 
-Accounts communicate with each other by message passing. Messages on Miden are called notes and are implemented as UTXOs under the hood. Just as accounts, notes can store assets. Notes also have “spend scripts” which define who can consume a note and how. These scripts are Turing-complete programs and can access blockchain state. For example, a script can define a “recallable transaction” (i.e., a note which can be claimed back by the sender after some time) or a native atomic swap. Another way to look at notes is that they are on-chain intents \- a note defines a set of conditions which needs to be fulfilled by someone to claim the note.
+Accounts communicate with each other by message passing. Messages on Miden are called notes and are implemented as UTXOs under the hood. Just as accounts, notes can store assets. Notes also have “spend scripts” which define who can consume a note and how. These scripts are Turing-complete programs and can access blockchain state - this makes them very powerful. For example, a script can define a “recallable transaction” (i.e., a note which can be claimed back by the sender after some time) or a native atomic swap. Another way to look at notes is that they are on-chain intents - a note defines a set of conditions which needs to be fulfilled by someone to claim the note.
 
 Similar to accounts, notes can be either public (fully on-chain) or private (only note commitment and metadata are on-chain). In the future, Miden will also enable encrypted notes, where the full note data goes on-chain but this data is encrypted.
 
@@ -70,7 +67,7 @@ For example, to transfer assets from one account to another, Miden requires two 
 
 ![Transaction](/images/transaction.gif)
 
-## Handling public shared state
+### Handling public shared sate
 
 While Miden emphasizes edge execution and self-custodied state, it also accommodates applications that require shared, public state and network execution. This hybridity creates maximal flexibility and enables new classes of applications which require both confidentiality and composability.
 
@@ -80,7 +77,7 @@ A good illustration of this mechanism is an AMM contract. Similar to how it work
 
 ![PublicSharedState](/images/public-shared-state.gif)
 
-## Writing smart contracts
+### Writing smart contracts
 
 At the core of the Miden execution environment is the Miden VM, a virtual machine designed specifically to be efficiently provable using ZK technology and to support private program execution required for client-side proving. However, to make the development on Miden as easy as possible, we've decided against developing a bespoke language for the Miden VM. Instead, the VM can execute programs written in any language that can be compiled into WebAssembly.
 
@@ -88,9 +85,9 @@ At the core of the Miden execution environment is the Miden VM, a virtual machin
 
 One such language is Rust, and it will be the primary smart contract development language on Miden. Aside from being a safe and mature programming language, Rust is familiar to most developers in the crypto industry and to many more developers beyond, minimizing the friction for new developers wanting to build on blockchain.
 
-# Miden’s advantage for builders and users
+## Miden’s advantage for builders and users
 
-As the edge blockchain, Miden presents a fundamental shift in blockchain architecture which addresses the core limitations of traditional blockchains. But how exactly does this benefit builders and users? Our goal is to expand the set of use cases blockchains can address by enabling applications which are difficult \- if not impossible \- to deploy on traditional chains, while at the same time making user experience simpler and safer.
+As the edge blockchain, Miden presents a fundamental shift in blockchain architecture which addresses the core limitations of traditional blockchains. But how exactly does this benefit builders and users? Our goal is to expand the set of use cases blockchains can address by enabling applications which are difficult - if not impossible - to deploy on traditional chains, while at the same time making user experience simpler and safer.
 
 Take, for example, applications that integrate complex logic which otherwise would be too expensive on traditional chains. Moving computations offchain has two primary benefits. First, there is no practical limit on how complex a smart contract can be. This means you could run sophisticated order matching algorithms, evaluate complex financial formulas, or compute AI model inferences in smart contracts, all while keeping fees at a minimum. Second, computational complexity of one contract does not affect other contract execution. 
 
@@ -98,12 +95,10 @@ So as applications gain traction, they will not cause performance degradation fo
 
 Miden is an ideal environment for compliant, privacy-oriented market participants who value confidentiality and recognize the security and business risks of broadcasting their financial activity on-chain. Among existing web3 participants, these include treasuries, foundations, VCs, whales, and retail users. But in a broader context, enabling privacy while allowing users to be provably compliant is an absolute necessity for bringing institutions into web3 in any meaningful way, such as putting blockchain rails on payment systems or tokenizing real world assets.
 
-In fact, Miden creates a new design space: privacy at scale, where applications can be hybrids of public and private components, all while maintaining composability. The simplest example of this are private wallets trading on a public DEXs while maintaining user confidentiality. But Miden is flexible enough to support more complex scenarios, where private payments or lending transactions are conditional on the states of public oracles; stablecoins which are able to impose transaction restrictions without the need to keep exhaustive ownership records; or even identity-based ownership, e.g., only users who are over 18 can own a certain asset \- all without revealing any personally-identifiable information to the public.
+In fact, Miden creates a new design space: privacy at scale, where applications can be hybrids of public and private components, all while maintaining composability. The simplest example of this are private wallets trading on a public DEXs while maintaining user confidentiality. But Miden is flexible enough to support more complex scenarios, where private payments or lending transactions are conditional on the states of public oracles; stablecoins which are able to impose transaction restrictions without the need to keep exhaustive ownership records; or even identity-based ownership, e.g., only users who are over 18 can own a certain asset - all without revealing any personally-identifiable information to the public.
 
 For users, Miden provides a set of protocol-level features which make using the chain both simpler and safer. For example, all accounts on Miden are smart contracts. Users get a host of features ranging from social account recovery, to rate-limited withdrawals, to flexible choice of authentication schemes.
 
-Miden’s unique note-based model enables constructs like recallable transactions: if funds are sent to a non-existent address, they can be reclaimed later. Transaction fees on Miden can be paid in non-native tokens, simplifying account management, and reducing the “cold-start” problem. And keeping account balances and transactions private drastically increases the level of safety \- it’s orders of magnitude more difficult for threat actors to identify high-value accounts and exploit bugs than in the fully transparent setting of traditional blockchains.
+Miden’s note-based model enables constructs like recallable transactions: if funds are sent to a non-existent address, they can be reclaimed later. Transaction fees on Miden can be paid in non-native tokens, simplifying account management, and reducing the “cold-start” problem. And keeping account balances and transactions private drastically increases the level of safety - it’s orders of magnitude more difficult for threat actors to identify high-value accounts and exploit bugs than in the fully transparent setting of traditional blockchains.
 
-In sum, Miden eliminates many of the pain points that have so far provincialized crypto. Miden makes for better user and builder experience, unlocks horizontal and vertical scale, and, yes, finally does what every blockchain before it has promised to do, but failed to deliver on: bring mass adoption to web3. 
-
-All of the above (and many others) help eliminate traditional web3 footguns which make crypto so difficult and scary to use for regular people and institutions alike making Miden the ideal chain for the mass adoption of crypto.
+All of the above (and many others) help eliminate traditional web3 footguns which make crypto so difficult and scary to use for regular people and institutions alike, making Miden ideal for the mass adoption of crypto.
