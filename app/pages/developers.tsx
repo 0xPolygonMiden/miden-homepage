@@ -11,7 +11,7 @@ export function PageDevelopers({ items }: { items: ItemType[] }) {
   return (
     <Container>
       <Header>
-        <h2>Why build on miden?</h2>
+        <h2>Why build on Miden?</h2>
         <p>
           Edge execution enables what traditional blockchains can’t provide: An
           environment to create and deploy scalable applications with private
