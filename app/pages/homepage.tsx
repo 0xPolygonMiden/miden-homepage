@@ -1,7 +1,18 @@
 import { Link } from "react-router";
 import { Container, Header } from "~/components/container";
+import { cn } from "~/lib/utils";
 
-export function PageHome() {
+export type Investor = {
+  icon: React.ReactNode;
+  label: string;
+  size?: "large" | "small";
+};
+
+export function PageHome({
+  items,
+}: {
+  items: Investor[];
+}) {
   return (
     <Container className="flex-1">
       <Header>
@@ -53,7 +64,24 @@ export function PageHome() {
         </ol>
       </div>
 
-      {/* TODO: Add a section investors */}
+      <div className="mt-16">
+        <h3 className="font-sans font-semibold text-2xl text-balance">
+          Our investors
+        </h3>
+        <ul className="gap-4 grid grid-cols-2 md:grid-cols-4 mt-6">
+          {items.map((item) => (
+            <li
+              key={item.label}
+              className={cn(
+                "flex items-center justify-center w-full h-24 border",
+                item.size === "large" && "h-44",
+              )}
+            >
+              {item.icon}
+            </li>
+          ))}
+        </ul>
+      </div>
     </Container>
   );
 }
