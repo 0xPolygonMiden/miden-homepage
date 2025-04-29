@@ -37,6 +37,17 @@ export function getFeaturedPosts(): Article[] {
     );
 }
 
+export function getRelatedPosts(slug: Article["slug"]): Article[] {
+  const allPosts = getPosts();
+  return allPosts
+    .filter((post) => post.featured)
+    .filter((post) => slug !== post.slug)
+    .sort(
+      (a, b) =>
+        new Date(format(b.date)).getTime() - new Date(format(a.date)).getTime(),
+    );
+}
+
 export function getPost(slug: string): Article | undefined {
   const allPosts = getPosts();
   return allPosts.find((post) => post.slug === slug);

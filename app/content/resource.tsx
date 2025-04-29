@@ -1,4 +1,3 @@
-import type { Route } from "./+types/resource";
 import { motion } from "motion/react";
 import { useState } from "react";
 import { Link, Outlet } from "react-router";
@@ -9,8 +8,9 @@ import { Navigation } from "~/components/navigation";
 import type { Article } from "~/lib/data";
 import { getEcosystem } from "~/lib/ecosystem.server";
 import { getPaper } from "~/lib/papers.server";
-import { getFeaturedPosts, getPost } from "~/lib/posts.server";
+import { getPost, getRelatedPosts } from "~/lib/posts.server";
 import { getTalk } from "~/lib/talks.server";
+import type { Route } from "./+types/resource";
 
 export function loader({ request }: Route.LoaderArgs) {
   const url = new URL(request.url);
@@ -52,7 +52,7 @@ export function loader({ request }: Route.LoaderArgs) {
     throw new Response("Not found", { status: 404 });
   }
 
-  const relatedPosts = getFeaturedPosts();
+  const relatedPosts = getRelatedPosts(data.slug);
 
   return { data, category, relatedPosts };
 }
@@ -131,13 +131,15 @@ export default function Layout({
       </main>
 
       <Container className="my-0 mb-12 text-sm">
-        <h3 className="my-b">More blogs</h3>
+        <h3 className="my-3 my-b font-sans">More blogs</h3>
         <ul className="flex flex-col">
           {relatedPosts.map((item) => (
             <li key={item.slug}>
               <ListItem to={`/resource/blog/${item.slug}`} prefetch="intent">
                 <time className="text-primary">{item.date}</time>
-                <h4 className="text-muted-foreground truncate">{item.title}</h4>
+                <h4 className="!font-normal text-muted-foreground truncate">
+                  {item.title}
+                </h4>
               </ListItem>
             </li>
           ))}
