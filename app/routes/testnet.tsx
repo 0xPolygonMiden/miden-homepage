@@ -28,7 +28,7 @@ const items = [
     label: "Miden Wallet",
     description: "Install the Miden wallet and experience client-side proving.",
     link: {
-      href: "#",
+      href: "https://www.leo.app/miden",
       label: "Wallet",
     },
   },
