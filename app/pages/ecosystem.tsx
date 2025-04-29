@@ -1,14 +1,27 @@
 import { href, Link } from "react-router";
 import { Container, Header, Wrapper } from "~/components/container";
-import type { Item } from "~/routes/ecosystem";
+import {
+  Item,
+  ItemDescription,
+  ItemHeader,
+  ItemTitle,
+} from "~/components/list";
+import type { Item as ItemType } from "~/routes/ecosystem";
 
-export function PageEcosystem({ items }: { items: Item[] }) {
+export function PageEcosystem({ items }: { items: ItemType[] }) {
   return (
     <Container>
       <Header>
         <h2>Miden Pioneer Program</h2>
-        <p>The Miden Pioneer Program gives top teams critical support and funding to build the future of on-chain economies.</p>
-        <p>Created to expand the Miden ecosystem, this accelerator brings together venture funds, market makers, and technical support to help founders navigate the key stages of startup growth.</p>
+        <p>
+          The Miden Pioneer Program gives top teams critical support and funding
+          to build the future of on-chain economies.
+        </p>
+        <p>
+          Created to expand the Miden ecosystem, this accelerator brings
+          together venture funds, market makers, and technical support to help
+          founders navigate the key stages of startup growth.
+        </p>
         <ul className="flex flex-col gap-3">
           <li>
             <Link
@@ -36,19 +49,18 @@ export function PageEcosystem({ items }: { items: Item[] }) {
         <div className="mb-6 font-bold">Projects</div>
         <Wrapper>
           {items.map((item) => (
-            <Link
+            <Item
               to={item.link}
               key={item.label}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col justify-between py-6 border-t transition-colors"
             >
-              <span className="flex items-center gap-3">
+              <ItemHeader>
                 {item.icon}
-                <h4>{item.label}</h4>
-              </span>
-              <p className="mt-4 text-muted-foreground">{item.description}</p>
-            </Link>
+                <ItemTitle>{item.label}</ItemTitle>
+              </ItemHeader>
+              <ItemDescription>{item.description}</ItemDescription>
+            </Item>
           ))}
         </Wrapper>
       </div>

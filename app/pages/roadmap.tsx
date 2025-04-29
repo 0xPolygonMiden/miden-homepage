@@ -23,9 +23,7 @@ export function PageRoadmap() {
       </div>
       <Container>
         <Header>
-          <h2>
-            Miden: Road to Mainnet
-          </h2>
+          <h2>Miden: Road to Mainnet</h2>
         </Header>
         <ul className="xl:hidden flex md:flex-row flex-col gap-4 mx-auto py-6 w-miden font-medium text-xs">
           <li className="flex items-center gap-2 text-[#00AC96]">

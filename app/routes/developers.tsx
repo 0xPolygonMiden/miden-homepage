@@ -9,8 +9,7 @@ export function meta() {
 const items = [
   {
     label: "Docs",
-    description:
-      "Everything you need to get started building with Miden.",
+    description: "Everything you need to get started building with Miden.",
     link: "https://0xpolygonmiden.github.io/miden-docs/",
   },
   {
@@ -20,7 +19,8 @@ const items = [
   },
   {
     label: "Midenscan",
-    description: "Explore accounts, transaction details, and notes on the Miden block explorer.",
+    description:
+      "Explore accounts, transaction details, and notes on the Miden block explorer.",
     link: "https://testnet.midenscan.com/",
   },
   {

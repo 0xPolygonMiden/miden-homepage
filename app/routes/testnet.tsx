@@ -9,7 +9,8 @@ export function meta() {
 const items = [
   {
     label: "Midenscan",
-    description: "Explore accounts, transaction details, and notes on the Miden block explorer.",
+    description:
+      "Explore accounts, transaction details, and notes on the Miden block explorer.",
     link: {
       href: "https://testnet.midenscan.com/",
       label: "Explorer",
@@ -25,8 +26,7 @@ const items = [
   },
   {
     label: "Miden Wallet",
-    description:
-      "Install the Miden wallet and experience client-side proving.",
+    description: "Install the Miden wallet and experience client-side proving.",
     link: {
       href: "#",
       label: "Wallet",

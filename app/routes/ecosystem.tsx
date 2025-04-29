@@ -3,6 +3,7 @@ import {
   LogoComposabilityLabs,
   LogoPragma,
   LogoLinum,
+  LogoLeo,
 } from "~/components/logo";
 import { PageEcosystem } from "~/pages/ecosystem";
 
@@ -36,6 +37,12 @@ const items = [
     label: "Linum Labs",
     description: "Compliant Dark Pool using MPC",
     link: "https://www.linumlabs.com/",
+  },
+  {
+    icon: <LogoLeo className="size-6" />,
+    label: "Leo Wallet",
+    description: "Wallet and WebClient SDK",
+    link: "https://www.leo.app/miden",
   },
 ];
 

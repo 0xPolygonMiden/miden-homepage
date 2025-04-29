@@ -1,31 +1,37 @@
-import { Link } from "react-router";
 import { Container, Header, Wrapper } from "~/components/container";
-import type { Item } from "~/routes/testnet";
+import {
+  Item,
+  ItemDescription,
+  ItemHeader,
+  ItemTitle,
+} from "~/components/list";
+import type { Item as ItemType } from "~/routes/testnet";
 
-export function PageTestnet({ items }: { items: Item[] }) {
+export function PageTestnet({ items }: { items: ItemType[] }) {
   return (
     <Container>
       <Header>
-        <h2>
-          Miden Testnet
-        </h2>
+        <h2>Miden Testnet</h2>
         <p>
-          The current version is Alpha Testnet v07. It is ready for builders to experiment with, but some important features (e.g. Rust compilation) are not yet available.
+          The current version is Alpha Testnet v07. It is ready for builders to
+          experiment with, but some important features (e.g. Rust compilation)
+          are not yet available.
         </p>
       </Header>
       <div className="mt-16">
         <Wrapper className="flex flex-col">
           {items.map((item) => (
-            <Link
+            <Item
               target="_blank"
               key={item.label}
               to={item.link.href}
-              className="py-6 border-t transition-colors"
               rel="noopener noreferrer"
             >
-              <h4>{item.label}</h4>
-              <p className="mt-2 text-muted-foreground">{item.description}</p>
-            </Link>
+              <ItemHeader>
+                <ItemTitle>{item.label}</ItemTitle>
+              </ItemHeader>
+              <ItemDescription>{item.description}</ItemDescription>
+            </Item>
           ))}
         </Wrapper>
       </div>
