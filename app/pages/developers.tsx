@@ -6,7 +6,7 @@ export function PageDevelopers({ items }: { items: Item[] }) {
   return (
     <Container>
       <Header>
-        <h2>Why build on miden?</h2>
+        <h2>Why build on Miden?</h2>
         <p>Edge execution enables what traditional blockchains can’t provide: An environment to create and deploy scalable applications with private and public transactions.</p>
         <p>Miden offers the flexibility and security guarantees needed to build previously impossible products through account abstraction, self-custodied state, and smart contracts written in Rust.</p>
       </Header>
