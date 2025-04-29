@@ -22,9 +22,19 @@ export function getPosts(): Article[] {
   return posts ?? [];
 }
 
+const format = (dateStr: string): string => {
+  const [day, month, year] = dateStr.split(".");
+  return `${`20${year}`}-${month}-${day}`;
+};
+
 export function getFeaturedPosts(): Article[] {
   const allPosts = getPosts();
-  return allPosts.filter((post) => post.featured);
+  return allPosts
+    .filter((post) => post.featured)
+    .sort(
+      (a, b) =>
+        new Date(format(b.date)).getTime() - new Date(format(a.date)).getTime(),
+    );
 }
 
 export function getPost(slug: string): Article | undefined {
