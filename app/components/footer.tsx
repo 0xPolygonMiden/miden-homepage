@@ -23,7 +23,7 @@ const socials = [
   },
   {
     label: "Github",
-    href: "https://github.com/0xPolygonMiden",
+    href: "https://github.com/0xMiden",
     icon: (
       <path
         fill="currentColor"
