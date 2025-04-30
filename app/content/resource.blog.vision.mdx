@@ -14,39 +14,55 @@ Why? The advent of ZK technology makes it possible to reimagine blockchains from
 We call this new paradigm the “edge blockchain” and it allows us to go beyond what is possible with traditional blockchains like Bitcoin, Ethereum, Solana, Sui, and Aptos, among others. Traditional blockchains are not suitable for mainstream adoption of crypto. They either fail to scale, lack privacy, are difficult to build on, or compromise the core principles of web3: self-custody and censorship resistance.
 
 With edge blockchains we can simultaneously address the problems of scalability, privacy, and safety, while preserving composability and network effects. This unlocks new classes of applications that demand both performance and privacy.
+
 Our goal with Miden is to build a chain that enables applications to scale both vertically and horizontally, supports public and private transactions, is safe to use and to develop on, and doesn’t require developers to learn new programming languages. All without compromising self-custody or censorship resistance.
+
 Only by achieving these can we fulfill the original promise of crypto where people and businesses can trustlessly transfer value to each other over the internet at global scale.
 
 ## The future of crypto is at the edge
 
 The crypto industry has seen two major inflection points. The first came with Bitcoin, in 2009, which, after years of trial and error, introduced the ability for people to transfer assets without intermediaries. The second came with Ethereum, in 2015, which made blockchains truly programmable and unlocked a wave of developer creativity across new use cases.
+
 Both inflection points required a fundamental rethinking of how the technology works. Since then, blockchain systems have seen improvements in areas like consensus, programming languages, and networking. But these improvements have been largely incremental in nature and none changed the core operating principles of blockchains. Now, with edge blockchains, crypto is on the verge of a third inflection point.
+
 The fundamental difference between traditional chains like Bitcoin, Ethereum, Solana, Sui, Aptos etc. and edge blockchains is who executes transactions and who stores the state.
+
 In traditional chains, users send transactions to the network. The network - through miners, block producers, etc. - executes these transactions and updates the global state. Then, all other nodes re-execute the transactions to verify the correctness of the chain. This creates a number of intractable problems: chains designed in this way fail to scale, lack privacy, or compromise self-custody and censorship-resistance.
+
 First, requiring every node to re-execute all transactions is inherently wasteful. This is known as execution bloat, and it limits the network’s throughput to the slowest node - in some cases, a single CPU core. The exact ceiling is debatable, but it is hard to imagine the world’s financial infrastructure running on a consumer-grade computer, let alone a single core.
 
 ![NetworkVsEdge](/images/network-vs-edge.png)
 
 The second major challenge with traditional chains is state bloat. Re-executing transactions requires access to the full underlying blockchain state. As usage grows, nodes must track an ever-expanding volume of data. Several approaches aim to reduce state bloat in traditional chains, such as statelessness and sharding, but they all come with significant trade-offs to security and/or composability.
+
 Both state and execution bloat force network execution chains into a tradeoff: they either have to limit throughput or rely on overpowered machines to run a node. Limiting throughput breaks scalability, while relying on overpowered nodes centralizes the network and undermines censorship resistance.
+
 Third, providing a satisfactory level of privacy or confidentiality in traditional blockchains is practically impossible. The fundamental limit here again is that to re-execute transactions, nodes need to know all underlying transaction data, and thus, transaction details must be made public. The lack of privacy is sometimes treated as a selling point: transparency. But transparency is a bug, not a feature.
+
 Traditional blockchains have attempted to work around the privacy problem, but each approach comes with trade-offs:
 - Pseudo-anonymity: While interactions between blockchain accounts are public, the connection to real-world identities stay private - at least in theory. In practice, firms like Chainalysis can easily trace most accounts back to owners.
 - ZK-based add-ons: Tools like Tornado Cash add real privacy to existing protocols, but at a high cost to users (both in UX and monetary terms). These costs deter regular activity and lead to adverse selection.
+
 Absent affordable on-chain privacy options, users frequently resort to using centralized exchanges such as Binance and Coinbase as their mixers, or worse yet, stay within web2-like ecosystems of these exchanges. While this does provide a measure of privacy, it also directly undermines core tenets of web3: self-custody and censorship-resistance.
 
 ### The case for edge execution
 
 Edge blockchains are designed differently. Users execute their own transactions locally and store their own state. ZK proofs of valid transactions reach the chain, where nodes verify compact ZK proofs that can represent thousands or even millions of valid transactions. This escapes the traditional blockchain correlation between usage growth and performance degradation, and makes privacy the default.
+
 The most immediate benefit of edge execution is the elimination of execution bloat. If most transactions are executed and proven by users, the network no longer needs to re-execute them. As a result, even a smartphone can handle real-time verification at a massive scale.
+
 Just as importantly, edge execution removes the limits on smart contract complexity. ZK proofs are exponentially faster to verify than the computations they represent. From the network’s perspective, there’s little difference between a proof of a simple token transfer and a proof of an ML model that required a data center to run. The computational complexity of a smart contract is limited only by the user's hardware, not by gas limits or other network-imposed constraints.
+
 Edge execution also minimizes state bloat by enabling users to self-custody their state. Since transitions are proven locally, the network only needs to track short commitments, such as 32-byte hashes, to verify validity. Full account states can be stored anywhere: on user devices, in centralized clouds, or in decentralized data availability layers. This drastically reduces node storage requirements and allows block producers to create new blocks without knowing the entire state. It also removes constraints on how large a contract's state can be or how costly that state is to manage.
+
 Last but not least, privacy is a natural outcome of edge execution. When users execute contract code themselves, there is no need to share the code with the network. Only a commitment to the code must be made public. The same applies to state: if users self-custody their data, the network sees only commitments, not the actual balances or storage. Edge execution combined with self-custodied state may be the only way to achieve true privacy.
+
 Rearchitecting a chain for the edge aligns incentives correctly: the more work users are willing to do themselves (to prove their own transactions, manage their own state), the less work the network needs to do. Not only does this lower the cost of using the network, the edge blockchain brings scale without compromising self-custody, censorship resistance, or privacy.
 
 ## Miden architecture: To the edge and beyond
 
 At the core of Miden’s design is the Actor Model, a proven framework for scaling concurrent and distributed systems. In this model, independent entities called actors communicate by exchanging asynchronous messages. Each actor is a “little” state machine which manages its own state and exposes a well-defined interface to the world. When an actor receives a message, it can update its state and send messages that trigger changes in other actors. Miden’s key innovation is combining the Actor Model with ZK proofs, making all state transitions provable.
+
 In the context of Miden, actors are accounts. Like Ethereum smart contracts, accounts contain code, storage, and assets.
 
 But there’s an important difference: in Miden, all assets are native and are stored locally within an account. Thus, adding or removing assets to/from an account does not require updates to other accounts. This is one of the crucial properties which makes edge execution on Miden possible in ways that traditional blockchains structurally cannot support.
