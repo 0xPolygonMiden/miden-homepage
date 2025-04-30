@@ -10,7 +10,7 @@ const items = [
   {
     label: "Docs",
     description: "Everything you need to get started building with Miden.",
-    link: "https://0xpolygonmiden.github.io/miden-docs/",
+    link: "https://0xmiden.github.io/miden-docs/",
   },
   {
     label: "Playground",
