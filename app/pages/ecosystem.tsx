@@ -34,7 +34,7 @@ export function PageEcosystem({ items }: { items: ItemType[] }) {
           </li>
           <li>
             <Link
-              to="https://docs.google.com/forms/d/e/1FAIpQLScGmZdSbJHeoRcIzret0dOG4PxorovSGBUXpVmUf0EFFLsW-w/viewform"
+              to="https://docs.google.com/forms/d/e/1FAIpQLSep4KHHPR7N0Wp4kw9fcLl3w5oXtx8AooJOOYxBTY3WAtjSLA/viewform"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary underline underline-offset-2"
