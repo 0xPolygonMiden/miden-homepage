@@ -40,7 +40,7 @@ On Miden, specialized accounts—called faucets—can issue assets. However, any
 
 The difference is that faucets do not track ownership. Instead, they produce notes in executing transactions to distribute the assets. As described in Miden’s transaction model, those notes carry the newly created assets to be consumed by other accounts. That way, one can mint a million NFTs locally in a single transaction and then send them out, as needed, in separate transactions in the future. If executed privately, the network would lose track of asset ownership from then on; one cannot query the asset account to get a balance.
 
-![](/images/01.jpg)
+![Faucet](/images/assets-1.jpg)
 
 ## Asset encoding
 
@@ -50,7 +50,7 @@ On Miden, all native assets are encoded using 256 bits. The asset encodes both t
 Asset storage
 On Miden, all assets are stored in the owner’s account itself or in a note. Accounts and notes have vaults to store them. Accounts may store an unlimited number of assets in a tiered sparse Merkle tree. Notes store assets in vectors of length 255.
 
-![](/images/01.jpg)
+![Encoding](/images/assets-2.jpg)
 
 Storing assets directly in accounts provides several benefits, including parallelizable transactions, off-chain storage, and programmable transaction fees.
 
