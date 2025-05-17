@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { Link, Outlet } from "react-router";
 import { Footer } from "~/components/footer";
